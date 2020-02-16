@@ -32,8 +32,5 @@ void loop()
 	SD_Write(String(loop_count));
 
 	loop_count++;
-	delay(1000);
+	delay(1001);
 }
-
-
-
