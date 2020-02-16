@@ -3,7 +3,9 @@
 #define PIN_ASSIGN_H
 
 
-#define PIN_SRV 3
+#define PIN_SRV 4
+
+#define PIN_LIT A0
 
 #define PIN_GPS_RX 8
 #define PIN_GPS_TX 9

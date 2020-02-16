@@ -2,6 +2,8 @@
 #include "./GPS.h"
 #include "./SD.h"
 #include "./Servo.h"
+#include "./Light.h"
+
 
 int loop_count = 0;
 
@@ -17,6 +19,7 @@ void setup()
 	GPS_Init();
 	SD_Init();
 	SRV_Init();
+	LIT_Init();
 
 	Serial.print(F("Init done\n"));
 	delay(300);
@@ -29,6 +32,7 @@ void loop()
 	IMU_PrintGyr();
 	IMU_PrintMag();
 	GPS_Update();
+	LIT_Print();
 	SD_Write(String(loop_count));
 
 	loop_count++;
