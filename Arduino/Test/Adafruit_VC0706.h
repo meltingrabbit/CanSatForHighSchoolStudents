@@ -52,14 +52,15 @@
 #define VC0706_320x240 0x11
 #define VC0706_160x120 0x22
 
-#define VC0706_MOTIONCONTROL 0x0
-#define VC0706_UARTMOTION 0x01
-#define VC0706_ACTIVATEMOTION 0x01
+// #define VC0706_MOTIONCONTROL 0x0
+// #define VC0706_UARTMOTION 0x01
+// #define VC0706_ACTIVATEMOTION 0x01
 
-#define VC0706_SET_ZOOM 0x52
-#define VC0706_GET_ZOOM 0x53
+// #define VC0706_SET_ZOOM 0x52
+// #define VC0706_GET_ZOOM 0x53
 
-#define CAMERABUFFSIZ 100
+// #define CAMERABUFFSIZ 100
+#define CAMERABUFFSIZ 50      // 減らした．多分問題ないが，怖いので安全コードも足した．
 #define CAMERADELAY 10
 
 
@@ -75,38 +76,38 @@ class Adafruit_VC0706 {
   Adafruit_VC0706(HardwareSerial *ser); // Constructor when using HardwareSerial
   boolean begin(uint16_t baud = 38400);
   boolean reset(void);
-  boolean TVon(void);
-  boolean TVoff(void);
+  // boolean TVon(void);
+  // boolean TVoff(void);
   boolean takePicture(void);
   uint8_t *readPicture(uint8_t n);
-  boolean resumeVideo(void);
+  // boolean resumeVideo(void);
   uint32_t frameLength(void);
-  char *getVersion(void);
+  // char *getVersion(void);
   uint8_t available();
-  uint8_t getDownsize(void);
-  boolean setDownsize(uint8_t);
-  uint8_t getImageSize();
+  // uint8_t getDownsize(void);
+  // boolean setDownsize(uint8_t);
+  // uint8_t getImageSize();
   boolean setImageSize(uint8_t);
-  boolean getMotionDetect();
-  uint8_t getMotionStatus(uint8_t);
-  boolean motionDetected();
-  boolean setMotionDetect(boolean f);
-  boolean setMotionStatus(uint8_t x, uint8_t d1, uint8_t d2);
+  // boolean getMotionDetect();
+  // uint8_t getMotionStatus(uint8_t);
+  // boolean motionDetected();
+  // boolean setMotionDetect(boolean f);
+  // boolean setMotionStatus(uint8_t x, uint8_t d1, uint8_t d2);
   boolean cameraFrameBuffCtrl(uint8_t command);
-  uint8_t getCompression();
-  boolean setCompression(uint8_t c);
-  
-  boolean getPTZ(uint16_t &w, uint16_t &h, uint16_t &wz, uint16_t &hz, uint16_t &pan, uint16_t &tilt);
-  boolean setPTZ(uint16_t wz, uint16_t hz, uint16_t pan, uint16_t tilt);
+  // uint8_t getCompression();
+  // boolean setCompression(uint8_t c);
 
-  void OSD(uint8_t x, uint8_t y, char *s); // isnt supported by the chip :(
+  // boolean getPTZ(uint16_t &w, uint16_t &h, uint16_t &wz, uint16_t &hz, uint16_t &pan, uint16_t &tilt);
+  // boolean setPTZ(uint16_t wz, uint16_t hz, uint16_t pan, uint16_t tilt);
 
-char* setBaud9600();
-char* setBaud19200();
-char* setBaud38400();
-char* setBaud57600();
-char* setBaud115200();
-  
+  // void OSD(uint8_t x, uint8_t y, char *s); // isnt supported by the chip :(
+
+// char* setBaud9600();
+// char* setBaud19200();
+// char* setBaud38400();
+// char* setBaud57600();
+// char* setBaud115200();
+
  private:
   uint8_t  serialNum;
   uint8_t  camerabuff[CAMERABUFFSIZ+1];
@@ -127,5 +128,5 @@ char* setBaud115200();
   void sendCommand(uint8_t cmd, uint8_t args[], uint8_t argn); 
   uint8_t readResponse(uint8_t numbytes, uint8_t timeout);
   boolean verifyResponse(uint8_t command);
-  void printBuff(void);
+  // void printBuff(void);
 };

@@ -12,9 +12,9 @@ Adafruit_VC0706 cam = Adafruit_VC0706(&CamSerial);
 void CAM_Init() {
 	// Try to locate the camera
 	if (cam.begin()) {
-		Serial.println(F("Camera Found:"));
+		Serial.println(F("Cam Found"));
 	} else {
-		Serial.println(F("No camera found?"));
+		Serial.println(F("No cam!!"));
 		return;
 	}
 	// // Print out the camera version information (optional)
@@ -37,7 +37,7 @@ void CAM_TakePic() {
 	SD_Write("CAM_TakePic");
 
 	// You can read the size back from the camera (optional, but maybe useful?)
-	uint8_t imgsize = cam.getImageSize();
+	// uint8_t imgsize = cam.getImageSize();
 	// Serial.print("Image size: ");
 	// if (imgsize == VC0706_640x480) Serial.println("640x480");
 	// if (imgsize == VC0706_320x240) Serial.println("320x240");
@@ -62,7 +62,7 @@ void CAM_TakePic() {
 		}
 	}
 
-	SD_Write("Fine name is " + String(filename));
+	SD_Write("Finename:" + String(filename));
 
 	// Open the file for writing
 	File imgFile = SD.open(SD_GetDirName() + "/" + String(filename), FILE_WRITE);
