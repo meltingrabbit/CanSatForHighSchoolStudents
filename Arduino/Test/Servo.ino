@@ -11,7 +11,7 @@ void SRV_Init() {
 	delay(1000);
 	SRV_Run();
 
-	Serial.println(F("Servo initialization done."));
+	Serial.println(F("Servo init done"));
 }
 
 void SRV_SetPosition(int pos) {

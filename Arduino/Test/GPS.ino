@@ -1,8 +1,9 @@
+/*
 #include "./GPS.h"
 
 Gps_t gps;
 
-SoftwareSerial GpsSerial(PIN_GPS_RX, PIN_GPS_TX);
+SoftwareSerial GpsSerial(PIN_GPS_TX, PIN_GPS_RX);
 
 // 非公開関数
 String GPS_NMEA2DMS_(float val);
@@ -13,8 +14,6 @@ String GPS_UTC2GMT900_(String str);
 
 
 void GPS_Init() {
-	// Gps.mySerial(PIN_GPS_RX, PIN_GPS_TX);
-	// Gps.mySerial.begin(9600);
 	GpsSerial.begin(9600);
 	Serial.println(F("GPS initialization done."));
 }
@@ -118,3 +117,4 @@ String GPS_UTC2GMT900_(String str) {
 	return String(hh,DEC) + ":" + str.substring(2,4) + ":" + str.substring(4,6);
 }
 
+*/

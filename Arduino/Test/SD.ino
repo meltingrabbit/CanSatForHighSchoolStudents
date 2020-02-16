@@ -3,16 +3,42 @@
 Sd_t sd;
 
 
+// フォルダ分け or 接頭辞
+// #define SD_IS_MKDIR
+
 
 void SD_Init() {
 	sd.logFileName = "log.txt";
 
+	pinMode(PIN_SD_SS, OUTPUT);
+
 	if (!SD.begin(PIN_SD_SS)) {
-		Serial.println(F("SD initialization failed!"));
+		Serial.println(F("SD: init failed!"));
 		while (1);
 	}
 
-	sd.logFile = SD.open(sd.logFileName, FILE_WRITE);
+
+	strcpy(sd.DirName, "D000");
+	for (int i = 0; i <= 1000; i++) {
+		if (i == 1000) {
+			Serial.println(F("SD: Number of Folder is MAX!"));
+			while (1);
+		}
+
+		sd.DirName[1] = '0' + i/100;
+		sd.DirName[2] = '0' + (i/10)%10;
+		sd.DirName[3] = '0' + i%10;
+		if (! SD.exists(SD_GetDirName() + sd.logFileName) ) {
+			#ifdef SD_IS_MKDIR
+				SD.mkdir(sd.DirName);		// フォルダわけではなく，接頭辞の場合コメントアウト！
+			#else
+			#endif
+			break;
+		}
+	}
+
+
+	sd.logFile = SD.open(SD_GetDirName() + sd.logFileName, FILE_WRITE);
 	if (sd.logFile) {
 		// sd.logFile.println("testing 1, 2, 3.");
 		sd.logFile.println("START UP!!");
@@ -24,13 +50,12 @@ void SD_Init() {
 	}
 
 	sd.logFile.close();
-	Serial.println(F("SD initialization done."));
+	Serial.println(F("SD init done."));
 }
 
 
-
 void SD_Write(String str) {
-	sd.logFile = SD.open(sd.logFileName, FILE_WRITE);
+	sd.logFile = SD.open(SD_GetDirName() + sd.logFileName, FILE_WRITE);
 
 	if (sd.logFile) {
 		sd.logFile.println("[" + String(millis()) + "]\t" + str);
@@ -47,4 +72,10 @@ void SD_Write(String str) {
 }
 
 
-
+String SD_GetDirName() {
+	#ifdef SD_IS_MKDIR
+		return (String(sd.DirName) + "/");
+	#else
+		return (String(sd.DirName) + "_");
+	#endif
+}
