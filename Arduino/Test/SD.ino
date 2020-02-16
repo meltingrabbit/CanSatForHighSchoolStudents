@@ -9,26 +9,25 @@ Sd_t sd;
 
 void SD_Init() {
 	sd.logFileName = "log.txt";
-	// sd.DirName     = "CS0000";
 
 	pinMode(PIN_SD_SS, OUTPUT);
 
 	if (!SD.begin(PIN_SD_SS)) {
-		Serial.println(F("SD: initialization failed!"));
+		Serial.println(F("SD: init failed!"));
 		while (1);
 	}
 
 
-	strcpy(sd.DirName, "CS0000");
+	strcpy(sd.DirName, "D000");
 	for (int i = 0; i <= 1000; i++) {
 		if (i == 1000) {
 			Serial.println(F("SD: Number of Folder is MAX!"));
 			while (1);
 		}
 
-		sd.DirName[3] = '0' + i/100;
-		sd.DirName[4] = '0' + (i/10)%10;
-		sd.DirName[5] = '0' + i%10;
+		sd.DirName[1] = '0' + i/100;
+		sd.DirName[2] = '0' + (i/10)%10;
+		sd.DirName[3] = '0' + i%10;
 		if (! SD.exists(SD_GetDirName() + sd.logFileName) ) {
 			#ifdef SD_IS_MKDIR
 				SD.mkdir(sd.DirName);		// フォルダわけではなく，接頭辞の場合コメントアウト！
@@ -51,7 +50,7 @@ void SD_Init() {
 	}
 
 	sd.logFile.close();
-	Serial.println(F("SD initialization done."));
+	Serial.println(F("SD init done."));
 }
 
 

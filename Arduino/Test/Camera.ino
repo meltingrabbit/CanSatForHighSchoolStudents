@@ -55,18 +55,18 @@ void CAM_TakePic() {
 
 	// Create an image with the name IMGxx.JPG
 	char filename[12];
-	strcpy(filename, "IMG000.JPG");
+	strcpy(filename, "000.JPG");
 	for (int i = 0; i < 1000; i++) {
-		filename[3] = '0' + i/100;
-		filename[4] = '0' + (i/10)%10;
-		filename[5] = '0' + i%10;
+		filename[0] = '0' + i/100;
+		filename[1] = '0' + (i/10)%10;
+		filename[2] = '0' + i%10;
 		// create if does not exist, do not open existing, write, sync after write
 		if ( ! SD.exists(SD_GetDirName() + String(filename)) ) {
 			break;
 		}
 	}
 
-	SD_Write("Finename:" + String(filename));
+	SD_Write("picname:" + SD_GetDirName() + String(filename));
 	Serial.println(SD_GetDirName() + String(filename));
 
 	// Open the file for writing
