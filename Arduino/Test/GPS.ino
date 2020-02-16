@@ -1,3 +1,4 @@
+/*
 #include "./GPS.h"
 
 Gps_t gps;
@@ -116,3 +117,4 @@ String GPS_UTC2GMT900_(String str) {
 	return String(hh,DEC) + ":" + str.substring(2,4) + ":" + str.substring(4,6);
 }
 
+*/

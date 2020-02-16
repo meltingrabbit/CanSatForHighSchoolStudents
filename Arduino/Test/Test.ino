@@ -17,8 +17,8 @@ void setup()
 	SD_Init();		// これは絶対最初に初期化！
 	CAM_Init();		// SDの後！
 	IMU_Init();
-	GPS_Init();
-	SRV_Init();
+	// GPS_Init();
+	// SRV_Init();
 	LIT_Init();
 
 	Serial.print(F("Init done\n"));
@@ -31,11 +31,11 @@ void loop()
 	IMU_PrintAcc();
 	IMU_PrintGyr();
 	IMU_PrintMag();
-	GPS_Update();
+	// GPS_Update();
 	LIT_Print();
 	CAM_TakePic();
 	SD_Write(String(loop_count));
 
 	loop_count++;
-	delay(1001);
+	delay(1000);
 }
