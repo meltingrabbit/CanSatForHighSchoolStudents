@@ -17,22 +17,23 @@ void SD_Init() {
 
 
 	strcpy(sd.DirName, "CS0000");
-	for (int i = 0; i <= 100; i++) {
-		sd.DirName[4] = '0' + i/10;
-		sd.DirName[5] = '0' + i%10;
-		if (! SD.exists(String(sd.DirName) + "/" + sd.logFileName) ) {
-			SD.mkdir(sd.DirName);
-			break;
-		}
-
-		if (i == 100) {
+	for (int i = 0; i <= 1000; i++) {
+		if (i == 1000) {
 			Serial.println(F("SD: Number of Folder is MAX!"));
 			while (1);
+		}
+
+		sd.DirName[3] = '0' + i/100;
+		sd.DirName[4] = '0' + (i/10)%10;
+		sd.DirName[5] = '0' + i%10;
+		if (! SD.exists(SD_GetDirName() + "/" + sd.logFileName) ) {
+			SD.mkdir(sd.DirName);
+			break;
 		}
 	}
 
 
-	sd.logFile = SD.open(String(sd.DirName) + "/" + sd.logFileName, FILE_WRITE);
+	sd.logFile = SD.open(SD_GetDirName() + "/" + sd.logFileName, FILE_WRITE);
 	if (sd.logFile) {
 		// sd.logFile.println("testing 1, 2, 3.");
 		sd.logFile.println("START UP!!");
@@ -48,9 +49,8 @@ void SD_Init() {
 }
 
 
-
 void SD_Write(String str) {
-	sd.logFile = SD.open(String(sd.DirName) + "/" + sd.logFileName, FILE_WRITE);
+	sd.logFile = SD.open(SD_GetDirName() + "/" + sd.logFileName, FILE_WRITE);
 
 	if (sd.logFile) {
 		sd.logFile.println("[" + String(millis()) + "]\t" + str);
@@ -67,4 +67,6 @@ void SD_Write(String str) {
 }
 
 
-
+String SD_GetDirName() {
+	return String(sd.DirName);
+}

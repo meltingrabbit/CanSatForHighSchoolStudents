@@ -3,6 +3,7 @@
 #include "./SD.h"
 #include "./Servo.h"
 #include "./Light.h"
+#include "./Camera.h"
 
 int loop_count = 0;
 
@@ -13,10 +14,10 @@ void setup()
 	// デバック用シリアル通信は9600bps
 	Serial.begin(9600);
 
-
+	SD_Init();		// これは絶対最初に初期化！
+	CAM_Init();		// SDの後！
 	IMU_Init();
 	GPS_Init();
-	SD_Init();
 	SRV_Init();
 	LIT_Init();
 
@@ -32,6 +33,7 @@ void loop()
 	IMU_PrintMag();
 	GPS_Update();
 	LIT_Print();
+	CAM_TakePic();
 	SD_Write(String(loop_count));
 
 	loop_count++;
