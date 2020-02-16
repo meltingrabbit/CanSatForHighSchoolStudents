@@ -27,18 +27,19 @@ void CAM_Init() {
 	// 	Serial.println(F("-----------------"));
 	// }
 
-	// cam.setImageSize(VC0706_640x480);        // biggest
-	cam.setImageSize(VC0706_320x240);        // medium
+	cam.setImageSize(VC0706_640x480);        // biggest
+	// cam.setImageSize(VC0706_320x240);        // medium
 	// cam.setImageSize(VC0706_160x120);        // small
 
 
 	// バッファークリアの意味も兼ねて一発撮る
+	// 壊れた画像になるので確認．
 	CAM_TakePic();
 }
 
 
 void CAM_TakePic() {
-	SD_Write("CAM_TakePic");
+	SD_Write("TakePic");
 
 	// You can read the size back from the camera (optional, but maybe useful?)
 	// uint8_t imgsize = cam.getImageSize();
@@ -48,9 +49,9 @@ void CAM_TakePic() {
 	// if (imgsize == VC0706_160x120) Serial.println("160x120");
 
 	if (! cam.takePicture()) {
-		Serial.println(F("Failed to snap!"));
+		Serial.println(F("Snap NG"));
 	} else {
-		Serial.println(F("Picture taken!"));
+		Serial.println(F("Snap OK"));
 	}
 
 	// Create an image with the name IMGxx.JPG
@@ -76,7 +77,7 @@ void CAM_TakePic() {
 	uint16_t jpglen = cam.frameLength();
 	Serial.print(F("Storing "));
 	Serial.print(jpglen, DEC);
-	Serial.print(F(" byte image."));
+	Serial.print(F(" byte."));
 
 	int32_t time = millis();
 	// pinMode(8, OUTPUT);

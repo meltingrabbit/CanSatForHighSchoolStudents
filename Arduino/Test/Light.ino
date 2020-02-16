@@ -16,7 +16,7 @@ int  LIT_Get() {
 
 void LIT_Print() {
 	int value = LIT_Get();
-	Serial.print(F("Light= "));
+	Serial.print(F("Lit= "));
 	Serial.print(value);
 	Serial.println(F(""));
 }

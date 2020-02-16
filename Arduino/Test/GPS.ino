@@ -7,7 +7,7 @@ SoftwareSerial GpsSerial(PIN_GPS_TX, PIN_GPS_RX);
 
 // 非公開関数
 String GPS_NMEA2DMS_(float val);
-String GPS_NMEA2DM_(float val);
+// String GPS_NMEA2DM_(float val);
 String GPS_NMEA2DD_(float val);
 String GPS_UTC2GMT900_(String str);
 
@@ -15,7 +15,7 @@ String GPS_UTC2GMT900_(String str);
 
 void GPS_Init() {
 	GpsSerial.begin(9600);
-	Serial.println(F("GPS initialization done."));
+	Serial.println(F("GPS init done"));
 }
 
 
@@ -71,7 +71,7 @@ void GPS_Update() {
 				list[10].toLowerCase();
 				Serial.print(list[10]);
 			} else {
-				Serial.print(F("測位できませんでした。"));
+				Serial.print(F("測位失敗"));
 			}
 
 			Serial.println(F(""));
@@ -95,12 +95,12 @@ String GPS_NMEA2DMS_(float val) {
 	return String(d) + "度" + String(m) + "分" + String(s, 1) + "秒";
 }
 
-// (未使用)NMEAの緯度経度を「度分」(DM)の文字列に変換する
-String GPS_NMEA2DM_(float val) {
-	int d = val / 100;
-	float m = ((val / 100.0) - d) * 100.0;
-	return String(d) + "度" + String(m, 4) + "分";
-}
+// // (未使用)NMEAの緯度経度を「度分」(DM)の文字列に変換する
+// String GPS_NMEA2DM_(float val) {
+// 	int d = val / 100;
+// 	float m = ((val / 100.0) - d) * 100.0;
+// 	return String(d) + "度" + String(m, 4) + "分";
+// }
 
 // NMEAの緯度経度を「度」(DD)の文字列に変換する
 String GPS_NMEA2DD_(float val) {

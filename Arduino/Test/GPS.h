@@ -1,3 +1,4 @@
+/*
 #ifndef GPS_H
 #define GPS_H
 
@@ -6,9 +7,6 @@
 
 
 // #################### GPS ####################
-
-
-
 
 void GPS_Init();
 void GPS_Update();
@@ -20,3 +18,4 @@ typedef struct {
 
 #endif
 
+*/

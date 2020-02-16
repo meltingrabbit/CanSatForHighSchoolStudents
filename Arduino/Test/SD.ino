@@ -38,37 +38,37 @@ void SD_Init() {
 	}
 
 
-	sd.logFile = SD.open(SD_GetDirName() + sd.logFileName, FILE_WRITE);
-	if (sd.logFile) {
-		// sd.logFile.println("testing 1, 2, 3.");
-		sd.logFile.println("START UP!!");
-		// sd.logFile.close();
+	File logFile = SD.open(SD_GetDirName() + sd.logFileName, FILE_WRITE);
+	if (logFile) {
+		// logFile.println("testing 1, 2, 3.");
+		logFile.println("START UP!!");
+		// logFile.close();
 		Serial.println(F("SD: Write done"));
 	} else {
 		// if the file didn't open, print an error:
 		Serial.println(F("SD: error opening file"));
 	}
 
-	sd.logFile.close();
+	logFile.close();
 	Serial.println(F("SD init done."));
 }
 
 
 void SD_Write(String str) {
-	sd.logFile = SD.open(SD_GetDirName() + sd.logFileName, FILE_WRITE);
+	File logFile = SD.open(SD_GetDirName() + sd.logFileName, FILE_WRITE);
 
-	if (sd.logFile) {
-		sd.logFile.println("[" + String(millis()) + "]\t" + str);
+	if (logFile) {
+		logFile.println("[" + String(millis()) + "]\t" + str);
 		// close the file:
-		sd.logFile.close();
+		logFile.close();
 		Serial.println(F("SD: Write done"));
 	} else {
 		// if the file didn't open, print an error:
-		Serial.println(F("SD: error opening file"));
+		Serial.println(F("SD: error opening"));
 	}
 
 
-	sd.logFile.close();
+	logFile.close();
 }
 
 
