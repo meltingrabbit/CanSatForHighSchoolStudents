@@ -27,9 +27,13 @@ void CAM_Init() {
 	// 	Serial.println(F("-----------------"));
 	// }
 
-	cam.setImageSize(VC0706_640x480);        // biggest
-	// cam.setImageSize(VC0706_320x240);        // medium
+	// cam.setImageSize(VC0706_640x480);        // biggest
+	cam.setImageSize(VC0706_320x240);        // medium
 	// cam.setImageSize(VC0706_160x120);        // small
+
+
+	// バッファークリアの意味も兼ねて一発撮る
+	CAM_TakePic();
 }
 
 
@@ -57,15 +61,16 @@ void CAM_TakePic() {
 		filename[4] = '0' + (i/10)%10;
 		filename[5] = '0' + i%10;
 		// create if does not exist, do not open existing, write, sync after write
-		if ( ! SD.exists(SD_GetDirName() + "/" + String(filename)) ) {
+		if ( ! SD.exists(SD_GetDirName() + String(filename)) ) {
 			break;
 		}
 	}
 
 	SD_Write("Finename:" + String(filename));
+	Serial.println(SD_GetDirName() + String(filename));
 
 	// Open the file for writing
-	File imgFile = SD.open(SD_GetDirName() + "/" + String(filename), FILE_WRITE);
+	File imgFile = SD.open(SD_GetDirName() + String(filename), FILE_WRITE);
 
 	// Get the size of the image (frame) taken
 	uint16_t jpglen = cam.frameLength();

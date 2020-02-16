@@ -33,7 +33,7 @@ void loop()
 	IMU_PrintMag();
 	// GPS_Update();
 	LIT_Print();
-	// CAM_TakePic();
+	CAM_TakePic();
 	SD_Write(String(loop_count));
 
 	loop_count++;

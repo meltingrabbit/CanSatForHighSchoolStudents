@@ -366,7 +366,9 @@ boolean Adafruit_VC0706::runCommand(uint8_t cmd, uint8_t *args, uint8_t argn,
 			   uint8_t resplen, boolean flushflag) {
   // flush out anything in the buffer?
   if (flushflag) {
-    readResponse(100, 10); 
+    // readResponse(100, 10); 
+    // ●●● 変えた！！！ ●●●
+    readResponse(CAMERABUFFSIZ, 10); 
   }
 
   sendCommand(cmd, args, argn);
