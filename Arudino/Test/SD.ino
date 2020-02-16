@@ -33,7 +33,7 @@ void SD_Write(String str) {
 	sd.logFile = SD.open(sd.logFileName, FILE_WRITE);
 
 	if (sd.logFile) {
-		sd.logFile.println(str);
+		sd.logFile.println("[" + String(millis()) + "]\t" + str);
 		// close the file:
 		sd.logFile.close();
 		Serial.println(F("SD: Write done"));
