@@ -21,8 +21,9 @@ void SD_Init();
 void SD_Write(String str);
 
 typedef struct {
-	String logFileName;
-	File logFile;
+	String  logFileName;
+	char    DirName[8];
+	File    logFile;
 } Sd_t;
 
 
