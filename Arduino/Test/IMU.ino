@@ -84,7 +84,7 @@ void IMU_Init() {
 	Wire.write(0x16);  // No. of Repetitions for Z-Axis = 15
 	Wire.endTransmission();
 
-	Serial.println(F("IMU initialization done."));
+	Serial.println(F("IMU init done"));
 }
 
 
@@ -172,7 +172,7 @@ void IMU_UpdateMag() {
 
 
 void IMU_PrintAcc() {
-	Serial.print(F("Accl= "));
+	Serial.print(F("Acc= "));
 	Serial.print(imu.xAccl);
 	Serial.print(F(","));
 	Serial.print(imu.yAccl);
@@ -183,7 +183,7 @@ void IMU_PrintAcc() {
 
 
 void IMU_PrintGyr() {
-	Serial.print(F("Gyro= "));
+	Serial.print(F("Gyr= "));
 	Serial.print(imu.xGyro);
 	Serial.print(F(","));
 	Serial.print(imu.yGyro);

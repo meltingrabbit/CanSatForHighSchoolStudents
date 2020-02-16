@@ -18,7 +18,7 @@ void setup()
 	CAM_Init();		// SDの後！
 	IMU_Init();
 	// GPS_Init();
-	// SRV_Init();
+	SRV_Init();
 	LIT_Init();
 
 	Serial.print(F("Init done\n"));

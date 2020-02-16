@@ -24,7 +24,7 @@ String SD_GetDirName();
 typedef struct {
 	String  logFileName;
 	char    DirName[6];
-	File    logFile;
+	// File    logFile;
 } Sd_t;
 
 
