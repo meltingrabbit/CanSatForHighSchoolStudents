@@ -96,8 +96,9 @@ void IMU_UpdateAll() {
 
 
 void IMU_UpdateAcc() {
-	int data[6];
-	for (int i = 0; i < 6; i++)
+	// int data[6];
+	uint8_t data[6];
+	for (uint8_t i = 0; i < 6; i++)
 	{
 		Wire.beginTransmission(IMU_ADDR_ACCL);
 		Wire.write((2 + i));// Select data register
@@ -122,8 +123,9 @@ void IMU_UpdateAcc() {
 
 
 void IMU_UpdateGyr() {
-	int data[6];
-	for (int i = 0; i < 6; i++)
+	// int data[6];
+	uint8_t data[6];
+	for (uint8_t i = 0; i < 6; i++)
 	{
 		Wire.beginTransmission(IMU_ADDR_GYRO);
 		Wire.write((2 + i));    // Select data register
@@ -149,8 +151,9 @@ void IMU_UpdateGyr() {
 
 
 void IMU_UpdateMag() {
-	int data[8];
-	for (int i = 0; i < 8; i++)
+	// int data[8];
+	uint8_t data[8];
+	for (uint8_t i = 0; i < 8; i++)
 	{
 		Wire.beginTransmission(IMU_ADDR_MAG);
 		Wire.write((0x42 + i));    // Select data register

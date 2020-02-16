@@ -28,14 +28,14 @@ void GPS_Update() {
 	String line = GpsSerial.readStringUntil('\n');
 
 	if(line != ""){
-		int     i;
-		uint8_t index = 0;
-		int     len = line.length();
-		String  str = "";
+		uint16_t i;
+		uint8_t  index = 0;
+		uint16_t len = line.length();
+		String   str = "";
 
 		// StringListの生成(簡易)
 		// const uint8_t MAX_LIST = 30;		// メモリ節約のために，極限まで小さくしたい！
-		const uint8_t MAX_LIST = 20;		// メモリ節約のために，極限まで小さくしたい！
+		const uint8_t MAX_LIST = 12;		// メモリ節約のために，極限まで小さくしたい！ [9]までしか使わないから小さくしても良いはず．
 		String list[MAX_LIST];
 		for (i = 0; i < MAX_LIST; i++) {
 			list[i] = "";
@@ -142,11 +142,13 @@ void GPS_Print() {
 // }
 
 // NMEAの緯度経度を「度」(DD)のfloatに変換する
+// dddmm.mmmmmm
 float GPS_NMEA2DDf_(float val) {
-	int d = val / 100;
-	int m = (((val / 100.0) - d) * 100.0) / 60;
-	float s = (((((val / 100.0) - d) * 100.0) - m) * 60) / (60 * 60);
-	return d + m + s;
+	int   d = val / 100;
+	float m = (((val / 100.0) - d) * 100.0) / 60;
+	// float s = (((((val / 100.0) - d) * 100.0) - m) * 60) / (60 * 60);
+	// return d + m + s;
+	return d + m;
 }
 
 // // UTC時刻から日本の標準時刻に変換する(GMT+9:00)

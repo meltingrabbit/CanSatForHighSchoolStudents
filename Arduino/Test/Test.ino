@@ -5,7 +5,7 @@
 #include "./Light.h"
 #include "./Camera.h"
 
-int loop_count = 0;
+uint16_t loop_count = 0;
 
 void setup()
 {
