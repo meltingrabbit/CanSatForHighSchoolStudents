@@ -4,6 +4,9 @@
 #include <SoftwareSerial.h>
 #include "./PIN_ASSIGN.h"
 
+/*
+http://akizukidenshi.com/catalog/g/gK-09991/
+*/
 
 // #################### GPS ####################
 

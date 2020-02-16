@@ -4,6 +4,9 @@
 #include "./PIN_ASSIGN.h"
 #include <Servo.h>
 
+/*
+http://akizukidenshi.com/catalog/g/gM-08914/
+*/
 
 // #################### Servo ####################
 

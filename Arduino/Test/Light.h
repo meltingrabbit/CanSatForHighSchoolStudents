@@ -1,7 +1,15 @@
 #ifndef LIGHT_H
 #define LIGHT_H
 
-// #################### 9AXIS ####################
+
+/*
+http://akizukidenshi.com/catalog/g/gI-00110/
+*/
+
+
+// #################### LIGHT ####################
+
+
 #include "./PIN_ASSIGN.h"
 
 void LIT_Init();

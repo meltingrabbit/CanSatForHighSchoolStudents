@@ -1,7 +1,14 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-// #################### 9AXIS ####################
+/*
+https://www.switch-science.com/catalog/1241/
+https://www.adafruit.com/product/397
+*/
+
+// #################### CAMERA ####################
+
+
 #include "./PIN_ASSIGN.h"
 
 #include "./Adafruit_VC0706.h"
