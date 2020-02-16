@@ -4,7 +4,6 @@
 #include "./Servo.h"
 #include "./Light.h"
 
-
 int loop_count = 0;
 
 void setup()
