@@ -5,7 +5,6 @@ Light_t light;
 
 
 void LIT_Init() {
-
 }
 
 int  LIT_Get() {

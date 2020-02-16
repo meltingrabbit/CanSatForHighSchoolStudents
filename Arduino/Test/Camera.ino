@@ -39,7 +39,7 @@ void CAM_Init() {
 
 
 void CAM_TakePic() {
-	SD_Write("TakePic");
+	SD_Write(F("TakePic"));
 
 	// You can read the size back from the camera (optional, but maybe useful?)
 	// uint8_t imgsize = cam.getImageSize();
@@ -50,6 +50,7 @@ void CAM_TakePic() {
 
 	if (! cam.takePicture()) {
 		Serial.println(F("Snap NG"));
+		return;
 	} else {
 		Serial.println(F("Snap OK"));
 	}
@@ -57,7 +58,7 @@ void CAM_TakePic() {
 	// Create an image with the name IMGxx.JPG
 	char filename[12];
 	strcpy(filename, "000.JPG");
-	for (int i = 0; i < 1000; i++) {
+	for (uint16_t i = 0; i < 1000; i++) {
 		filename[0] = '0' + i/100;
 		filename[1] = '0' + (i/10)%10;
 		filename[2] = '0' + i%10;

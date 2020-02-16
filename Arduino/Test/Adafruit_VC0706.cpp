@@ -295,11 +295,11 @@ boolean Adafruit_VC0706::setImageSize(uint8_t x) {
 
 boolean Adafruit_VC0706::takePicture() {
   frameptr = 0;
-  return cameraFrameBuffCtrl(VC0706_STOPCURRENTFRAME); 
+  return cameraFrameBuffCtrl(VC0706_STOPCURRENTFRAME);
 }
 
 // boolean Adafruit_VC0706::resumeVideo() {
-//   return cameraFrameBuffCtrl(VC0706_RESUMEFRAME); 
+//   return cameraFrameBuffCtrl(VC0706_RESUMEFRAME);
 // }
 
 // boolean Adafruit_VC0706::TVon() {
@@ -456,7 +456,7 @@ uint8_t Adafruit_VC0706::readResponse(uint8_t numbytes, uint8_t timeout) {
     camerabuff[bufferLen++] = hwSerial->read();
 #endif
     // ●●● 安全コード．足した！！！●●●
-    if (bufferLen > (CAMERABUFFSIZ - 3)) {
+    if (bufferLen > (CAMERABUFFSIZ - 1)) {
       Serial.print(F("CAM BUF WARNING!!!"));
     }
   }

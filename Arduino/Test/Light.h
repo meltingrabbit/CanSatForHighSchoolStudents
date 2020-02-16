@@ -4,8 +4,6 @@
 // #################### 9AXIS ####################
 #include "./PIN_ASSIGN.h"
 
-
-
 void LIT_Init();
 int  LIT_Get();
 void LIT_Print();
