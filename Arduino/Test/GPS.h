@@ -9,9 +9,13 @@
 
 void GPS_Init();
 void GPS_Update();
-// void GPS_Print();
+void GPS_Print();
 
 typedef struct {
+	float lat;
+	float lng;
+	float height;
+	uint16_t last_received_time;
 } Gps_t;
 
 

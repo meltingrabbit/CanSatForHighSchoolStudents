@@ -8,8 +8,6 @@
 // #################### Servo ####################
 
 
-
-
 void SRV_Init();
 void SRV_SetPosition(uint8_t pos);
 uint8_t SRV_GetPosition();

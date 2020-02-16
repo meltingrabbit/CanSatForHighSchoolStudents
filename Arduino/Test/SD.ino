@@ -38,18 +38,20 @@ void SD_Init() {
 	}
 
 
-	File logFile = SD.open(SD_GetDirName() + sd.logFileName, FILE_WRITE);
-	if (logFile) {
-		// logFile.println("testing 1, 2, 3.");
-		logFile.println(F("START UP!!"));
-		// logFile.close();
-		Serial.println(F("SD: Write done"));
-	} else {
-		// if the file didn't open, print an error:
-		Serial.println(F("SD: error opening file"));
-	}
+	// File logFile = SD.open(SD_GetDirName() + sd.logFileName, FILE_WRITE);
+	// if (logFile) {
+	// 	// logFile.println("testing 1, 2, 3.");
+	// 	logFile.println(F("START UP!!"));
+	// 	// logFile.close();
+	// 	Serial.println(F("SD: Write done"));
+	// } else {
+	// 	// if the file didn't open, print an error:
+	// 	Serial.println(F("SD: error opening file"));
+	// }
+	// logFile.close();
 
-	logFile.close();
+	SD_Write(F("START UP!!"));
+
 	Serial.println(F("SD init done."));
 }
 
@@ -66,7 +68,6 @@ void SD_Write(String str) {
 		// if the file didn't open, print an error:
 		Serial.println(F("SD: Open Error"));
 	}
-
 
 	logFile.close();
 }

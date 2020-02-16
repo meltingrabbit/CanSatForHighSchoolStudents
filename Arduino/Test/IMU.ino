@@ -5,12 +5,12 @@ Imu_t imu;
 
 
 void IMU_Init() {
-	imu.xAccl = 0.00;
-	imu.yAccl = 0.00;
-	imu.zAccl = 0.00;
-	imu.xGyro = 0.00;
-	imu.yGyro = 0.00;
-	imu.zGyro = 0.00;
+	imu.xAccl = 0.0;
+	imu.yAccl = 0.0;
+	imu.zAccl = 0.0;
+	imu.xGyro = 0.0;
+	imu.yGyro = 0.0;
+	imu.zGyro = 0.0;
 	imu.xMag  = 0;
 	imu.yMag  = 0;
 	imu.zMag  = 0;
