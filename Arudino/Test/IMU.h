@@ -40,6 +40,17 @@ void IMU_PrintAcc();
 void IMU_PrintGyr();
 void IMU_PrintMag();
 
+float IMU_GetAccX();
+float IMU_GetAccY();
+float IMU_GetAccZ();
+float IMU_GetGyrX();
+float IMU_GetGyrY();
+float IMU_GetGyrZ();
+int IMU_GetMagX();
+int IMU_GetMagY();
+int IMU_GetMagZ();
+
+
 typedef struct {
 	float xAccl;
 	float yAccl;

@@ -15,7 +15,6 @@ void IMU_Init() {
 	imu.yMag  = 0;
 	imu.zMag  = 0;
 
-
 	//------------------------------------------------------------//
 	Wire.beginTransmission(IMU_ADDR_ACCL);
 	Wire.write(0x0F); // Select PMU_Range register
@@ -89,12 +88,12 @@ void IMU_Init() {
 }
 
 
-
 void IMU_UpdateAll() {
 	IMU_UpdateAcc();
 	IMU_UpdateGyr();
 	IMU_UpdateMag();
 }
+
 
 void IMU_UpdateAcc() {
 	int data[6];
@@ -171,6 +170,7 @@ void IMU_UpdateMag() {
 	if (imu.zMag > 16383)  imu.zMag -= 32768;
 }
 
+
 void IMU_PrintAcc() {
 	Serial.print(F("Accl= "));
 	Serial.print(imu.xAccl);
@@ -180,6 +180,8 @@ void IMU_PrintAcc() {
 	Serial.print(imu.zAccl);
 	Serial.println(F(""));
 }
+
+
 void IMU_PrintGyr() {
 	Serial.print(F("Gyro= "));
 	Serial.print(imu.xGyro);
@@ -189,6 +191,8 @@ void IMU_PrintGyr() {
 	Serial.print(imu.zGyro);
 	Serial.println(F(""));
 }
+
+
 void IMU_PrintMag() {
 	Serial.print(F("Mag= "));
 	Serial.print(imu.xMag);
@@ -199,3 +203,31 @@ void IMU_PrintMag() {
 	Serial.println(F(""));
 }
 
+
+float IMU_GetAccX() {
+	return imu.xAccl;
+}
+float IMU_GetAccY() {
+	return imu.yAccl;
+}
+float IMU_GetAccZ() {
+	return imu.zAccl;
+}
+float IMU_GetGyrX() {
+	return imu.xGyro;
+}
+float IMU_GetGyrY() {
+	return imu.yGyro;
+}
+float IMU_GetGyrZ() {
+	return imu.zGyro;
+}
+int IMU_GetMagX() {
+	return imu.xMag;
+}
+int IMU_GetMagY() {
+	return imu.yMag;
+}
+int IMU_GetMagZ() {
+	return imu.zMag;
+}
