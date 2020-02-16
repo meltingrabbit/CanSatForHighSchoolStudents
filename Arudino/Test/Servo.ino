@@ -5,10 +5,11 @@ Servo_t servo;
 
 void SRV_Init() {
 	servo.position = 0;
+	servo.setPosition = 0;
 
 	servo.servo.attach(PIN_SRV);
 	delay(1000);
-	servo.servo.write(servo.position);
+	SRV_Run();
 
 	Serial.println(F("Servo initialization done."));
 }
@@ -16,6 +17,13 @@ void SRV_Init() {
 void SRV_SetPosition(int pos) {
 	servo.position = pos;
 }
+
+int SRV_GetPosition() {
+	return servo.position;
+}
+
+
 void SRV_Run() {
-	servo.servo.write(servo.position);
+	servo.servo.write(servo.setPosition);
+	servo.position = servo.setPosition;
 }
