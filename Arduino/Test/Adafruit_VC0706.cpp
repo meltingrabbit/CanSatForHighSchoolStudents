@@ -295,11 +295,11 @@ boolean Adafruit_VC0706::setImageSize(uint8_t x) {
 
 boolean Adafruit_VC0706::takePicture() {
   frameptr = 0;
-  return cameraFrameBuffCtrl(VC0706_STOPCURRENTFRAME); 
+  return cameraFrameBuffCtrl(VC0706_STOPCURRENTFRAME);
 }
 
 // boolean Adafruit_VC0706::resumeVideo() {
-//   return cameraFrameBuffCtrl(VC0706_RESUMEFRAME); 
+//   return cameraFrameBuffCtrl(VC0706_RESUMEFRAME);
 // }
 
 // boolean Adafruit_VC0706::TVon() {
