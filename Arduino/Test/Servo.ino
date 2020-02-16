@@ -11,14 +11,15 @@ void SRV_Init() {
 	delay(1000);
 	SRV_Run();
 
-	Serial.println(F("Servo init done"));
+	// Serial.println(F("SRV init done"));
+	Serial.println(F("SRV init done"));
 }
 
-void SRV_SetPosition(int pos) {
+void SRV_SetPosition(uint8_t pos) {
 	servo.position = pos;
 }
 
-int SRV_GetPosition() {
+uint8_t SRV_GetPosition() {
 	return servo.position;
 }
 

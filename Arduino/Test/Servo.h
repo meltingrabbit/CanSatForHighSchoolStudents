@@ -11,14 +11,14 @@
 
 
 void SRV_Init();
-void SRV_SetPosition(int pos);
-int SRV_GetPosition();
+void SRV_SetPosition(uint8_t pos);
+uint8_t SRV_GetPosition();
 void SRV_Run();
 
 typedef struct {
 	Servo servo;
-	int setPosition;
-	int position;
+	uint8_t setPosition;
+	uint8_t position;
 } Servo_t;
 
 

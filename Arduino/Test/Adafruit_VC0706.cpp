@@ -456,7 +456,7 @@ uint8_t Adafruit_VC0706::readResponse(uint8_t numbytes, uint8_t timeout) {
     camerabuff[bufferLen++] = hwSerial->read();
 #endif
     // ●●● 安全コード．足した！！！●●●
-    if (bufferLen > (CAMERABUFFSIZ - 3)) {
+    if (bufferLen > (CAMERABUFFSIZ - 1)) {
       Serial.print(F("CAM BUF WARNING!!!"));
     }
   }

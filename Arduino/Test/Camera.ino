@@ -39,7 +39,7 @@ void CAM_Init() {
 
 
 void CAM_TakePic() {
-	SD_Write("TakePic");
+	SD_Write(F("TakePic"));
 
 	// You can read the size back from the camera (optional, but maybe useful?)
 	// uint8_t imgsize = cam.getImageSize();
@@ -50,6 +50,7 @@ void CAM_TakePic() {
 
 	if (! cam.takePicture()) {
 		Serial.println(F("Snap NG"));
+		return;
 	} else {
 		Serial.println(F("Snap OK"));
 	}
