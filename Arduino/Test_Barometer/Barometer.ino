@@ -51,7 +51,13 @@ void BMP_Init() {
 
 	readCoefficients();
 	// write8(BMP280_REGISTER_CONTROL, 0x3F); /* needed? */
-	setSampling();
+	// setSampling();
+	/* Default settings from datasheet. */
+	setSampling(MODE_NORMAL,     /* Operating Mode. */
+							SAMPLING_X2,     /* Temp. oversampling */
+							SAMPLING_X16,    /* Pressure oversampling */
+							FILTER_X16,      /* Filtering. */
+							STANDBY_MS_500); /* Standby time. */
 	delay(100);
 }
 
