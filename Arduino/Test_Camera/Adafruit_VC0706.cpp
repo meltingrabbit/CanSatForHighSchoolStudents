@@ -89,7 +89,7 @@ boolean Adafruit_VC0706::reset() {
 
 // boolean Adafruit_VC0706::setMotionDetect(boolean flag) {
 //   if (! setMotionStatus(VC0706_MOTIONCONTROL, 
-// 			VC0706_UARTMOTION, VC0706_ACTIVATEMOTION))
+//      VC0706_UARTMOTION, VC0706_ACTIVATEMOTION))
 //     return false;
 
 //   uint8_t args[] = {0x01, flag};
@@ -250,9 +250,9 @@ boolean Adafruit_VC0706::setImageSize(uint8_t x) {
 
 // boolean Adafruit_VC0706::setPTZ(uint16_t wz, uint16_t hz, uint16_t pan, uint16_t tilt) {
 //   uint8_t args[] = {0x08, wz >> 8, wz, 
-// 		    hz >> 8, wz, 
-// 		    pan>>8, pan, 
-// 		    tilt>>8, tilt};
+//        hz >> 8, wz, 
+//        pan>>8, pan, 
+//        tilt>>8, tilt};
 
 //   return (! runCommand(VC0706_SET_ZOOM, args, sizeof(args), 5));
 // }
@@ -363,7 +363,7 @@ uint8_t * Adafruit_VC0706::readPicture(uint8_t n) {
 
 
 boolean Adafruit_VC0706::runCommand(uint8_t cmd, uint8_t *args, uint8_t argn, 
-			   uint8_t resplen, boolean flushflag) {
+         uint8_t resplen, boolean flushflag) {
   // flush out anything in the buffer?
   if (flushflag) {
     // readResponse(100, 10); 
