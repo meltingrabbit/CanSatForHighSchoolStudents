@@ -1,17 +1,17 @@
 /*************************************************** 
-  This is a library for the Adafruit TTL JPEG Camera (VC0706 chipset)
+	This is a library for the Adafruit TTL JPEG Camera (VC0706 chipset)
 
-  Pick one up today in the adafruit shop!
-  ------> http://www.adafruit.com/products/397
+	Pick one up today in the adafruit shop!
+	------> http://www.adafruit.com/products/397
 
-  These displays use Serial to communicate, 2 pins are required to interface
+	These displays use Serial to communicate, 2 pins are required to interface
 
-  Adafruit invests time and resources providing this open source code, 
-  please support Adafruit and open-source hardware by purchasing 
-  products from Adafruit!
+	Adafruit invests time and resources providing this open source code, 
+	please support Adafruit and open-source hardware by purchasing 
+	products from Adafruit!
 
-  Written by Limor Fried/Ladyada for Adafruit Industries.  
-  BSD license, all text above must be included in any redistribution
+	Written by Limor Fried/Ladyada for Adafruit Industries.  
+	BSD license, all text above must be included in any redistribution
  ****************************************************/
 
 
@@ -20,46 +20,46 @@
 // Initialization code used by all constructor types
 void Adafruit_VC0706::common_init(void) {
 #if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
-  swSerial  = NULL;
+	swSerial  = NULL;
 #endif
-  hwSerial  = NULL;
-  frameptr  = 0;
-  bufferLen = 0;
-  serialNum = 0;
+	hwSerial  = NULL;
+	frameptr  = 0;
+	bufferLen = 0;
+	serialNum = 0;
 }
 
 #if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
 // Constructor when using SoftwareSerial or NewSoftSerial
-  #if ARDUINO >= 100
-    Adafruit_VC0706::Adafruit_VC0706(SoftwareSerial *ser) {
-  #else
-    Adafruit_VC0706::Adafruit_VC0706(NewSoftSerial *ser) {
-  #endif
-  common_init();  // Set everything to common state, then...
-  swSerial = ser; // ...override swSerial with value passed.
+	#if ARDUINO >= 100
+		Adafruit_VC0706::Adafruit_VC0706(SoftwareSerial *ser) {
+	#else
+		Adafruit_VC0706::Adafruit_VC0706(NewSoftSerial *ser) {
+	#endif
+	common_init();  // Set everything to common state, then...
+	swSerial = ser; // ...override swSerial with value passed.
 }
 #endif
 
 
 // Constructor when using HardwareSerial
 Adafruit_VC0706::Adafruit_VC0706(HardwareSerial *ser) {
-  common_init();  // Set everything to common state, then...
-  hwSerial = ser; // ...override hwSerial with value passed.
+	common_init();  // Set everything to common state, then...
+	hwSerial = ser; // ...override hwSerial with value passed.
 }
 
 boolean Adafruit_VC0706::begin(uint16_t baud) {
 #if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
-  if(swSerial) swSerial->begin(baud);
-  else
+	if(swSerial) swSerial->begin(baud);
+	else
 #endif
-    hwSerial->begin(baud);
-  return reset();
+		hwSerial->begin(baud);
+	return reset();
 }
 
 boolean Adafruit_VC0706::reset() {
-  uint8_t args[] = {0x0};
+	uint8_t args[] = {0x0};
 
-  return runCommand(VC0706_RESET, args, 1, 5);
+	return runCommand(VC0706_RESET, args, 1, 5);
 }
 
 // boolean Adafruit_VC0706::motionDetected() {
@@ -93,7 +93,7 @@ boolean Adafruit_VC0706::reset() {
 //     return false;
 
 //   uint8_t args[] = {0x01, flag};
-  
+	
 //   runCommand(VC0706_COMM_MOTION_CTRL, args, sizeof(args), 5);
 // }
 
@@ -117,9 +117,9 @@ boolean Adafruit_VC0706::reset() {
 // }
 
 boolean Adafruit_VC0706::setImageSize(uint8_t x) {
-  uint8_t args[] = {0x05, 0x04, 0x01, 0x00, 0x19, x};
+	uint8_t args[] = {0x05, 0x04, 0x01, 0x00, 0x19, x};
 
-  return runCommand(VC0706_WRITE_DATA, args, sizeof(args), 5);
+	return runCommand(VC0706_WRITE_DATA, args, sizeof(args), 5);
 }
 
 /****************** downsize image control */
@@ -142,7 +142,7 @@ boolean Adafruit_VC0706::setImageSize(uint8_t x) {
 
 // char * Adafruit_VC0706::getVersion(void) {
 //   uint8_t args[] = {0x01};
-  
+	
 //   sendCommand(VC0706_GEN_VERSION, args, 1);
 //   // get reply
 //   if (!readResponse(CAMERABUFFSIZ, 200)) 
@@ -260,7 +260,7 @@ boolean Adafruit_VC0706::setImageSize(uint8_t x) {
 
 // boolean Adafruit_VC0706::getPTZ(uint16_t &w, uint16_t &h, uint16_t &wz, uint16_t &hz, uint16_t &pan, uint16_t &tilt) {
 //   uint8_t args[] = {0x0};
-  
+	
 //   if (! runCommand(VC0706_GET_ZOOM, args, sizeof(args), 16))
 //     return false;
 //   printBuff();
@@ -294,8 +294,8 @@ boolean Adafruit_VC0706::setImageSize(uint8_t x) {
 
 
 boolean Adafruit_VC0706::takePicture() {
-  frameptr = 0;
-  return cameraFrameBuffCtrl(VC0706_STOPCURRENTFRAME);
+	frameptr = 0;
+	return cameraFrameBuffCtrl(VC0706_STOPCURRENTFRAME);
 }
 
 // boolean Adafruit_VC0706::resumeVideo() {
@@ -312,168 +312,168 @@ boolean Adafruit_VC0706::takePicture() {
 // }
 
 boolean Adafruit_VC0706::cameraFrameBuffCtrl(uint8_t command) {
-  uint8_t args[] = {0x1, command};
-  return runCommand(VC0706_FBUF_CTRL, args, sizeof(args), 5);
+	uint8_t args[] = {0x1, command};
+	return runCommand(VC0706_FBUF_CTRL, args, sizeof(args), 5);
 }
 
 uint32_t Adafruit_VC0706::frameLength(void) {
-  uint8_t args[] = {0x01, 0x00};
-  if (!runCommand(VC0706_GET_FBUF_LEN, args, sizeof(args), 9))
-    return 0;
+	uint8_t args[] = {0x01, 0x00};
+	if (!runCommand(VC0706_GET_FBUF_LEN, args, sizeof(args), 9))
+		return 0;
 
-  uint32_t len;
-  len = camerabuff[5];
-  len <<= 8;
-  len |= camerabuff[6];
-  len <<= 8;
-  len |= camerabuff[7];
-  len <<= 8;
-  len |= camerabuff[8];
+	uint32_t len;
+	len = camerabuff[5];
+	len <<= 8;
+	len |= camerabuff[6];
+	len <<= 8;
+	len |= camerabuff[7];
+	len <<= 8;
+	len |= camerabuff[8];
 
-  return len;
+	return len;
 }
 
 
 uint8_t Adafruit_VC0706::available(void) {
-  return bufferLen;
+	return bufferLen;
 }
 
 
 uint8_t * Adafruit_VC0706::readPicture(uint8_t n) {
-  uint8_t args[] = {0x0C, 0x0, 0x0A, 
-                    0, 0, frameptr >> 8, frameptr & 0xFF, 
-                    0, 0, 0, n, 
-                    CAMERADELAY >> 8, CAMERADELAY & 0xFF};
+	uint8_t args[] = {0x0C, 0x0, 0x0A, 
+										0, 0, frameptr >> 8, frameptr & 0xFF, 
+										0, 0, 0, n, 
+										CAMERADELAY >> 8, CAMERADELAY & 0xFF};
 
-  if (! runCommand(VC0706_READ_FBUF, args, sizeof(args), 5, false))
-    return 0;
-
-
-  // read into the buffer PACKETLEN!
-  if (readResponse(n+5, CAMERADELAY) == 0) 
-      return 0;
+	if (! runCommand(VC0706_READ_FBUF, args, sizeof(args), 5, false))
+		return 0;
 
 
-  frameptr += n;
+	// read into the buffer PACKETLEN!
+	if (readResponse(n+5, CAMERADELAY) == 0) 
+			return 0;
 
-  return camerabuff;
+
+	frameptr += n;
+
+	return camerabuff;
 }
 
 /**************** low level commands */
 
 
 boolean Adafruit_VC0706::runCommand(uint8_t cmd, uint8_t *args, uint8_t argn, 
-			   uint8_t resplen, boolean flushflag) {
-  // flush out anything in the buffer?
-  if (flushflag) {
-    // readResponse(100, 10); 
-    // ●●● 変えた！！！ ●●●
-    readResponse(CAMERABUFFSIZ, 10); 
-  }
+				 uint8_t resplen, boolean flushflag) {
+	// flush out anything in the buffer?
+	if (flushflag) {
+		// readResponse(100, 10); 
+		// ●●● 変えた！！！ ●●●
+		readResponse(CAMERABUFFSIZ, 10); 
+	}
 
-  sendCommand(cmd, args, argn);
-  if (readResponse(resplen, 200) != resplen) 
-    return false;
-  if (! verifyResponse(cmd))
-    return false;
-  return true;
+	sendCommand(cmd, args, argn);
+	if (readResponse(resplen, 200) != resplen) 
+		return false;
+	if (! verifyResponse(cmd))
+		return false;
+	return true;
 }
 
 void Adafruit_VC0706::sendCommand(uint8_t cmd, uint8_t args[] = 0, uint8_t argn = 0) {
 #if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
-    if(swSerial) {
+		if(swSerial) {
 #if ARDUINO >= 100
-    swSerial->write((byte)0x56);
-    swSerial->write((byte)serialNum);
-    swSerial->write((byte)cmd);
+		swSerial->write((byte)0x56);
+		swSerial->write((byte)serialNum);
+		swSerial->write((byte)cmd);
 
-    for (uint8_t i=0; i<argn; i++) {
-      swSerial->write((byte)args[i]);
-      //Serial.print(" 0x");
-      //Serial.print(args[i], HEX);
-    }
+		for (uint8_t i=0; i<argn; i++) {
+			swSerial->write((byte)args[i]);
+			//Serial.print(" 0x");
+			//Serial.print(args[i], HEX);
+		}
 #else
-    swSerial->print(0x56, BYTE);
-    swSerial->print(serialNum, BYTE);
-    swSerial->print(cmd, BYTE);
+		swSerial->print(0x56, BYTE);
+		swSerial->print(serialNum, BYTE);
+		swSerial->print(cmd, BYTE);
 
-    for (uint8_t i=0; i<argn; i++) {
-      swSerial->print(args[i], BYTE);
-      //Serial.print(" 0x");
-      //Serial.print(args[i], HEX);
-    }
+		for (uint8_t i=0; i<argn; i++) {
+			swSerial->print(args[i], BYTE);
+			//Serial.print(" 0x");
+			//Serial.print(args[i], HEX);
+		}
 #endif
-  }
-    else
+	}
+		else
 #endif
-  {
+	{
 #if ARDUINO >= 100
-    hwSerial->write((byte)0x56);
-    hwSerial->write((byte)serialNum);
-    hwSerial->write((byte)cmd);
+		hwSerial->write((byte)0x56);
+		hwSerial->write((byte)serialNum);
+		hwSerial->write((byte)cmd);
 
-    for (uint8_t i=0; i<argn; i++) {
-      hwSerial->write((byte)args[i]);
-      //Serial.print(" 0x");
-      //Serial.print(args[i], HEX);
-    }
+		for (uint8_t i=0; i<argn; i++) {
+			hwSerial->write((byte)args[i]);
+			//Serial.print(" 0x");
+			//Serial.print(args[i], HEX);
+		}
 #else
-    hwSerial->print(0x56, BYTE);
-    hwSerial->print(serialNum, BYTE);
-    hwSerial->print(cmd, BYTE);
+		hwSerial->print(0x56, BYTE);
+		hwSerial->print(serialNum, BYTE);
+		hwSerial->print(cmd, BYTE);
 
-    for (uint8_t i=0; i<argn; i++) {
-      hwSerial->print(args[i], BYTE);
-      //Serial.print(" 0x");
-      //Serial.print(args[i], HEX);
-    }
+		for (uint8_t i=0; i<argn; i++) {
+			hwSerial->print(args[i], BYTE);
+			//Serial.print(" 0x");
+			//Serial.print(args[i], HEX);
+		}
 #endif
-  }
+	}
 //Serial.println();
 }
 
 uint8_t Adafruit_VC0706::readResponse(uint8_t numbytes, uint8_t timeout) {
-  uint8_t counter = 0;
-  bufferLen = 0;
-  int avail;
+	uint8_t counter = 0;
+	bufferLen = 0;
+	int avail;
  
-  while ((timeout != counter) && (bufferLen != numbytes)){
+	while ((timeout != counter) && (bufferLen != numbytes)){
 #if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
-    avail = swSerial ? swSerial->available() : hwSerial->available();
+		avail = swSerial ? swSerial->available() : hwSerial->available();
 #else
-    avail = hwSerial->available();
+		avail = hwSerial->available();
 #endif
-    if (avail <= 0) {
-      delay(1);
-      counter++;
-      continue;
-    }
-    counter = 0;
-    // there's a byte!
+		if (avail <= 0) {
+			delay(1);
+			counter++;
+			continue;
+		}
+		counter = 0;
+		// there's a byte!
 #if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
-    camerabuff[bufferLen++] = swSerial ? swSerial->read() : hwSerial->read();
+		camerabuff[bufferLen++] = swSerial ? swSerial->read() : hwSerial->read();
 #else
-    camerabuff[bufferLen++] = hwSerial->read();
+		camerabuff[bufferLen++] = hwSerial->read();
 #endif
-    // ●●● 安全コード．足した！！！●●●
-    if (bufferLen > (CAMERABUFFSIZ - 1)) {
-      Serial.println(F("CAM BUF WARNING!!!"));
-    }
-  }
-  //printBuff();
+		// ●●● 安全コード．足した！！！●●●
+		if (bufferLen > (CAMERABUFFSIZ - 1)) {
+			Serial.println(F("CAM BUF WARNING!!!"));
+		}
+	}
+	//printBuff();
 //camerabuff[bufferLen] = 0;
 //Serial.println((char*)camerabuff);
-  return bufferLen;
+	return bufferLen;
 }
 
 boolean Adafruit_VC0706::verifyResponse(uint8_t command) {
-  if ((camerabuff[0] != 0x76) ||
-      (camerabuff[1] != serialNum) ||
-      (camerabuff[2] != command) ||
-      (camerabuff[3] != 0x0))
-      return false;
-  return true;
-  
+	if ((camerabuff[0] != 0x76) ||
+			(camerabuff[1] != serialNum) ||
+			(camerabuff[2] != command) ||
+			(camerabuff[3] != 0x0))
+			return false;
+	return true;
+	
 }
 
 // void Adafruit_VC0706::printBuff() {

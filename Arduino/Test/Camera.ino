@@ -84,7 +84,7 @@ void CAM_TakePic() {
 	// サーボのプルプルを防ぐ
 	SRV_Detach();
 
-	int32_t time = millis();
+	// int32_t time = millis();
 	// pinMode(8, OUTPUT);
 	// Read all the data up to # bytes!
 	byte wCount = 0; // For counting # of writes
@@ -105,8 +105,8 @@ void CAM_TakePic() {
 
 	SRV_Attach();
 
-	time = millis() - time;
+	// time = millis() - time;
 	Serial.println(F("done!"));
-	Serial.print(time);
-	Serial.println(F(" ms elapsed"));
+	// Serial.print(time);
+	// Serial.println(F(" ms elapsed"));
 }
