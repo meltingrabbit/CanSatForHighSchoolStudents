@@ -60,7 +60,7 @@
 // #define VC0706_GET_ZOOM 0x53
 
 // #define CAMERABUFFSIZ 100
-#define CAMERABUFFSIZ 40      // 減らした．多分問題ないが，怖いので安全コードも足した． L.370, L.458あたり
+#define CAMERABUFFSIZ 50      // 減らした．多分問題ないが，怖いので安全コードも足した． L.370, L.458あたり
 #define CAMERADELAY 10
 
 

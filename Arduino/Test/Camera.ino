@@ -50,7 +50,7 @@ void CAM_TakePic() {
 
 	if (! cam.takePicture()) {
 		Serial.println(F("Snap NG"));
-		return;
+		// return;
 	} else {
 		Serial.println(F("Snap OK"));
 	}
