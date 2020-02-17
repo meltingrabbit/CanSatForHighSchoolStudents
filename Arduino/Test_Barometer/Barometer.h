@@ -39,10 +39,10 @@ enum {
 	BMP280_REGISTER_DIG_P8 = 0x9C,
 	BMP280_REGISTER_DIG_P9 = 0x9E,
 	BMP280_REGISTER_CHIPID = 0xD0,
-	BMP280_REGISTER_VERSION = 0xD1,
-	BMP280_REGISTER_SOFTRESET = 0xE0,
-	BMP280_REGISTER_CAL26 = 0xE1, /**< R calibration = 0xE1-0xF0 */
-	BMP280_REGISTER_STATUS = 0xF3,
+	// BMP280_REGISTER_VERSION = 0xD1,
+	// BMP280_REGISTER_SOFTRESET = 0xE0,
+	// BMP280_REGISTER_CAL26 = 0xE1, /**< R calibration = 0xE1-0xF0 */
+	// BMP280_REGISTER_STATUS = 0xF3,
 	BMP280_REGISTER_CONTROL = 0xF4,
 	BMP280_REGISTER_CONFIG = 0xF5,
 	BMP280_REGISTER_PRESSUREDATA = 0xF7,
@@ -99,15 +99,15 @@ typedef struct {
 /** Oversampling rate for the sensor. */
 enum sensor_sampling {
 	/** No over-sampling. */
-	SAMPLING_NONE = 0x00,
+	// SAMPLING_NONE = 0x00,
 	/** 1x over-sampling. */
-	SAMPLING_X1 = 0x01,
+	// SAMPLING_X1 = 0x01,
 	/** 2x over-sampling. */
 	SAMPLING_X2 = 0x02,
 	/** 4x over-sampling. */
-	SAMPLING_X4 = 0x03,
+	// SAMPLING_X4 = 0x03,
 	/** 8x over-sampling. */
-	SAMPLING_X8 = 0x04,
+	// SAMPLING_X8 = 0x04,
 	/** 16x over-sampling. */
 	SAMPLING_X16 = 0x05
 };
@@ -129,11 +129,11 @@ enum sensor_filter {
 	/** No filtering. */
 	FILTER_OFF = 0x00,
 	/** 2x filtering. */
-	FILTER_X2 = 0x01,
+	// FILTER_X2 = 0x01,
 	/** 4x filtering. */
-	FILTER_X4 = 0x02,
+	// FILTER_X4 = 0x02,
 	/** 8x filtering. */
-	FILTER_X8 = 0x03,
+	// FILTER_X8 = 0x03,
 	/** 16x filtering. */
 	FILTER_X16 = 0x04
 };
@@ -143,19 +143,19 @@ enum standby_duration {
 	/** 1 ms standby. */
 	STANDBY_MS_1 = 0x00,
 	/** 62.5 ms standby. */
-	STANDBY_MS_63 = 0x01,
+	// STANDBY_MS_63 = 0x01,
 	/** 125 ms standby. */
-	STANDBY_MS_125 = 0x02,
+	// STANDBY_MS_125 = 0x02,
 	/** 250 ms standby. */
-	STANDBY_MS_250 = 0x03,
+	// STANDBY_MS_250 = 0x03,
 	/** 500 ms standby. */
 	STANDBY_MS_500 = 0x04,
 	/** 1000 ms standby. */
-	STANDBY_MS_1000 = 0x05,
+	// STANDBY_MS_1000 = 0x05,
 	/** 2000 ms standby. */
-	STANDBY_MS_2000 = 0x06,
+	// STANDBY_MS_2000 = 0x06,
 	/** 4000 ms standby. */
-	STANDBY_MS_4000 = 0x07
+	// STANDBY_MS_4000 = 0x07
 };
 
 
@@ -165,7 +165,12 @@ enum standby_duration {
 void BMP_Init();
 void BMP_Update();
 
+
 typedef struct {
+	ctrl_meas         _measReg;
+	config            _configReg;
+	bmp280_calib_data _bmp280_calib;
+	int32_t           t_fine;
 } Barometer_t;
 
 
