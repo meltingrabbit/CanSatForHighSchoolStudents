@@ -4,6 +4,8 @@
 #include "./Servo.h"
 #include "./Light.h"
 #include "./Camera.h"
+#include "./Barometer.h"
+
 
 uint16_t loop_count = 0;
 
@@ -17,9 +19,11 @@ void setup()
 	SD_Init();		// これは絶対最初に初期化！
 	CAM_Init();		// SDの後！
 	IMU_Init();
-	GPS_Init();
+	// GPS_Init();
 	SRV_Init();
 	LIT_Init();
+	BMP_Init();
+
 
 	Serial.println(F("Init done"));
 	delay(300);
@@ -31,9 +35,10 @@ void loop()
 	IMU_PrintAcc();
 	IMU_PrintGyr();
 	IMU_PrintMag();
-	GPS_Update();
-	GPS_Print();
+	// GPS_Update();
+	// GPS_Print();
 	LIT_Print();
+	BMP_Update();
 	if (loop_count % 10 == 3) {
 		CAM_TakePic();
 	}
