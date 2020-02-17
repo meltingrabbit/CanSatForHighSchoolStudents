@@ -2,8 +2,12 @@
 ## 概要
 カメラの単体テストコード
 
+SDカードについては
+[こちら](../SD/README.md)
+を参照
+
 ## 回路図
-![](../../Schematic/PNG/Camera.png)
+![](../../Schematic/PNG/Camera_SD.png)
 
 + 通信はシリアル通信 (TX, RX)
 + 電源電圧は5V
