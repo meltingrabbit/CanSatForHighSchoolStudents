@@ -19,5 +19,5 @@ void loop()
 	GPS_Print();
 
 	loop_count++;
-	delay(250);
+	delay(25);
 }
