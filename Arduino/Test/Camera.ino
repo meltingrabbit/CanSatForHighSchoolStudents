@@ -1,5 +1,6 @@
 #include "./Camera.h"
 #include "./SD.h"
+#include "./Servo.h"
 
 
 Camera_t camera;
@@ -80,6 +81,9 @@ void CAM_TakePic() {
 	Serial.print(jpglen, DEC);
 	Serial.print(F(" byte."));
 
+	// サーボのプルプルを防ぐ
+	SRV_Detach();
+
 	int32_t time = millis();
 	// pinMode(8, OUTPUT);
 	// Read all the data up to # bytes!
@@ -98,6 +102,8 @@ void CAM_TakePic() {
 		jpglen -= bytesToRead;
 	}
 	imgFile.close();
+
+	SRV_Attach();
 
 	time = millis() - time;
 	Serial.println(F("done!"));

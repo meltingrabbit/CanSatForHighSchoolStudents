@@ -15,6 +15,8 @@ void SRV_Init();
 void SRV_SetPosition(uint8_t pos);
 uint8_t SRV_GetPosition();
 void SRV_Run();
+void SRV_Detach();
+void SRV_Attach();
 
 typedef struct {
 	Servo servo;
