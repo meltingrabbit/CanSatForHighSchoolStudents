@@ -16,7 +16,7 @@ void SRV_Init() {
 }
 
 void SRV_SetPosition(uint8_t pos) {
-	servo.position = pos;
+	servo.setPosition = pos;
 }
 
 uint8_t SRV_GetPosition() {
