@@ -20,6 +20,7 @@ void loop()
 {
 
 	BMP_Update();
+	BMP_Print();
 
 	loop_count++;
 	delay(1000);

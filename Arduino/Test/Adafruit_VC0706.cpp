@@ -340,9 +340,9 @@ uint8_t Adafruit_VC0706::available(void) {
 
 
 uint8_t * Adafruit_VC0706::readPicture(uint8_t n) {
-	uint8_t args[] = {0x0C, 0x0, 0x0A, 
-										0, 0, frameptr >> 8, frameptr & 0xFF, 
-										0, 0, 0, n, 
+	uint8_t args[] = {0x0C, 0x0, 0x0A,
+										0, 0, frameptr >> 8, frameptr & 0xFF,
+										0, 0, 0, n,
 										CAMERADELAY >> 8, CAMERADELAY & 0xFF};
 
 	if (! runCommand(VC0706_READ_FBUF, args, sizeof(args), 5, false))
@@ -350,8 +350,8 @@ uint8_t * Adafruit_VC0706::readPicture(uint8_t n) {
 
 
 	// read into the buffer PACKETLEN!
-	if (readResponse(n+5, CAMERADELAY) == 0) 
-			return 0;
+	if (readResponse(n+5, CAMERADELAY) == 0)
+		return 0;
 
 
 	frameptr += n;
@@ -366,13 +366,13 @@ boolean Adafruit_VC0706::runCommand(uint8_t cmd, uint8_t *args, uint8_t argn,
 				 uint8_t resplen, boolean flushflag) {
 	// flush out anything in the buffer?
 	if (flushflag) {
-		// readResponse(100, 10); 
+		// readResponse(100, 10);
 		// ●●● 変えた！！！ ●●●
-		readResponse(CAMERABUFFSIZ, 10); 
+		readResponse(CAMERABUFFSIZ, 10);
 	}
 
 	sendCommand(cmd, args, argn);
-	if (readResponse(resplen, 200) != resplen) 
+	if (readResponse(resplen, 200) != resplen)
 		return false;
 	if (! verifyResponse(cmd))
 		return false;
@@ -436,7 +436,7 @@ uint8_t Adafruit_VC0706::readResponse(uint8_t numbytes, uint8_t timeout) {
 	uint8_t counter = 0;
 	bufferLen = 0;
 	int avail;
- 
+
 	while ((timeout != counter) && (bufferLen != numbytes)){
 #if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
 		avail = swSerial ? swSerial->available() : hwSerial->available();
@@ -473,13 +473,12 @@ boolean Adafruit_VC0706::verifyResponse(uint8_t command) {
 			(camerabuff[3] != 0x0))
 			return false;
 	return true;
-	
 }
 
 // void Adafruit_VC0706::printBuff() {
 //   for (uint8_t i = 0; i< bufferLen; i++) {
 //     Serial.print(" 0x");
-//     Serial.print(camerabuff[i], HEX); 
+//     Serial.print(camerabuff[i], HEX);
 //   }
 //   Serial.println();
 // }

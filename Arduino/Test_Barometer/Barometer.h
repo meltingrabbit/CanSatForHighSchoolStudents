@@ -164,13 +164,18 @@ enum standby_duration {
 
 void BMP_Init();
 void BMP_Update();
+void BMP_Print();
+float BMP_GetPressure();
+float BMP_GetTemperature();
 
 
 typedef struct {
 	ctrl_meas         _measReg;
 	config            _configReg;
 	bmp280_calib_data _bmp280_calib;
-	int32_t           t_fine;
+	// int32_t           t_fine;
+	float             pressure;
+	float             temperature;
 } Barometer_t;
 
 

@@ -39,6 +39,7 @@ void loop()
 	GPS_Print();
 	LIT_Print();
 	BMP_Update();
+	BMP_Print();
 	if (loop_count % 10 == 3) {
 		CAM_TakePic();
 	}
