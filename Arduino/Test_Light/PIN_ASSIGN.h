@@ -20,8 +20,8 @@
 #define PIN_SW 5
 
 
-// #define SDA 21
-// #define SCL 22
+// #define SDA A4
+// #define SCL A5
 
 
 #endif
