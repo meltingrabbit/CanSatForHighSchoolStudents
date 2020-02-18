@@ -20,7 +20,13 @@
 
 
 ## フォルダ構成
-+ `./Arduino` ：サンプルコード
-	- [GPS単体テストコード](./Arduino/Test_GPS)
++ `./Arduino` ：サンプルコードとその設定など
+	- [GPSの単体テストコード](./Arduino/Test_GPS)
+	- [9軸センサの単体テストコード](./Arduino/Test_IMU)
+	- [高度計（気圧計）の単体テストコード](./Arduino/Test_Barometer)
+	- [光センサの単体テストコード](./Arduino/Test_Light)
+	- [カメラの単体テストコード](./Arduino/Test_Camera)
+	- [サーボモータの単体テストコード](./Arduino/Test_Servo)
+	- [SDカードの単体テストコード](./Arduino/Test_SD)
 + `./Schematic`
 	- 回路図
