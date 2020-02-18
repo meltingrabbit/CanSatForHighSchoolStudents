@@ -28,5 +28,5 @@
 	- [カメラの単体テストコード](./Arduino/Test_Camera)
 	- [サーボモータの単体テストコード](./Arduino/Test_Servo)
 	- [SDカードの単体テストコード](./Arduino/Test_SD)
-+ `./Schematic`
-	- 回路図
+	- [全機器の統合状態のテストコード](./Arduino/Test)
++ `./Schematic` ：回路図
