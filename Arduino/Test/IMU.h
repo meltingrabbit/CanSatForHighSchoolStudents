@@ -54,6 +54,7 @@ int16_t IMU_GetMagZ();
 
 
 typedef struct {
+	// floatだとメモリを多く消費するので，intで保持し，Getterで変換
 	int16_t xAccl;
 	int16_t yAccl;
 	int16_t zAccl;
