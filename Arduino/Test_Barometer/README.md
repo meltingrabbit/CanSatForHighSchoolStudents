@@ -7,6 +7,7 @@
 メモリ節約のため，ライブラリは未使用  
 （[Adafruitのライブラリ使用版](../Test_Barometer_with_lib/README.md)）
 
+
 ## 機器詳細
 気圧センサ GY-BMP280-3.3  
 https://www.led-paradise.com/product/2334
