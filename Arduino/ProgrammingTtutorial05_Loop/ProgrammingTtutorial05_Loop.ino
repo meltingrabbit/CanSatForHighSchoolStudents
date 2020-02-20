@@ -7,7 +7,7 @@ void setup()
 		delay(100);
 	}
 
-	for (int num = 0; num <= 1-; num = num + 1) {
+	for (int num = 0; num <= 10; num = num + 1) {
 
 		if (num == 5) {
 			break;
