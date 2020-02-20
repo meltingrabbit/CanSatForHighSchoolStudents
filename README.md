@@ -35,6 +35,6 @@
 		* [SDカードの単体テスト](./Arduino/Test_SD)
 		* [全機器の統合状態のテスト](./Arduino/Test)
 	- プログラミング講習
-		* [HelloWorld](./Arduino/ProgrammingTtutorial01_HelloWorld)
+		* [01. HelloWorld](./Arduino/ProgrammingTtutorial01_HelloWorld)
 + `./Schematic` ：[回路図](./Schematic)
 + `./Structure` ：[構造など](./Structure)
