@@ -3,8 +3,8 @@
 + 高校生向け缶サット開発キット
 + Arduino Nanoを想定
 
-<img src="./overview_in_bottle.jpg" width="30%"> <img src="./overview.jpg" width="30%">
-<img src="./board_side.jpg" width="50%">
+<img src=".Structure/overview_in_bottle.jpg" width="30%"> <img src=".Structure/overview.jpg" width="30%">
+<img src=".Structure/board_side.jpg" width="50%">
 
 
 
