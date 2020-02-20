@@ -36,5 +36,11 @@
 		* [全機器の統合状態のテスト](./Arduino/Test)
 	- プログラミング講習
 		* [01. HelloWorld](./Arduino/ProgrammingTtutorial01_HelloWorld)
+		* [02. Variable](./Arduino/ProgrammingTtutorial02_Variable)
+		* [03. Operator](./Arduino/ProgrammingTtutorial03_Operator)
+		* [04. If Else](./Arduino/ProgrammingTtutorial04_IfElse)
+		* [05. Loop](./Arduino/ProgrammingTtutorial05_Loop)
+		* [06. Function](./Arduino/ProgrammingTtutorial06_Function)
+		* [07. Device](./Arduino/ProgrammingTtutorial07_Device)
 + `./Schematic` ：[回路図](./Schematic)
 + `./Structure` ：[構造など](./Structure)
