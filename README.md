@@ -1,6 +1,6 @@
 # 高校生のためのCanSat開発キット
 ## 概要
-+ 高校生向け缶サット開発キットのためのコード類
++ 高校生向け缶サット開発キット
 + Arduino Nanoを想定
 
 
@@ -29,4 +29,5 @@
 	- [サーボモータの単体テスト](./Arduino/Test_Servo)
 	- [SDカードの単体テスト](./Arduino/Test_SD)
 	- [全機器の統合状態のテスト](./Arduino/Test)
-+ `./Schematic` ：回路図
++ `./Schematic` ：[回路図](./Schematic)
++ `./Structure` ：[構造など](./Structure)
