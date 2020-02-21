@@ -27,6 +27,11 @@ void loop()
 	// サーボは 0 - 180
 	uint8_t angle = (uint8_t)( (float)light * 180.0 / 1024.0);
 
+	Serial.print(F("Light = "));
+	Serial.print(light);
+	Serial.print(F(", Angle = "));
+	Serial.println(angle);
+
 	SRV_SetPosition(angle);
 	SRV_Run();
 
