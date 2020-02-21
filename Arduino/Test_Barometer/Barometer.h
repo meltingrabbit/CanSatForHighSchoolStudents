@@ -16,6 +16,16 @@ Adafruit_Sensor
 */
 
 
+// #################### Barometer ####################
+
+
+void BMP_Init();
+void BMP_Update();
+void BMP_Print();
+float BMP_GetPressure();
+float BMP_GetTemperature();
+
+
 
 #define BMP280_ADDRESS (0x76) /**< The default I2C address for the sensor. */
 // #define BMP280_ADDRESS (0x77) /**< The default I2C address for the sensor. */
@@ -157,16 +167,6 @@ enum standby_duration {
 	/** 4000 ms standby. */
 	// STANDBY_MS_4000 = 0x07
 };
-
-
-// #################### Barometer ####################
-
-
-void BMP_Init();
-void BMP_Update();
-void BMP_Print();
-float BMP_GetPressure();
-float BMP_GetTemperature();
 
 
 typedef struct {
