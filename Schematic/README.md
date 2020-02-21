@@ -1,2 +1,10 @@
 # 回路図
-
++ 詳細は，各機器の動作試験コードのページを参照
+	- [GPSの単体テスト](../Arduino/Test_GPS)
+	- [9軸センサの単体テスト](../Arduino/Test_IMU)
+	- [高度計（気圧計）の単体テスト](../Arduino/Test_Barometer)
+	- [光センサの単体テスト](../Arduino/Test_Light)
+	- [カメラの単体テスト](../Arduino/Test_Camera)
+	- [サーボモータの単体テスト](../Arduino/Test_Servo)
+	- [SDカードの単体テスト](../Arduino/Test_SD)
+	- [全機器の統合状態のテスト](../Arduino/Test)
