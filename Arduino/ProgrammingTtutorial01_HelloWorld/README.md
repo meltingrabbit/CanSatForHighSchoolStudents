@@ -5,7 +5,7 @@
 
 
 ## ソースコード
-```
+```cpp
 void setup()                              // 最初に実行される
 {
   Serial.begin(9600);                     // 通信速度 9600 bps で通信開始
@@ -18,7 +18,7 @@ void setup()                              // 最初に実行される
 void loop()                               // Setup後，繰り返し実行される
 {
   Serial.println("Loop!");
-  // Serial.println(“Comment”);         // コメント行（実行されない）
+  // Serial.println("Comment");           // コメント行（実行されない）
   delay(1000);
 }
 ```
