@@ -35,6 +35,7 @@
 		* [SDカードの単体テスト](./Arduino/Test_SD)
 		* [全機器の統合状態のテスト](./Arduino/Test)
 	- プログラミング講習
+		* [00. 事前準備](./Arduino/ProgrammingTutorial00_Preparation)
 		* [01. HelloWorld](./Arduino/ProgrammingTutorial01_HelloWorld)
 		* [02. Variable](./Arduino/ProgrammingTutorial02_Variable)
 		* [03. Operator](./Arduino/ProgrammingTutorial03_Operator)
