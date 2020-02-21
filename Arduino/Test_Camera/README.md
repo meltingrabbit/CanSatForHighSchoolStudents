@@ -24,4 +24,6 @@ https://www.switch-science.com/catalog/1241/
 
 
 ## 撮影画像
+上下逆に取り付けてしまた...（笑）
+
 ![](./D004_001.JPG)
