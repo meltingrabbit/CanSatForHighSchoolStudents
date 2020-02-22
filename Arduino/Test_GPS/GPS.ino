@@ -110,7 +110,7 @@ void GPS_Print() {
 	Serial.print(F(", Lng="));
 	Serial.print(gps.lng,6);
 	Serial.print(F(", Height="));
-	Serial.print(gps.height,6);
+	Serial.print(gps.height,2);
 	Serial.print(F(", RecTime="));
 	Serial.print(gps.last_received_time);
 	Serial.println(F(""));

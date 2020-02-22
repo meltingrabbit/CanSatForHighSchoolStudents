@@ -104,11 +104,11 @@ void GPS_Update() {
 
 void GPS_Print() {
 	Serial.print(F("GPS: Lat="));
-	Serial.print(gps.lat);
+	Serial.print(gps.lat,6);
 	Serial.print(F(", Lng="));
-	Serial.print(gps.lng);
+	Serial.print(gps.lng,6);
 	Serial.print(F(", Height="));
-	Serial.print(gps.height);
+	Serial.print(gps.height,2);
 	Serial.print(F(", RecTime="));
 	Serial.print(gps.last_received_time);
 	Serial.println(F(""));
@@ -144,7 +144,7 @@ void GPS_Print() {
 // NMEAの緯度経度を「度」(DD)のfloatに変換する
 // dddmm.mmmmmm
 float GPS_NMEA2DDf_(float val) {
-	int   d = val / 100;
+	int   d = (int)(val / 100);
 	float m = (((val / 100.0) - d) * 100.0) / 60;
 	// float s = (((((val / 100.0) - d) * 100.0) - m) * 60) / (60 * 60);
 	// return d + m + s;
