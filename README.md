@@ -36,6 +36,7 @@
 	- 機器のテストコード（複数使用）
 		* [全機器の統合状態のテスト](./Arduino/Test)
 		* [光センサを４並列にした光方向センサ](./Arduino/Test_Light4)
+		* [サーボモータの２並列版](./Arduino/Test_Servo2)
 	- プログラミング講習
 		* [00. 事前準備](./Arduino/ProgrammingTutorial00_Preparation)
 		* [01. HelloWorld](./Arduino/ProgrammingTutorial01_HelloWorld)
