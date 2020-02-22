@@ -1,7 +1,5 @@
 #include "./IMU.h"
 
-uint16_t loop_count = 0;
-
 void setup()
 {
 	// Wire(Arduino-I2C)の初期化
@@ -9,7 +7,7 @@ void setup()
 	// デバック用シリアル通信は9600bps
 	Serial.begin(9600);
 
-	IMU_Init();
+	IMU_Init();			// 9軸センサを初期化
 
 	Serial.println(F("Init done"));
 	delay(300);
@@ -17,11 +15,10 @@ void setup()
 
 void loop()
 {
-	IMU_UpdateAll();
-	IMU_PrintAcc();
-	IMU_PrintGyr();
-	IMU_PrintMag();
+	IMU_UpdateAll();		// 9軸センサの値をアップデート
+	IMU_PrintAcc();			// 取得した加速度を表示
+	IMU_PrintGyr();			// 取得した角加速度を表示
+	IMU_PrintMag();			// 取得した磁気を表示
 
-	loop_count++;
-	delay(250);
+	delay(250);					// 250 ms 待つ
 }

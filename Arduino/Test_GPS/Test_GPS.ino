@@ -1,13 +1,12 @@
 #include "./GPS.h"
 
-uint16_t loop_count = 0;
 
 void setup()
 {
 	// デバック用シリアル通信は9600bps
 	Serial.begin(9600);
 
-	GPS_Init();
+	GPS_Init();		// GPSの初期化
 
 	Serial.println(F("Init done"));
 	delay(300);
@@ -15,9 +14,8 @@ void setup()
 
 void loop()
 {
-	GPS_Update();
-	GPS_Print();
+	GPS_Update();		// GPSの値をアップデート
+	GPS_Print();		// GPSの値を表示
 
-	loop_count++;
-	delay(25);
+	delay(25);		// 25 ms 待つ
 }

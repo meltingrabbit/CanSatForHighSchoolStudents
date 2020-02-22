@@ -1,13 +1,12 @@
 #include "./Light.h"
 
-uint16_t loop_count = 0;
 
 void setup()
 {
 	// デバック用シリアル通信は9600bps
 	Serial.begin(9600);
 
-	LIT_Init();
+	LIT_Init();			// 光センサを初期化
 
 	Serial.println(F("Init done"));
 	delay(300);
@@ -15,8 +14,7 @@ void setup()
 
 void loop()
 {
-	LIT_Print();
+	LIT_Print();			// 光センサの値を表示
 
-	loop_count++;
-	delay(50);
+	delay(50);				// 50 ms 待つ
 }

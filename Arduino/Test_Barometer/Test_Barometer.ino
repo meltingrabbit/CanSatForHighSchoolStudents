@@ -1,8 +1,5 @@
 #include "./Barometer.h"
 
-
-uint16_t loop_count = 0;
-
 void setup()
 {
 	// Wire(Arduino-I2C)の初期化
@@ -10,6 +7,7 @@ void setup()
 	// デバック用シリアル通信は9600bps
 	Serial.begin(9600);
 
+	// 初期化
 	BMP_Init();
 
 	Serial.println(F("Init done"));
@@ -19,9 +17,8 @@ void setup()
 void loop()
 {
 
-	BMP_Update();
-	BMP_Print();
+	BMP_Update();		// 気圧の値をアップデート
+	BMP_Print();		// アップデートした値を表示
 
-	loop_count++;
-	delay(1000);
+	delay(1000);		// 1000 ms 待つ
 }

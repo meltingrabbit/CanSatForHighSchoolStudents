@@ -6,7 +6,7 @@ void setup()
 	// デバック用シリアル通信は9600bps
 	Serial.begin(9600);
 
-	SRV_Init();
+	SRV_Init();		// サーボモータを初期化
 
 	Serial.println(F("Init done"));
 	delay(300);
@@ -14,7 +14,6 @@ void setup()
 
 void loop()
 {
-
 	Serial.println(loop_count);
 	if (loop_count % 10 == 0) {
 		Serial.println(F("Move Up!"));

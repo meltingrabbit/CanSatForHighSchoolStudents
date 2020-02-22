@@ -1,7 +1,6 @@
 #include "./SD.h"
 #include "./Camera.h"
 
-uint16_t loop_count = 0;
 
 void setup()
 {
@@ -10,6 +9,7 @@ void setup()
 	// デバック用シリアル通信は9600bps
 	Serial.begin(9600);
 
+	// 初期化
 	SD_Init();		// これは絶対最初に初期化！
 	CAM_Init();		// SDの後！
 
@@ -19,9 +19,6 @@ void setup()
 
 void loop()
 {
-	CAM_TakePic();
-	SD_Write(String(loop_count));
-
-	loop_count++;
-	delay(1000);
+	CAM_TakePic();		// 写真を撮る
+	delay(1000);			// 1000 ms 待つ
 }
