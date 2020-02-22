@@ -45,7 +45,8 @@
 		* [04. If Else](./Arduino/ProgrammingTutorial04_IfElse)
 		* [05. Loop](./Arduino/ProgrammingTutorial05_Loop)
 		* [06. Function](./Arduino/ProgrammingTutorial06_Function)
-		* [07. Device](./Arduino/ProgrammingTutorial07_Device)
+		* [07. Device1](./Arduino/ProgrammingTutorial07_Device1)
+		* [08. Device2](./Arduino/ProgrammingTutorial07_Device2)
 	- 実装例
 		* [明るさ計](./Arduino/App_LightMeter)
 + `./Schematic` ：[回路図](./Schematic)

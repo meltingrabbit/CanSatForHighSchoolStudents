@@ -29,8 +29,8 @@ void loop()
 {
   // 気圧計の値を更新
   BMP_Update();
-  // 気圧計の値を表示
-  BMP_Print();
+  // // 気圧計の値を表示
+  // BMP_Print();
 
   // 気圧計の値を取得
   float pressure = BMP_GetPressure();
