@@ -8,7 +8,7 @@ http://akizukidenshi.com/catalog/g/gP-00300/
 ![](./switch_datasheet.png)
 
 黒と赤が導通
-![](./switch_left.png)
+![](./switch_left.jpg)
 
 黒と青が導通
-![](./switch_right.png)
+![](./switch_right.jpg)
