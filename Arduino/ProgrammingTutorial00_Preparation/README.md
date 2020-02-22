@@ -1,6 +1,8 @@
 # プログラミング講習 00. 事前準備
 ## 概要
 + Arduino IDEでプログラミングを始めるための事前準備
++ IDE（開発環境）のダウンロードはこちら
+	- https://www.arduino.cc/en/main/software
 
 
 ## 説明スライド
