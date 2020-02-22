@@ -69,7 +69,7 @@ void GPS_Update() {
 				// Serial.print(GPS_NMEA2DD_(list[2].toFloat()));
 				// Serial.print(F(")"));
 
-				gps.lat = list[2].toFloat();
+				gps.lat = GPS_NMEA2DDf_(list[2].toFloat());
 
 				// 経度
 				// Serial.print(F(" 経度:"));
@@ -78,7 +78,7 @@ void GPS_Update() {
 				// Serial.print(GPS_NMEA2DD_(list[4].toFloat()));
 				// Serial.print(F(")"));
 
-				gps.lng = list[4].toFloat();
+				gps.lng = GPS_NMEA2DDf_(list[4].toFloat());
 
 				// 海抜
 				// Serial.print(F(" 海抜:"));

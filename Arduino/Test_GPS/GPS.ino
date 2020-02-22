@@ -70,7 +70,7 @@ void GPS_Update() {
 				// Serial.print(GPS_NMEA2DD_(list[2].toFloat()));
 				// Serial.print(F(")"));
 
-				gps.lat = list[2].toFloat();
+				gps.lat = GPS_NMEA2DDf_(list[2].toFloat());
 
 				// 経度
 				// Serial.print(F(" 経度:"));
@@ -79,7 +79,7 @@ void GPS_Update() {
 				// Serial.print(GPS_NMEA2DD_(list[4].toFloat()));
 				// Serial.print(F(")"));
 
-				gps.lng = list[4].toFloat();
+				gps.lng = GPS_NMEA2DDf_(list[4].toFloat());
 
 				// 海抜
 				// Serial.print(F(" 海抜:"));
@@ -106,11 +106,11 @@ void GPS_Update() {
 void GPS_Print() {
 	Serial.print(F("測位結果："));
 	Serial.print(F("GPS: Lat="));
-	Serial.print(gps.lat);
+	Serial.print(gps.lat,6);
 	Serial.print(F(", Lng="));
-	Serial.print(gps.lng);
+	Serial.print(gps.lng,6);
 	Serial.print(F(", Height="));
-	Serial.print(gps.height);
+	Serial.print(gps.height,6);
 	Serial.print(F(", RecTime="));
 	Serial.print(gps.last_received_time);
 	Serial.println(F(""));
@@ -146,7 +146,7 @@ void GPS_Print() {
 // NMEAの緯度経度を「度」(DD)のfloatに変換する
 // dddmm.mmmmmm
 float GPS_NMEA2DDf_(float val) {
-	int   d = val / 100;
+	int   d = (int)(val / 100);
 	float m = (((val / 100.0) - d) * 100.0) / 60;
 	// float s = (((((val / 100.0) - d) * 100.0) - m) * 60) / (60 * 60);
 	// return d + m + s;
