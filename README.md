@@ -54,3 +54,4 @@
 + `./Structure` ：[構造など](./Structure)
 	- [ユニ基板詳細](./Structure/board)
 	- [電源スイッチ](./Structure/switch)
+	- [テスタ](./Structure/tester)
