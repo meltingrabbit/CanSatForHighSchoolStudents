@@ -13,3 +13,7 @@
 <img src="./overview.jpg" width="30%">
 <img src="./board_side.jpg" width="50%">
 <img src="./board_top.jpg" width="50%">
+
+
+## パーツ
+[スイッチ](./switch)
