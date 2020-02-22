@@ -51,4 +51,4 @@
 + `./Schematic` ：[回路図](./Schematic)
 + `./Structure` ：[構造など](./Structure)
 	- [ユニ基板詳細](./Structure/board)
-	- [電源スイッチ](./Structure/swtch)
+	- [電源スイッチ](./Structure/switch)
