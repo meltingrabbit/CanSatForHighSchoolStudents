@@ -17,13 +17,18 @@ void setup()                              // 最初に実行される
 
 void loop()                               // Setup後，繰り返し実行される
 {
-  Serial.println("Loop!");
+  Serial.println(F("Loop!"));             // F() で囲むと（Fマクロ），使用メモリを抑えることができる（ROMを消費する）
   // Serial.println("Comment");           // コメント行（実行されない）
   delay(1000);
 }
 ```
 
 + 文字を変えて試してみよう
+
+
+## 備考
++ `Serial.print`, `Serial.println` での文字列を `F()` で囲う事により，メモリ使用量を抑えることができる．
+	- 代わりにROMを消費するが，メモリ (RAM) の少ないArduinoでは有効な手段である．
 
 
 ## リファレンス

@@ -9,7 +9,7 @@ void setup()                              // 最初に実行される
 
 void loop()                               // Setup後，繰り返し実行される
 {
-  Serial.println("Loop!");
+  Serial.println(F("Loop!"));             // F() で囲むと（Fマクロ），使用メモリを抑えることができる（ROMを消費する）
   // Serial.println(“Comment”);         // コメント行（実行されない）
   delay(1000);
 }
