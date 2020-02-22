@@ -1,7 +1,7 @@
 # 構造
 ## 概要
 + ユニバーサル基板を用いて配線と構造を組む
-
++ [詳細画像はこちら](./board)
 <!--
 ![](./overview_in_bottle.jpg)
 ![](./overview.jpg)
