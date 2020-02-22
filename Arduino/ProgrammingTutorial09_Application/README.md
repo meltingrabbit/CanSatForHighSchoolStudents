@@ -5,6 +5,8 @@
 	- ここでは，光センサからの入力に応じて動く明るさ計を作る．
 + [明るさ計のページ](../App_LightMeter)も参照のこと
 
+![](../App_LightMeter/img/overview.JPG)
+
 
 ## ソースコード
 ```cpp
