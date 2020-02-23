@@ -18,8 +18,6 @@
 ```cpp
 void setup()
 {
-void setup()
-{
   Serial.begin(9600);
 
   int a = 10;                     // aに整数10を代入
