@@ -188,33 +188,33 @@ void IMU_UpdateMag() {
 
 void IMU_PrintAcc() {
 	Serial.print(F("Acc= "));
-	Serial.print(imu.xAccl);
+	Serial.print(IMU_GetAccX());
 	Serial.print(F(","));
-	Serial.print(imu.yAccl);
+	Serial.print(IMU_GetAccY());
 	Serial.print(F(","));
-	Serial.print(imu.zAccl);
+	Serial.print(IMU_GetAccZ());
 	Serial.println(F(""));
 }
 
 
 void IMU_PrintGyr() {
 	Serial.print(F("Gyr= "));
-	Serial.print(imu.xGyro);
+	Serial.print(IMU_GetGyrX());
 	Serial.print(F(","));
-	Serial.print(imu.yGyro);
+	Serial.print(IMU_GetGyrY());
 	Serial.print(F(","));
-	Serial.print(imu.zGyro);
+	Serial.print(IMU_GetGyrZ());
 	Serial.println(F(""));
 }
 
 
 void IMU_PrintMag() {
 	Serial.print(F("Mag= "));
-	Serial.print(imu.xMag);
+	Serial.print(IMU_GetMagX());
 	Serial.print(F(","));
-	Serial.print(imu.yMag);
+	Serial.print(IMU_GetMagY());
 	Serial.print(F(","));
-	Serial.print(imu.zMag);
+	Serial.print(IMU_GetMagZ());
 	Serial.println(F(""));
 }
 
