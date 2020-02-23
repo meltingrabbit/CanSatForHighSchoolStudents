@@ -128,8 +128,6 @@ float GPS_GetHeight() {
 
 
 
-
-
 // // NMEAの緯度経度を「度分秒」(DMS)の文字列に変換する
 // String GPS_NMEA2DMS_(float val) {
 // 	int d = val / 100;

@@ -104,17 +104,25 @@ void GPS_Update() {
 
 void GPS_Print() {
 	Serial.print(F("GPS: Lat="));
-	Serial.print(gps.lat,6);
+	Serial.print(GPS_GetLat(),6);
 	Serial.print(F(", Lng="));
-	Serial.print(gps.lng,6);
+	Serial.print(GPS_GetLng(),6);
 	Serial.print(F(", Height="));
-	Serial.print(gps.height,2);
+	Serial.print(GPS_GetHeight(),2);
 	Serial.print(F(", RecTime="));
 	Serial.print(gps.last_received_time);
 	Serial.println(F(""));
 }
 
-
+float GPS_GetLat() {
+	return gps.lat;
+}
+float GPS_GetLng() {
+	return gps.lng;
+}
+float GPS_GetHeight() {
+	return gps.height;
+}
 
 
 
