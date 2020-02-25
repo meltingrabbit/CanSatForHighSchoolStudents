@@ -9,6 +9,8 @@
 
 
 ## 搭載機器
+機器の詳細な型番などは[パーツリスト](./Structure/PartsList)を参照のこと．
+
 ### センサ
 + GPS
 + 9軸センサ
@@ -52,6 +54,7 @@
 		* [明るさ計](./Arduino/App_LightMeter)
 + `./Schematic` ：[回路図](./Schematic)
 + `./Structure` ：[構造など](./Structure)
+	- [パーツリスト](./Structure/PartsList)
 	- [ユニ基板詳細](./Structure/board)
 	- [電源スイッチ](./Structure/switch)
 	- [テスタ](./Structure/tester)
