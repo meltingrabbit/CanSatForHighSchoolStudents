@@ -25,14 +25,18 @@
 ## その他基板実装パーツ
 | パーツ名 | 型番 | 概要 | 購入先URL |
 | :--- | :--- | :--- | :--- |
-| 1kΩ抵抗 | xx | xx | xx |
-| 10kΩ抵抗 | xx | xx | xx |
+| 1kΩ抵抗 |  | 光センサ用負荷抵抗 |  |
+| 10kΩ抵抗 |  | カメラ通信ラインの分圧用 |  |
 | ロングピンソケット 1×42(42P) | FHU-1x42SG | センサやマイコンと基板間にはんだしておくソケット<br>基板間の電源・通信ライン接続にも用いる | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-05779/) |
 | 足の長いピンソケット(10P)| SSCI-014182 | 基板間の電源・通信ライン接続用 | [SWITCHSCIENCE](https://www.switch-science.com/catalog/1418/) |
 | ピンヘッダ 1×40(40P) | PH-1x40SG | サーボのコネクタと基板間にはんだしておくピン<br>基板間の電源・通信ライン接続にも用いる | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-00167/) |
 | microSDカードスロット | AE-microSD-LLCNV | microSDカードへの書き込み・読み取り回路基板<br>実装参考は[こちら](../../Arduino/Test_SD) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gK-14015/) |
 | トグルスイッチ | 2MS1-T1-B4-VS2-Q-E | 電源ON/OFF用スイッチ<br>実装参考は[こちら](../switch) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-00300/) |
 | DCジャック | AE-DC-POWER-JACK-DIP | DCプラグ接続用コネクタ基板 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gK-05148/) |
+| ジャンパワイヤ(オス-オス) | BBJ-65 | カメラ等を直接配線する用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-05159/) |
+| メッキ線 | P-13310 | 基板にはんだ固定する導通経路用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-13310/) |
+| 被覆線 |  | ジャンプ配線に用いる |  |
+| カプトンテープ |  | 導通防止箇所に貼るテープ |  |
 
 
 ## 構造部材
