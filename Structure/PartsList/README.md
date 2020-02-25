@@ -15,12 +15,9 @@
 ## アクチュエータ
 | パーツ名 | 型番 | 概要 | 購入先URL |
 | :--- | :--- | :--- | :--- |
-| サーボモータ | SG92R | 制御角±90°のサーボモータ<br>実装参考は[こちら](../../Arduino/Test_Servo) | TD |
+| サーボモータ | SG92R | 制御角±90°のサーボモータ<br>実装参考は[こちら](../../Arduino/Test_Servo) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gM-08914/) |
 
 ## カメラ
 | パーツ名 | 型番 | 概要 | 購入先URL |
 | :--- | :--- | :--- | :--- |
-| サーボモータ | TD | TD | TD |
-
-## パーツ
-[電源スイッチ](./switch)
+| TTLシリアルJPEGカメラ | ADA-397 | 実装参考は[こちら](../../Arduino/Test_Camera) | [SWITCHSCIENCE](https://www.switch-science.com/catalog/1241/) |
