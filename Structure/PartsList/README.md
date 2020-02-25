@@ -38,8 +38,11 @@
 | 被覆線 |  | ジャンプ配線に用いる |  |
 | カプトンテープ |  | 導通防止箇所に貼るテープ |  |
 
-
 ## 構造部材
 | パーツ名 | 型番 | 概要 | 購入先URL |
 | :--- | :--- | :--- | :--- |
-| xx | xx | xx | xx |
+| 丸型基板 | AE-50.8mm-TH | 回路実装基板 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-08758/) |
+| スペーサー(30mm) | TP-30 | 基板間締結用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-07572/) |
+| スペーサー(20mm) | TP-20 | 基板間締結用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-07570/) |
+| プラスチックナット・ボルト | P-01885 | 基板間締結用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-01885/) |
+
