@@ -46,3 +46,11 @@
 | スペーサー(20mm) | TP-20 | 基板間締結用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-07570/) |
 | プラスチックナット・ボルト | P-01885 | 基板間締結用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-01885/) |
 
+## 周辺機器
+| パーツ名 | 型番 | 概要 | 購入先URL |
+| :--- | :--- | :--- | :--- |
+| ＤＣプラグ付バッテリースナップ | BS-IR-1/150MM+DC5.5X2.1X10MM | 電池とDCジャックの接続用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-07356/) |
+| 9Vアルカリ角電池 | GL6F22A] | 缶サット単体での起動用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gB-03257/) |
+| microSDカード |  | ログデータ・画像データ保存用 |  |
+| ACアダプタ | GF12-US1210 | 缶サット単体での起動用(電池を消耗したくないときコンセントから電源を取る) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gM-01804/) |
+| usbケーブル | USBcable A-miniB | PCとArduinoの接続用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-07606/) |
