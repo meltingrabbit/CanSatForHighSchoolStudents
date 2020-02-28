@@ -58,3 +58,5 @@
 	- [ユニ基板詳細](./Structure/board)
 	- [電源スイッチ](./Structure/switch)
 	- [テスタ](./Structure/tester)
++ `./Archives` ：アーカイブ
+	- [2020年02月22～23日 缶サットHigh School 「缶サット電子系講座」](./Archives/2020-02-22_Fukui)
