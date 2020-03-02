@@ -11,16 +11,12 @@
 | 9軸センサ | AE-BMX055 | 実装参考は[こちら](../../Arduino/Test_IMU) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gK-13010/) |
 | 気圧計 | GY-BMP280-3.3 | 実装参考は[こちら](../../Arduino/Test_Barometer) | [LED PARADISE](https://www.led-paradise.com/product/2334) |
 | 光センサ | MI527 | CdSセルを使用したセンサ<br>実装参考は[こちら](../../Arduino/Test_Light) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gI-00110/) |
+| TTLシリアルJPEGカメラ | ADA-397 | 実装参考は[こちら](../../Arduino/Test_Camera) | [SWITCH SCIENCE](https://www.switch-science.com/catalog/1241/) |
 
 ## アクチュエータ
 | パーツ名 | 型番 | 概要 | 購入先URL |
 | :--- | :--- | :--- | :--- |
 | サーボモータ | SG92R | 制御角±90°のサーボモータ<br>実装参考は[こちら](../../Arduino/Test_Servo) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gM-08914/) |
-
-## カメラ
-| パーツ名 | 型番 | 概要 | 購入先URL |
-| :--- | :--- | :--- | :--- |
-| TTLシリアルJPEGカメラ | ADA-397 | 実装参考は[こちら](../../Arduino/Test_Camera) | [SWITCH SCIENCE](https://www.switch-science.com/catalog/1241/) |
 
 ## その他基板実装パーツ
 | パーツ名 | 型番 | 概要 | 購入先URL |
@@ -50,7 +46,7 @@
 | パーツ名 | 型番 | 概要 | 購入先URL |
 | :--- | :--- | :--- | :--- |
 | ＤＣプラグ付バッテリースナップ | BS-IR-1/150MM+DC5.5X2.1X10MM | 電池とDCジャックの接続用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-07356/) |
-| 9Vアルカリ角電池 | GL6F22A] | 缶サット単体での起動用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gB-03257/) |
+| 9Vアルカリ角電池 | GL6F22A | 缶サット単体での起動用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gB-03257/) |
 | microSDカード |  | ログデータ・画像データ保存用 |  |
 | ACアダプタ | GF12-US1210 | 缶サット単体での起動用(電池を消耗したくないときコンセントから電源を取る) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gM-01804/) |
 | usbケーブル | USBcable A-miniB | PCとArduinoの接続用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-07606/) |
