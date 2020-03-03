@@ -6,6 +6,8 @@
 <img src="./Structure/overview_in_bottle.jpg" width="30%"> <img src="./Structure/overview.jpg" width="30%">
 <img src="./Structure/board_side.jpg" width="50%">
 
+本資料の活用については制限しておりませんが，その際には以下までご一報いただければ幸いです．
++ melting.rabbit.mr[at]gmail.com
 
 
 ## 搭載機器
