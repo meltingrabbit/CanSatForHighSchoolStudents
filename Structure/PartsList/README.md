@@ -4,6 +4,9 @@
 | :--- | :--- | :--- | :--- |
 | Arduino Nano | ARDUINO-A000005 |  | [SWITCH SCIENCE](https://www.switch-science.com/catalog/2554/) |
 
++ Arduino NanoはSRAMが2KBと極めて少なく，高度なことをするのは厳しいので，後継機でありSRAMが6KBの[Arduino Nano Every](https://www.switch-science.com/catalog/6199/)の方が好ましいだろう．
++ また，個人的にはESP32系列（例えば[ESPr® Developer 32](https://www.switch-science.com/catalog/3210/)）は更に高性能でWiFiやBLEが搭載されているので，非常に使い勝手が良いと思っている（Arduino互換ではあるが，若干異なるので注意）．
+
 ## センサ
 | パーツ名 | 型番 | 概要 | 購入先URL |
 | :--- | :--- | :--- | :--- |
