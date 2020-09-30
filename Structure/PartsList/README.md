@@ -26,7 +26,8 @@
 | :--- | :--- | :--- | :--- |
 | 1kΩ抵抗 |  | 光センサ用負荷抵抗 |  |
 | 10kΩ抵抗 |  | カメラ通信ラインの分圧用 |  |
-| ロングピンソケット 1×42(42P) | FHU-1x42SG | センサやマイコンと基板間にはんだしておくソケット<br>基板間の電源・通信ライン接続にも用いる | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-05779/) |
+| <del>ロングピンソケット 1×42(42P)</del> | <del>FHU-1x42SG</del> | <del>センサやマイコンと基板間にはんだしておくソケット<br>基板間の電源・通信ライン接続にも用いる</del><br> → ピンがゆるいので，下の商品がベター | <del>[秋月電子通商](http://akizukidenshi.com/catalog/g/gC-05779/)</del> |
+| ピンソケット(40P) | SFE-PRT-00115 | センサやマイコンと基板間にはんだしておくソケット<br>基板間の電源・通信ライン接続にも用いる | [SWITCH SCIENCE](https://www.switch-science.com/catalog/505/) |
 | 足の長いピンソケット(10P)| SSCI-014182 | 基板間の電源・通信ライン接続用 | [SWITCH SCIENCE](https://www.switch-science.com/catalog/1418/) |
 | ピンヘッダ 1×40(40P) | PH-1x40SG | サーボのコネクタと基板間にはんだしておくピン<br>基板間の電源・通信ライン接続にも用いる | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-00167/) |
 | microSDカードスロット | AE-microSD-LLCNV | microSDカードへの書き込み・読み取り回路基板<br>実装参考は[こちら](../../Arduino/Test_SD) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gK-14015/) |
@@ -50,6 +51,6 @@
 | :--- | :--- | :--- | :--- |
 | ＤＣプラグ付バッテリースナップ | BS-IR-1/150MM+DC5.5X2.1X10MM | 電池とDCジャックの接続用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-07356/) |
 | 9Vアルカリ角電池 | GL6F22A | 缶サット単体での起動用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gB-03257/) |
-| microSDカード |  | ログデータ・画像データ保存用 |  |
+| microSDカード |  | ログデータ・画像データ保存用（16GB以下が安全） |  |
 | ACアダプタ | GF12-US1210 | 缶サット単体での起動用(電池を消耗したくないときコンセントから電源を取る) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gM-01804/) |
 | usbケーブル | USBcable A-miniB | PCとArduinoの接続用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-07606/) |
