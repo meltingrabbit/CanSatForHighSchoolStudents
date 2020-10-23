@@ -37,6 +37,7 @@
 		* [カメラの単体テスト](./Arduino/Test_Camera)
 		* [サーボモータの単体テスト](./Arduino/Test_Servo)
 		* [SDカードの単体テスト](./Arduino/Test_SD)
+		* [XBee（無線通信機）の単体テスト](./Arduino/Test_XBee)
 	- 機器のテストコード（複数使用）
 		* [全機器の統合状態のテスト](./Arduino/Test)
 		* [光センサを４並列にした光方向センサ](./Arduino/Test_Light4)
