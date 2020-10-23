@@ -21,6 +21,13 @@
 | :--- | :--- | :--- | :--- |
 | サーボモータ | SG92R | 制御角±90°のサーボモータ<br>実装参考は[こちら](../../Arduino/Test_Servo) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gM-08914/) |
 
+## 通信機
+| パーツ名 | 型番 | 概要 | 購入先URL |
+| :--- | :--- | :--- | :--- |
+| XBee S2C / ワイヤアンテナ型 | DIGI-XB24-CAWIT-001 | 屋外で長距離通信できる通信機<br>実装参考は[こちら](../../Arduino/Test_XBee) | [SWITCH SCIENCE](https://www.switch-science.com/catalog/4089/) |
+| XBeeエクスプローラ5Vマイコン用 | SFE-WRL-11373 | XBeeの5Vへのレベル変換 兼 ピッチ変換 | [SWITCH SCIENCE](https://www.switch-science.com/catalog/1166/) |
+| XBee USB アダプター rev.2 | SSCI-034951 | XBeeとPCの接続用 | [SWITCH SCIENCE](https://www.switch-science.com/catalog/3495/) |
+
 ## その他基板実装パーツ
 | パーツ名 | 型番 | 概要 | 購入先URL |
 | :--- | :--- | :--- | :--- |
