@@ -12,7 +12,7 @@ XBee USB アダプター rev.2（PC側XBee用）
 https://www.switch-science.com/catalog/3495/
 
 ## 回路図
-<!--![](../../Schematic/PNG/GPS.png)-->
+![](../../Schematic/PNG/XBee.png)
 
 + 通信はシリアル通信 (TX, RX)
 + 電圧は5V
