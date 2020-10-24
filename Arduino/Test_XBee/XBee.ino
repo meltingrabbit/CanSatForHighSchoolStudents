@@ -1,9 +1,6 @@
 #include "./XBee.h"
 
 
-SoftwareSerial XbeeSerial(PIN_XBEE_RX, PIN_XBEE_TX);
-
-
 void XBEE_Init() {
 	XbeeSerial.begin(9600);
 }

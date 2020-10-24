@@ -1,8 +1,10 @@
-#ifndef GPS_H
-#define GPS_H
+#ifndef XBEE_H
+#define XBEE_H
 
 #include <SoftwareSerial.h>
 #include "./PIN_ASSIGN.h"
+
+SoftwareSerial XbeeSerial(PIN_XBEE_RX, PIN_XBEE_TX);
 
 /*
 https://www.switch-science.com/catalog/4089/
