@@ -4,3 +4,6 @@
 + [プログラミング講習 09. アプリケーション例](../ProgrammingTutorial09_Application)も参照のこと．
 
 ![](./img/overview.JPG)
+
+## ソースコードへのリンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/App_LightMeter)
