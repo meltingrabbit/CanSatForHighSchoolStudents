@@ -1,4 +1,7 @@
 # 高校生のためのCanSat開発キット
+CanSat for High School Students  
+高校生のためのCanSat開発キット
+
 ## 概要
 + 高校生向け缶サット開発キット
 + Arduino Nanoを想定
