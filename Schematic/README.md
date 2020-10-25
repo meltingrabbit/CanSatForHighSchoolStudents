@@ -7,4 +7,5 @@
 	- [カメラ](../Arduino/Test_Camera)
 	- [サーボモータ](../Arduino/Test_Servo)
 	- [SDカード](../Arduino/Test_SD)
+	- [XBee（無線通信機）の単体テスト](../Arduino/Test_XBee)
 	- [全機器の統合状態](../Arduino/Test)
