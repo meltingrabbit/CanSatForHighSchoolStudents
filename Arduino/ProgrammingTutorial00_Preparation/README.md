@@ -15,4 +15,8 @@
 
 ## リファレンス
 詳細な説明はリファレンス（説明書）を参考にしよう！  
-http://www.musashinodenpa.com/arduino/ref/index.php
+[http://www.musashinodenpa.com/arduino/ref/index.php](http://www.musashinodenpa.com/arduino/ref/index.php)
+
+
+## ソースコードへのリンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/ProgrammingTutorial00_Preparation)
