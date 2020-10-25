@@ -15,3 +15,7 @@ http://akizukidenshi.com/catalog/g/gK-14015/
 + 電圧は5V
 	- 素子の内部で3.3Vにレギュレート & レベル変換してくれるので，5V系マイコンで利用するにはとても便利
 + ジャンパJ1をショートさせることに注意
+
+## ソースコードへのリンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_SD)
+

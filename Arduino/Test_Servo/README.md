@@ -13,3 +13,7 @@ http://akizukidenshi.com/catalog/g/gM-08914/
 
 + 信号電圧は5V
 + Arduinoの標準ライブラリであるServoライブラリを使用
+
+## ソースコードへのリンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_Servo)
+

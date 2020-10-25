@@ -19,3 +19,6 @@ https://www.switch-science.com/catalog/3495/
 
 ## 参考資料
 https://qiita.com/s_fujii/items/9804eaf3599139164aa3
+
+## ソースコードへのリンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_XBee)

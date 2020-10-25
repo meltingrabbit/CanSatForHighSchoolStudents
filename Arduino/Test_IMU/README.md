@@ -21,3 +21,6 @@ http://akizukidenshi.com/catalog/g/gK-13010/
 	- 電源電圧，通信電圧は，素子のジャンパで5Vと3.3Vで選択可能
 	- ここでは，JP6のみをショートさせ，ともに5Vとして使用している
 	- 詳細はデータシートを参照のこと
+
+## ソースコードへのリンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_IMU)

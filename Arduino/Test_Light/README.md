@@ -14,3 +14,6 @@ http://akizukidenshi.com/catalog/g/gI-00110/
 + 照射した光の強度に応じて抵抗が減少する
 	- プルダウンしておき，アナログ入力でセンサを読みとる
 
+## ソースコードへのリンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_Light)
+

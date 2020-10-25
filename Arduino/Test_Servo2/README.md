@@ -14,3 +14,7 @@ http://akizukidenshi.com/catalog/g/gM-08914/
 
 ## 回路図
 ![](./img/DSCF2497.JPG)
+
+## ソースコードへのリンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_Servo2)
+

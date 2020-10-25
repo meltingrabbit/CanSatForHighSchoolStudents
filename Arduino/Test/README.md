@@ -11,3 +11,7 @@
 ## 既知の問題
 + Arduino Nanoのメモリ容量不足から，すべての機器を使用すると動作が不安定になってしまう．
 	- 後継機であるArduino Nano Everyを用いれば，SRAMが３倍になるので問題ないと思われる．
+
+
+## ソースコードへのリンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test)
