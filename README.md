@@ -2,6 +2,10 @@
 CanSat for High School Students  
 高校生のためのCanSat開発キット
 
+## リンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents)  
+[Web Page](https://meltingrabbit.github.io/CanSatForHighSchoolStudents/)
+
 ## 概要
 + 高校生向け缶サット開発キット
 + Arduino Nanoを想定
