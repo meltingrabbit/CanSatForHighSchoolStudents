@@ -29,4 +29,3 @@ https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Structure/board/
 https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Structure/switch/
 https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Structure/tester/
 https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Archives/2020-02-22_Fukui/
-https://github.com/meltingrabbit/CanSatForHighSchoolStudents/
