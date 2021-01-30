@@ -24,7 +24,7 @@ void loop()
 
 // print_number という関数は，
 //   String（文字）とint（整数）の２つの引数をもらう
-//   返り値はの型は void（何も返さない）
+//   返り値の型は void（何も返さない）
 //   もらった値を表示する
 void print_number(String str, int i) {
   Serial.print(str);
@@ -34,7 +34,7 @@ void print_number(String str, int i) {
 
 // my_max という関数は，
 //   ２つのint（整数）の引数をもらう
-//   返り値はの型はint
+//   返り値の型はint
 //   大きい数字を返す
 int  my_max(int a, int b) {
   int ret = 0;
@@ -45,4 +45,3 @@ int  my_max(int a, int b) {
   }
   return ret;
 }
-
