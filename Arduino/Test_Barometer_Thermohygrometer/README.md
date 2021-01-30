@@ -11,7 +11,7 @@ https://akizukidenshi.com/catalog/g/gK-09421/
 
 
 ## 回路図
-![](../../Schematic/PNG/Barometer_Thermohygrometer.png)
+![](../../Schematic/PNG/BarometerThermohygrometer.png)
 
 + 通信はI2C
 + 電圧は3.3V
