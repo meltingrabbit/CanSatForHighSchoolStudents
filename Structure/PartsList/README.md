@@ -66,9 +66,11 @@
 # パーツリスト（過去使用版）
 ## センサ
 | パーツ名 | 型番 | 概要 | 購入先URL |  
+| :--- | :--- | :--- | :--- |  
 | TTLシリアルJPEGカメラ | ADA-397 | 実装参考は[こちら](../../Arduino/Test_Camera) | [SWITCH SCIENCE](https://www.switch-science.com/catalog/1241/) |  
 
 ## その他基板実装パーツ
 | パーツ名 | 型番 | 概要 | 購入先URL |  
+| :--- | :--- | :--- | :--- |  
 | <del>ロングピンソケット 1×42(42P)</del> | <del>FHU-1x42SG</del> | <del>センサやマイコンと基板間にはんだしておくソケット<br>基板間の電源・通信ライン接続にも用いる</del><br> → ピンがゆるいので，他の商品がベター | <del>[秋月電子通商](http://akizukidenshi.com/catalog/g/gC-05779/)</del> |  
 
