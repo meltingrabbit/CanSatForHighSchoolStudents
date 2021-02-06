@@ -38,6 +38,7 @@ CanSat for High School Students
 
 ## 資料一覧
 + `./Arduino` ：サンプルコードとその設定など
+	- [Arduinoについて](./Arduino/)
 	- 機器のテストコード（動作試験）
 		* [GPSの単体テスト](./Arduino/Test_GPS)
 		* [9軸センサの単体テスト](./Arduino/Test_IMU)
