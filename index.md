@@ -26,6 +26,7 @@ CanSat for High School Students
 + GPS
 + 9軸センサ
 + 高度計（気圧計）
++ 温湿度計
 + 光センサ
 + カメラ
 
