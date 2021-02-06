@@ -9,7 +9,8 @@ CanSat for High School Students
 
 ## 概要
 + 高校生向け缶サット開発キット
-+ Arduino Nanoを想定
++ [Arduino Nano Every](https://store.arduino.cc/usa/nano-every-with-headers)を想定
+	- Arduino Nanoでも可能だが，よりSRAMの多いEveryを用いたほうがよい．
 
 <img src="./Structure/overview_in_bottle.jpg" width="30%"> <img src="./Structure/overview.jpg" width="30%">
 <img src="./Structure/board_side.jpg" width="50%">

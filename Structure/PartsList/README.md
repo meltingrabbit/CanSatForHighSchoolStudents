@@ -2,6 +2,7 @@
 ## マイコン
 | パーツ名 | 型番 | 概要 | 購入先URL |  
 | :--- | :--- | :--- | :--- |  
+| Arduino Nano Every | 	ARDUINO-7630049201552 |  | [SWITCH SCIENCE](https://www.switch-science.com/catalog/6199/) |  
 | Arduino Nano | ARDUINO-A000005 |  | [SWITCH SCIENCE](https://www.switch-science.com/catalog/2554/) |  
 
 + Arduino NanoはSRAMが2KBと極めて少なく，高度なことをするのは厳しいので，後継機でありSRAMが6KBの[Arduino Nano Every](https://www.switch-science.com/catalog/6199/)の方が好ましいだろう．
