@@ -60,7 +60,25 @@
 | 9Vアルカリ角電池 | GL6F22A | 缶サット単体での起動用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gB-03257/) |  
 | microSDカード |  | ログデータ・画像データ保存用（16GB以下が安全） |  |  
 | ACアダプタ | GF12-US1210 | 缶サット単体での起動用(電池を消耗したくないときコンセントから電源を取る) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gM-01804/) |  
-| usbケーブル | USBcable A-miniB | PCとArduinoの接続用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-07606/) |  
+| usbケーブル | USBcable A-microB | PCとArduino Nano Every，PCとXBeeの接続用 | [秋月電子通商](https://akizukidenshi.com/catalog/g/gC-07607/) |  
+| usbケーブル | USBcable A-miniB | PCとArduino Nanoの接続用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-07606/) |  
+
+## 工具，器具など
+工具の型番はあくまで例であり，好きなものを準備すること．
+| パーツ名 | 型番 | 概要 | 購入先URL |  
+| :--- | :--- | :--- | :--- |  
+| テスタ |  | 導通チェック用など |  |  
+| はんだごて | 白光 FX600-01 | はんだ付け用 | [ヨドバシカメラ](https://www.yodobashi.com/product/100000001001987046/) |  
+| こて台 | 白光 633-01 | はんだ付け用<br>個人的にはスポンジタイプより金属タイプが好き．フラックスも含むし． | [ヨドバシカメラ](https://www.yodobashi.com/product/100000001001987509/) |  
+| フラックス | 白光 FX600-01 | はんだ付け用<br>賛否両論あるが，フラックスがあったほうが圧倒的に楽だと思う（とくに鉛フリーで） | [ヨドバシカメラ](https://www.yodobashi.com/product/100000001001885214/) |  
+| フラックス洗浄剤 |  | はんだ付け用 |  |  
+| はんだ | 太洋電機産業 SD60 | はんだ付け用 | [ヨドバシカメラ](https://www.yodobashi.com/product/100000001003578754/) |  
+| はんだ | 太洋電機産業 SF-B1004 | はんだ付け用 | [ヨドバシカメラ](https://www.yodobashi.com/product/100000001004866812/) |  
+| はんだハンダ吸い取り線 | 太洋電機産業 CP-15Y | はんだ付け用 | [ヨドバシカメラ](https://www.yodobashi.com/product/100000001001987609/) |  
+| はんだ吸い取り器 |  | はんだ付け用 |  |  
+| ニッパー |  |  |  |  
+| ラジオペンチ |  |  |  |  
+| ワイヤーストリッパー |  |  |  |  
 
 
 # パーツリスト（過去使用版）
