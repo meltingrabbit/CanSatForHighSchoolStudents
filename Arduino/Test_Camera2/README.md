@@ -8,7 +8,8 @@ SDカードについては
 
 
 ## 機器詳細
-Arducam Miniモジュール  
+Arducam Mini 2MP Plus  
+https://www.arducam.com/product/arducam-2mp-spi-camera-b0067-arduino/  
 https://www.switch-science.com/catalog/3780/
 
 
