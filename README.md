@@ -42,12 +42,13 @@ CanSat for High School Students
 		* [9軸センサの単体テスト](./Arduino/Test_IMU)
 		* [高度計（気圧計）・温湿度計の単体テスト](./Arduino/Test_Barometer_Thermohygrometer)
 		* [光センサの単体テスト](./Arduino/Test_Light)
-		* [カメラ（2020年使用版）の単体テスト](./Arduino/Test_Camera)
 		* [カメラ（2021年使用版）の単体テスト](./Arduino/Test_Camera2)
 		* [サーボモータの単体テスト](./Arduino/Test_Servo)
 		* [SDカードの単体テスト](./Arduino/Test_SD)
 		* [XBee（無線通信機）の単体テスト](./Arduino/Test_XBee)
-		* [高度計（気圧計）の単体テスト](./Arduino/Test_Barometer)（過去に使用したセンサ）
+		* 過去
+			+ [カメラ（2020年使用版）の単体テスト](./Arduino/Test_Camera)
+			+ [高度計（気圧計）（2020年使用版）の単体テスト](./Arduino/Test_Barometer)
 	- 機器のテストコード（複数使用）
 		* [全機器の統合状態のテスト](./Arduino/Test)
 		* [光センサを４並列にした光方向センサ](./Arduino/Test_Light4)
