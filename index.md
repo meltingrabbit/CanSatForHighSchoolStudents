@@ -9,7 +9,8 @@ CanSat for High School Students
 
 ## 概要
 + 高校生向け缶サット開発キット
-+ Arduino Nanoを想定
++ [Arduino Nano Every](https://store.arduino.cc/usa/nano-every-with-headers)を想定
+	- Arduino Nanoでも可能だが，よりSRAMの多いEveryを用いたほうがよい．
 
 <img src="./Structure/overview_in_bottle.jpg" width="30%"> <img src="./Structure/overview.jpg" width="30%">
 <img src="./Structure/board_side.jpg" width="50%">
@@ -40,12 +41,15 @@ CanSat for High School Students
 	- 機器のテストコード（動作試験）
 		* [GPSの単体テスト](./Arduino/Test_GPS)
 		* [9軸センサの単体テスト](./Arduino/Test_IMU)
-		* [高度計（気圧計）の単体テスト](./Arduino/Test_Barometer)
+		* [高度計（気圧計）・温湿度計の単体テスト](./Arduino/Test_Barometer_Thermohygrometer)
 		* [光センサの単体テスト](./Arduino/Test_Light)
-		* [カメラの単体テスト](./Arduino/Test_Camera)
+		* [カメラの単体テスト](./Arduino/Test_Camera2)
 		* [サーボモータの単体テスト](./Arduino/Test_Servo)
 		* [SDカードの単体テスト](./Arduino/Test_SD)
 		* [XBee（無線通信機）の単体テスト](./Arduino/Test_XBee)
+		* 過去
+			+ [カメラ（2020年使用版）の単体テスト](./Arduino/Test_Camera)
+			+ [高度計（気圧計）（2020年使用版）の単体テスト](./Arduino/Test_Barometer)
 	- 機器のテストコード（複数使用）
 		* [全機器の統合状態のテスト](./Arduino/Test)
 		* [光センサを４並列にした光方向センサ](./Arduino/Test_Light4)
