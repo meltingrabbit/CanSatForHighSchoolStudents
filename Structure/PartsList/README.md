@@ -93,3 +93,7 @@
 | :--- | :--- | :--- | :--- |  
 | <del>ロングピンソケット 1×42(42P)</del> | <del>FHU-1x42SG</del> | <del>センサやマイコンと基板間にはんだしておくソケット<br>基板間の電源・通信ライン接続にも用いる</del><br> → ピンがゆるいので，他の商品がベター | <del>[秋月電子通商](http://akizukidenshi.com/catalog/g/gC-05779/)</del> |  
 
+
+### GitHubへのリンク
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Structure/PartsList)
+
