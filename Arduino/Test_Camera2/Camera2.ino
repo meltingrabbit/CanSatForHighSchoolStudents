@@ -21,7 +21,7 @@ ArduCAM myCAM(OV2640, PIN_CAM2_SS);
 //IF the FRAMES_NUM is 0X05, take six photos
 //IF the FRAMES_NUM is 0X06, take seven photos
 //IF the FRAMES_NUM is 0XFF, continue shooting until the FIFO is full
-#define   FRAMES_NUM    0x06
+#define   FRAMES_NUM    0x00
 // 現状，1枚を仮定する．SD保存で上書きが発生しないようにするロジックなど，1枚を想定してコーディングしてある．
 // → 複数枚対応した
 
@@ -83,15 +83,19 @@ void CAM2_Init() {
 	myCAM.clear_fifo_flag();
 	myCAM.write_reg(ARDUCHIP_FRAMES, FRAMES_NUM);
 
+	myCAM.CS_HIGH();		// これしておかないとSDにかけない．
+
 	Serial.println(F("Camera init done."));
 }
 
 
 void CAM2_TakePic() {
+	myCAM.CS_HIGH();
 	int total_time = 0;
 
 	SD_Write(F("TakePic"));
 
+	myCAM.CS_LOW();
 	myCAM.flush_fifo();
 	myCAM.clear_fifo_flag();
 	myCAM.OV2640_set_JPEG_size(OV2640_1600x1200);		// FIXME: ここも要検討
@@ -122,13 +126,14 @@ void CAM2_TakePic() {
 
 
 static uint8_t CAM2_save_to_sd_(ArduCAM myCAM) {
-	static int k = 0;
-	char str[16];
+	// static int k = 0;
+	// char str[16];
 
 	byte buf[256];
 	char filename[FINENAME_MAX_LEN];
 
 	uint32_t length = myCAM.read_fifo_length();
+	myCAM.CS_HIGH();
 	Serial.print(F("CAMERA: The fifo length is :"));
 	Serial.println(length, DEC);
 
@@ -187,19 +192,19 @@ static uint8_t CAM2_save_to_sd_(ArduCAM myCAM) {
 			Serial.println("CAMERA: HEADER FOUND!!!");
 			is_header = true;
 
+			myCAM.CS_HIGH();
 			CAM2_get_filename_(filename);
 			SD_Write("picname:" + SD_GetDirName() + String(filename));
 			Serial.print(F("CAMERA: picname: "));
 			Serial.println(SD_GetDirName() + String(filename));
 
-			myCAM.CS_HIGH();
-			k = k + 1;
-			itoa(k, str, 10);
-			strcat(str, ".jpg");
+			// k = k + 1;
+			// itoa(k, str, 10);
+			// strcat(str, ".jpg");
 			// Open the new file
-			outFile = SD.open(str, O_WRITE | O_CREAT | O_TRUNC);
+			// outFile = SD.open(str, O_WRITE | O_CREAT | O_TRUNC);
 			// outFile = SD.open(SD_GetDirName() + String(filename), FILE_WRITE);
-			// outFile = SD.open(SD_GetDirName() + String(filename), O_WRITE | O_CREAT | O_TRUNC);
+			outFile = SD.open(SD_GetDirName() + String(filename), O_WRITE | O_CREAT | O_TRUNC);
 			// outFile = SD.open(String(filename), O_WRITE | O_CREAT | O_TRUNC);
 			if (! outFile)
 			{
@@ -219,6 +224,7 @@ static uint8_t CAM2_save_to_sd_(ArduCAM myCAM) {
 
 
 static void CAM2_get_filename_(char filename[FINENAME_MAX_LEN]) {
+	myCAM.CS_HIGH();
 	strcpy(filename, "000.JPG");
 	for (uint16_t i = 0; i < 1000; i++) {
 		filename[0] = '0' + i/100;

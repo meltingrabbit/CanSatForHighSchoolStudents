@@ -20,7 +20,7 @@ https://www.switch-science.com/catalog/3780/
 + 電源電圧は5V
 
 ## 撮影画像
-![](./D004_001.JPG)
+![](./D010_001.JPG)
 
 ## ソースコードへのリンク
 [GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_Camera2)

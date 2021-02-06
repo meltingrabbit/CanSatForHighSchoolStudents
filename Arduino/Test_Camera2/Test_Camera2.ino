@@ -20,5 +20,5 @@ void setup()
 void loop()
 {
 	CAM2_TakePic();		// 写真を撮る
-	delay(1000);			// 1000 ms 待つ
+	delay(3000);			// 3000 ms 待つ
 }
