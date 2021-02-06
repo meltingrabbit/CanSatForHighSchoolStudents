@@ -15,7 +15,7 @@
 | 9軸センサ | AE-BMX055 | 実装参考は[こちら](../../Arduino/Test_IMU) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gK-13010/) |  
 | 気圧計 | GY-BMP280-3.3 | 実装参考は[こちら](../../Arduino/Test_Barometer) | [LED PARADISE](https://www.led-paradise.com/product/2334) |  
 | 光センサ | MI527 | CdSセルを使用したセンサ<br>実装参考は[こちら](../../Arduino/Test_Light) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gI-00110/) |  
-| TTLシリアルJPEGカメラ | ADA-397 | 実装参考は[こちら](../../Arduino/Test_Camera) | [SWITCH SCIENCE](https://www.switch-science.com/catalog/1241/) |  
+| カメラ | Arducam Mini 2MP Plus | 実装参考は[こちら](../../Arduino/Test_Camera2) | [SWITCH SCIENCE](https://www.switch-science.com/catalog/3780/) |  
 
 ## アクチュエータ
 | パーツ名 | 型番 | 概要 | 購入先URL |  
@@ -34,7 +34,6 @@
 | :--- | :--- | :--- | :--- |  
 | 1kΩ抵抗 |  | 光センサ用負荷抵抗 |  |  
 | 10kΩ抵抗 |  | カメラ通信ラインの分圧用 |  |  
-| <del>ロングピンソケット 1×42(42P)</del> | <del>FHU-1x42SG</del> | <del>センサやマイコンと基板間にはんだしておくソケット<br>基板間の電源・通信ライン接続にも用いる</del><br> → ピンがゆるいので，下の商品がベター | <del>[秋月電子通商](http://akizukidenshi.com/catalog/g/gC-05779/)</del> |  
 | ピンソケット(40P) | SFE-PRT-00115 | センサやマイコンと基板間にはんだしておくソケット<br>基板間の電源・通信ライン接続にも用いる | [SWITCH SCIENCE](https://www.switch-science.com/catalog/505/) |  
 | 足の長いピンソケット(10P)| SSCI-014182 | 基板間の電源・通信ライン接続用 | [SWITCH SCIENCE](https://www.switch-science.com/catalog/1418/) |  
 | ピンヘッダ 1×40(40P) | PH-1x40SG | サーボのコネクタと基板間にはんだしておくピン<br>基板間の電源・通信ライン接続にも用いる | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-00167/) |  
@@ -62,3 +61,14 @@
 | microSDカード |  | ログデータ・画像データ保存用（16GB以下が安全） |  |  
 | ACアダプタ | GF12-US1210 | 缶サット単体での起動用(電池を消耗したくないときコンセントから電源を取る) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gM-01804/) |  
 | usbケーブル | USBcable A-miniB | PCとArduinoの接続用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-07606/) |  
+
+
+# パーツリスト（過去使用版）
+## センサ
+| パーツ名 | 型番 | 概要 | 購入先URL |  
+| TTLシリアルJPEGカメラ | ADA-397 | 実装参考は[こちら](../../Arduino/Test_Camera) | [SWITCH SCIENCE](https://www.switch-science.com/catalog/1241/) |  
+
+## その他基板実装パーツ
+| パーツ名 | 型番 | 概要 | 購入先URL |  
+| <del>ロングピンソケット 1×42(42P)</del> | <del>FHU-1x42SG</del> | <del>センサやマイコンと基板間にはんだしておくソケット<br>基板間の電源・通信ライン接続にも用いる</del><br> → ピンがゆるいので，他の商品がベター | <del>[秋月電子通商](http://akizukidenshi.com/catalog/g/gC-05779/)</del> |  
+
