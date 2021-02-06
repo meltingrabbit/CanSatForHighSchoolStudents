@@ -31,6 +31,8 @@ static int16_t  dig_P7;
 static int16_t  dig_P8;
 static int16_t  dig_P9;
 
+int32_t t_fine;
+
 static unsigned char buffer[26];
 
 int32_t BME280_compensate_T_int32_(int32_t adc_T);
@@ -43,7 +45,6 @@ void BTH_Init() {
 	bthmeter.pressure    = 0.0;
 	bthmeter.humidity    = 0.0;
 	bthmeter.temperature = 0.0;
-
 
 	// BME280の設定
 	// BME280動作設定
@@ -137,17 +138,17 @@ void BTH_Update() {
 		buffer[i] = Wire.read();
 	}
 
-	adc_P = ((uint32_t)buffer[0] << 12) | ((uint32_t)buffer[1] << 4) | ((buffer[2] >> 4) & 0x0F);
-	adc_T = ((uint32_t)buffer[3] << 12) | ((uint32_t)buffer[4] << 4) | ((buffer[5] >> 4) & 0x0F);
-	adc_H = ((uint32_t)buffer[6] << 8) | ((uint32_t)buffer[7]);
+	int32_t adc_T = ((uint32_t)buffer[3] << 12) | ((uint32_t)buffer[4] << 4) | ((buffer[5] >> 4) & 0x0F);
+	int32_t adc_P = ((uint32_t)buffer[0] << 12) | ((uint32_t)buffer[1] << 4) | ((buffer[2] >> 4) & 0x0F);
+	int32_t adc_H = ((uint32_t)buffer[6] << 8) | ((uint32_t)buffer[7]);
 
-	pres_cal = BME280_compensate_P_int32_(adc_P);		// 気圧データ補正計算
 	temp_cal = BME280_compensate_T_int32_(adc_T);		// 温度データ補正計算
+	pres_cal = BME280_compensate_P_int32_(adc_P);		// 気圧データ補正計算
 	humi_cal = BME280_compensate_H_int32_(adc_H);		// 湿度データ補正計算
 
-	bthmeter.pressure    = (float)pres_cal / 100.0;// 気圧データを実際の値に計算
-	bthmeter.temperature = (float)temp_cal / 100.0;// 温度データを実際の値に計算
-	bthmeter.humidity    = (float)humi_cal / 1024.0;// 湿度データを実際の値に計算
+	bthmeter.temperature = (float)temp_cal / 100.0;		// 温度データを実際の値に計算
+	bthmeter.pressure    = (float)pres_cal / 100.0;		// 気圧データを実際の値に計算
+	bthmeter.humidity    = (float)humi_cal / 1024.0;	// 湿度データを実際の値に計算
 }
 
 
@@ -176,16 +177,14 @@ float BTH_GetTemperature() {
 }
 
 
-
-
 // 温度補正 関数
 int32_t BME280_compensate_T_int32_(int32_t adc_T)
 {
 	int32_t var1, var2, T;
-	var1 = ((((adc_T>>3) - ((int32_t)dig_T1<<1))) * ((int32_t)dig_T2)) >> 11;
-	var2 = (((((adc_T>>4) - ((int32_t)dig_T1)) * ((adc_T>>4) - ((int32_t)dig_T1))) >> 12) * ((int32_t)dig_T3)) >> 14;
+	var1   = ((((adc_T>>3) - ((int32_t)dig_T1<<1))) * ((int32_t)dig_T2)) >> 11;
+	var2   = (((((adc_T>>4) - ((int32_t)dig_T1)) * ((adc_T>>4) - ((int32_t)dig_T1))) >> 12) * ((int32_t)dig_T3)) >> 14;
 	t_fine = var1 + var2;
-	T  = (t_fine * 5 + 128) >> 8;
+	T      = (t_fine * 5 + 128) >> 8;
 	return T;
 }
 
@@ -215,17 +214,13 @@ uint32_t BME280_compensate_P_int32_(int32_t adc_P)
 	var2 = (var2>>2)+(((int32_t)dig_P4)<<16);
 	var1 = (((dig_P3 * (((var1>>2) * (var1>>2)) >> 13 )) >> 3) + ((((int32_t)dig_P2) * var1)>>1))>>18;
 	var1 =((((32768+var1))*((int32_t)dig_P1))>>15);
-	if (var1 == 0)
-	{
+	if (var1 == 0) {
 		return 0; // avoid exception caused by division by zero
 	}
 	p = (((uint32_t)(((int32_t)1048576)-adc_P)-(var2>>12)))*3125;
-	if (p < 0x80000000)
-	{
+	if (p < 0x80000000) {
 		p = (p << 1) / ((uint32_t)var1);
-	}
-	else
-	{
+	} else {
 		p = (p / (uint32_t)var1) * 2;
 	}
 	var1 = (((int32_t)dig_P9) * ((int32_t)(((p>>3) * (p>>3))>>13)))>>12;
