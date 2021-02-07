@@ -16,7 +16,6 @@ https://www.switch-science.com/catalog/3780/
 ## 回路図
 ![](../../Schematic/PNG/Camera2_SD.png)
 
-<span style="color: red; "> この図ではカメラの配線の色はArduCamにあるカラージャンパの色に対応している </span>
 + 通信はSPI通信とI2C通信の両方
 + 電源電圧は5V
 
