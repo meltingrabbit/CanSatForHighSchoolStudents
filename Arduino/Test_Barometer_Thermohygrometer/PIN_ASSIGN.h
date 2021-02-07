@@ -14,8 +14,7 @@
 // SD MISO 12
 // SD CLK  13
 
-#define PIN_CAM_TX 2
-#define PIN_CAM_RX 3
+#define PIN_CAM2_SS 7
 
 #define PIN_SW 5
 
