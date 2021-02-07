@@ -17,8 +17,8 @@ CanSat for High School Students
 
 
 ### Ver.1 （2020年版）
-<img src="./Structure/overview_in_bottle.jpg" width="30%"> <img src="./Structure/overview.jpg" width="30%">
-<img src="./Structure/board_side.jpg" width="50%">
+<img src="./Structure/img/2020/overview_in_bottle.jpg" width="30%"> <img src="./Structure/img/2020/overview.jpg" width="30%">
+<img src="./Structure/img/2020/board_side.jpg" width="49%">
 
 
 ### 利用について

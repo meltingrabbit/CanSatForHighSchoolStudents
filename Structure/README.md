@@ -9,10 +9,10 @@
 ![](./board_top.jpg)
 -->
 
-<img src="./overview_in_bottle.jpg" width="30%">
-<img src="./overview.jpg" width="30%">
-<img src="./board_side.jpg" width="50%">
-<img src="./board_top.jpg" width="50%">
+<img src="./img/2020/overview_in_bottle.jpg" width="30%">
+<img src="./img/2020/overview.jpg" width="30%">
+<img src="./img/2020/board_side.jpg" width="50%">
+<img src="./img/2020/board_top.jpg" width="50%">
 
 
 ## パーツ

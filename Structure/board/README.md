@@ -1,7 +1,7 @@
 # 構造詳細画像
 
-![](./top_omote.JPG)
-![](./top_ura.JPG)
-![](./top_yoko.JPG)
-![](./bottom_omote.JPG)
-![](./bottom_ura.JPG)
+![](./img/2020/top_omote.JPG)
+![](./img/2020/top_ura.JPG)
+![](./img/2020/top_yoko.JPG)
+![](./img/2020/bottom_omote.JPG)
+![](./img/2020/bottom_ura.JPG)
