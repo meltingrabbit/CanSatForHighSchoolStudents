@@ -20,13 +20,13 @@ void setup()
 
 	SD_Init();			// これは絶対最初に初期化！
 	CAM2_Init();		// SDの後！
-	// BTH_Init();
-	// DCM_Init();
+	BTH_Init();
+	DCM_Init();
 	IMU_Init();
-	// LIT_Init();
+	LIT_Init();
 	SRV_Init();
-	// GPS_Init();
-	// XBEE_Init();
+	GPS_Init();
+	XBEE_Init();
 
 	Serial.println(F("Init done"));
 	delay(300);
@@ -38,11 +38,13 @@ void loop()
 	IMU_PrintAcc();
 	IMU_PrintGyr();
 	IMU_PrintMag();
-	// GPS_Update();
-	// GPS_Print();
-	// LIT_Print();
-	// BTH_Update();
-	// BTH_Print();
+	GPS_Update();
+	GPS_Print();
+	LIT_Print();
+	BTH_Update();
+	BTH_Print();
+	XBEE_Test();
+
 	if (loop_count % 10 == 3) {
 		CAM2_TakePic();
 	}
@@ -69,6 +71,8 @@ void loop()
 			delay(20);
 		}
 	}
+
+	// DCは一旦含んでいない（基本的に使わないと考えているため）
 
 	loop_count++;
 	delay(1000);
