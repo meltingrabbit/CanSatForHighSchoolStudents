@@ -12,9 +12,16 @@ CanSat for High School Students
 + [Arduino Nano Every](https://store.arduino.cc/usa/nano-every-with-headers)を想定
 	- Arduino Nanoでも可能だが，よりSRAMの多いEveryを用いたほうがよい．
 
+
+### Ver.2 （2021年版）
+
+
+### Ver.1 （2020年版）
 <img src="./Structure/overview_in_bottle.jpg" width="30%"> <img src="./Structure/overview.jpg" width="30%">
 <img src="./Structure/board_side.jpg" width="50%">
 
+
+### 利用について
 本資料の活用については制限しておりませんが，その際には以下までご一報いただければ幸いです．
 + melting.rabbit.mr[at]gmail.com
 
