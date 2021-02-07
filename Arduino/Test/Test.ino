@@ -19,7 +19,7 @@ void setup()
 	Serial.begin(9600);
 
 	SD_Init();			// これは絶対最初に初期化！
-	// CAM2_Init();		// SDの後！
+	CAM2_Init();		// SDの後！
 	// BTH_Init();
 	// DCM_Init();
 	IMU_Init();
@@ -43,9 +43,9 @@ void loop()
 	// LIT_Print();
 	// BTH_Update();
 	// BTH_Print();
-	// if (loop_count % 10 == 3) {
-	// 	CAM_TakePic();
-	// }
+	if (loop_count % 10 == 3) {
+		CAM2_TakePic();
+	}
 	SD_Write(String(loop_count));
 
 	Serial.println(loop_count);
