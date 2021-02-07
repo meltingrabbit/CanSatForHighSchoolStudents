@@ -60,6 +60,8 @@
 | :--- | :--- | :--- | :--- |  
 | ＤＣプラグ付バッテリースナップ | BS-IR-1/150MM+DC5.5X2.1X10MM | 電池とDCジャックの接続用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-07356/) |  
 | 9Vアルカリ角電池 | GL6F22A | 缶サット単体での起動用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gB-03257/) |  
+| 単3アルカリ乾電池 |  | DCモータの外部電源用 |  |  
+| 電池ボックス |  | 単3アルカリ乾電池の収納用 |  |  
 | microSDカード |  | ログデータ・画像データ保存用（16GB以下が安全） |  |  
 | ACアダプタ | GF12-US1210 | 缶サット単体での起動用(電池を消耗したくないときコンセントから電源を取る) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gM-01804/) |  
 | usbケーブル | USBcable A-microB | PCとArduino Nano Every，PCとXBeeの接続用 | [秋月電子通商](https://akizukidenshi.com/catalog/g/gC-07607/) |  
@@ -80,7 +82,7 @@
 | はんだ吸い取り器 |  | はんだ付け用 |  |  
 | ニッパー |  |  |  |  
 | ラジオペンチ |  |  |  |  
-| ワイヤーストリッパー |  |  |  |  
+| ワイヤーストリッパ |  |  |  |  
 
 
 # パーツリスト（過去使用版）
