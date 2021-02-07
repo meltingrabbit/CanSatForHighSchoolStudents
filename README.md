@@ -33,6 +33,9 @@ CanSat for High School Students
 ### アクチュエータ
 + サーボモータ
 
+### 通信機
++ XBee
+
 ### ストレージ
 + SDカード
 
