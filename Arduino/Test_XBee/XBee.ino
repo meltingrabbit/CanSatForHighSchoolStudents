@@ -3,6 +3,7 @@
 
 void XBEE_Init() {
 	XbeeSerial.begin(9600);
+	Serial.println(F("Xbee init done"));
 }
 
 void XBEE_Test() {

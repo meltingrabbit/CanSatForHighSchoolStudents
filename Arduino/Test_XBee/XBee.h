@@ -4,7 +4,7 @@
 #include <SoftwareSerial.h>
 #include "./PIN_ASSIGN.h"
 
-SoftwareSerial XbeeSerial(PIN_XBEE_RX, PIN_XBEE_TX);
+SoftwareSerial XbeeSerial(PIN_XBEE_TX, PIN_XBEE_RX);
 
 /*
 https://www.switch-science.com/catalog/4089/
