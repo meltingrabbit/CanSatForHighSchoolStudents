@@ -26,6 +26,7 @@ void GPS_Init() {
 void GPS_Update() {
 	// 1つのセンテンスを読み込む
 	String line = GpsSerial.readStringUntil('\n');
+	Serial.println(line);
 
 	if(line != ""){
 		uint16_t i;
@@ -90,11 +91,11 @@ void GPS_Update() {
 				gps.height = list[9].toFloat();
 
 				gps.last_received_time = millis() / 1000;
-				// Serial.print(F("測位成功"));
-				Serial.print(F("GPS OK"));
+				Serial.print(F("測位成功"));
+				// Serial.print(F("GPS OK"));
 			} else {
-				// Serial.print(F("測位失敗"));
-				Serial.print(F("GPS NG"));
+				Serial.print(F("測位失敗"));
+				// Serial.print(F("GPS NG"));
 			}
 
 			Serial.println(F(""));
@@ -103,6 +104,7 @@ void GPS_Update() {
 }
 
 void GPS_Print() {
+	Serial.print(F("測位結果："));
 	Serial.print(F("GPS: Lat="));
 	Serial.print(GPS_GetLat(),6);
 	Serial.print(F(", Lng="));

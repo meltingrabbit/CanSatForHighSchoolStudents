@@ -21,6 +21,8 @@
 | パーツ名 | 型番 | 概要 | 購入先URL |  
 | :--- | :--- | :--- | :--- |  
 | サーボモータ | SG92R | 制御角±90°のサーボモータ<br>実装参考は[こちら](../../Arduino/Test_Servo) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gM-08914/) |  
+| DCモータ | FA-130RA-2270L | 1.5-3VのDCモータ<br>実装参考は[こちら](../../Arduino/Test_DCMoter) | [秋月電子通商](https://akizukidenshi.com/catalog/g/gP-09169/) |  
+| DCモータ | RS-385PH-4045 | 3-9VのDCモータ<br>実装参考は[こちら](../../Arduino/Test_DCMoter) | [秋月電子通商](https://akizukidenshi.com/catalog/g/gP-06439/) |  
 
 ## 通信機
 | パーツ名 | 型番 | 概要 | 購入先URL |  

@@ -31,8 +31,6 @@ http://akizukidenshi.com/catalog/g/gK-13010/
 #define IMU_ADDR_MAG 0x13   // (JP1,JP2,JP3 = Openの時)
 
 
-#define IMU_COEF  (100.0)
-
 void IMU_Init();
 void IMU_UpdateAll();
 void IMU_UpdateAcc();
@@ -48,22 +46,21 @@ float IMU_GetAccZ();
 float IMU_GetGyrX();
 float IMU_GetGyrY();
 float IMU_GetGyrZ();
-int16_t IMU_GetMagX();
-int16_t IMU_GetMagY();
-int16_t IMU_GetMagZ();
+int IMU_GetMagX();
+int IMU_GetMagY();
+int IMU_GetMagZ();
 
 
 typedef struct {
-	// floatだとメモリを多く消費するので，intで保持し，Getterで変換
-	int16_t xAccl;
-	int16_t yAccl;
-	int16_t zAccl;
-	int16_t xGyro;
-	int16_t yGyro;
-	int16_t zGyro;
-	int16_t xMag ;
-	int16_t yMag ;
-	int16_t zMag ;
+	float xAccl;
+	float yAccl;
+	float zAccl;
+	float xGyro;
+	float yGyro;
+	float zGyro;
+	int   xMag ;
+	int   yMag ;
+	int   zMag ;
 } Imu_t;
 
 

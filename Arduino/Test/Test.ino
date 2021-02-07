@@ -1,10 +1,12 @@
-#include "./IMU.h"
-#include "./GPS.h"
 #include "./SD.h"
-#include "./Servo.h"
+#include "./Camera2.h"
+#include "./BarometerThermohygrometer.h"
+#include "./DCMoter.h"
+#include "./IMU.h"
 #include "./Light.h"
-#include "./Camera.h"
-#include "./Barometer.h"
+#include "./Servo.h"
+#include "./GPS.h"
+#include "./XBee.h"
 
 
 uint16_t loop_count = 0;
@@ -16,14 +18,15 @@ void setup()
 	// デバック用シリアル通信は9600bps
 	Serial.begin(9600);
 
-	SD_Init();		// これは絶対最初に初期化！
-	CAM_Init();		// SDの後！
+	SD_Init();			// これは絶対最初に初期化！
+	// CAM2_Init();		// SDの後！
+	// BTH_Init();
+	// DCM_Init();
 	IMU_Init();
-	GPS_Init();
+	// LIT_Init();
 	SRV_Init();
-	LIT_Init();
-	BMP_Init();
-
+	// GPS_Init();
+	// XBEE_Init();
 
 	Serial.println(F("Init done"));
 	delay(300);
@@ -35,14 +38,14 @@ void loop()
 	IMU_PrintAcc();
 	IMU_PrintGyr();
 	IMU_PrintMag();
-	GPS_Update();
-	GPS_Print();
-	LIT_Print();
-	BMP_Update();
-	BMP_Print();
-	if (loop_count % 10 == 3) {
-		CAM_TakePic();
-	}
+	// GPS_Update();
+	// GPS_Print();
+	// LIT_Print();
+	// BTH_Update();
+	// BTH_Print();
+	// if (loop_count % 10 == 3) {
+	// 	CAM_TakePic();
+	// }
 	SD_Write(String(loop_count));
 
 	Serial.println(loop_count);
