@@ -2,7 +2,6 @@
 
 DcMoter_t dcmoter;
 
-
 void DCM_Init() {
 	pinMode(PIN_DC_MOTER1, OUTPUT);
 	pinMode(PIN_DC_MOTER2, OUTPUT);

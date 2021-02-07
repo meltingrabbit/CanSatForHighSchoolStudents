@@ -32,6 +32,7 @@ CanSat for High School Students
 
 ### アクチュエータ
 + サーボモータ
++ DCモータ
 
 ### 通信機
 + XBee
@@ -50,6 +51,7 @@ CanSat for High School Students
 		* [光センサの単体テスト](./Arduino/Test_Light)
 		* [カメラの単体テスト](./Arduino/Test_Camera2)
 		* [サーボモータの単体テスト](./Arduino/Test_Servo)
+		* [DCモータの単体テスト](./Arduino/Test_DCMoter)
 		* [SDカードの単体テスト](./Arduino/Test_SD)
 		* [XBee（無線通信機）の単体テスト](./Arduino/Test_XBee)
 		* 過去
