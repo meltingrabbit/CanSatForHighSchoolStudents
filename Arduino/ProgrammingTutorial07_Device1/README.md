@@ -18,7 +18,7 @@
 //  float BTH_GetHumidity();
 //  float BTH_GetTemperature();
 // という関数が使えるようになる
-// 関数の中身は Barometer.c にかかれている
+// 関数の中身は BarometerThrmohygrometer.ino にかかれている
 
 
 void setup()
