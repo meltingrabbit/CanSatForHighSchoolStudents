@@ -1,13 +1,13 @@
-#include "./DCMoter.h"
+#include "./DCMotor.h"
 
-DcMoter_t dcmoter;
+DcMotor_t dcmotor;
 
 void DCM_Init() {
 	pinMode(PIN_DC_MOTER1, OUTPUT);
 	pinMode(PIN_DC_MOTER2, OUTPUT);
 	digitalWrite(PIN_DC_MOTER1, LOW);
 	digitalWrite(PIN_DC_MOTER2, LOW);
-	Serial.println(F("DC Moter init done."));
+	Serial.println(F("DC Motor init done."));
 }
 
 void DCM_COAST() {

@@ -1,4 +1,4 @@
-#include "./DCMoter.h"
+#include "./DCMotor.h"
 
 void setup()
 {

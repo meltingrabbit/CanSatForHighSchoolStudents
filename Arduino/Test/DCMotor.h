@@ -6,7 +6,7 @@
 https://akizukidenshi.com/catalog/g/gK-09848/
 */
 
-// #################### DC Moter ####################
+// #################### DC Motor ####################
 #include "./PIN_ASSIGN.h"
 
 void DCM_Init();
@@ -16,7 +16,7 @@ void DCM_REVERSE();
 void DCM_BRAKE();
 
 typedef struct {
-} DcMoter_t;
+} DcMotor_t;
 
 
 #endif

@@ -1,7 +1,7 @@
 #include "./SD.h"
 #include "./Camera2.h"
 #include "./BarometerThermohygrometer.h"
-#include "./DCMoter.h"
+#include "./DCMotor.h"
 #include "./IMU.h"
 #include "./Light.h"
 #include "./Servo.h"

@@ -11,11 +11,11 @@ https://akizukidenshi.com/catalog/g/gK-09848/
 
 
 ## 回路図
-![](../../Schematic/PNG/DCMoter.png)
+![](../../Schematic/PNG/DCMotor.png)
 
 + DCモータの外部電源電圧は3V
 + DCモータには大電流が流れるため，マイコンとは別の電源を用意する．
 	- 大電流のノイズがマイコンに悪影響を与えるのを防ぐために，コンデンサを入れている．
 
 ## ソースコードへのリンク
-[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_DCMoter)
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_DCMotor)
