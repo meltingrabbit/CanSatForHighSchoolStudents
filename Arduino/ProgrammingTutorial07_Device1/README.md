@@ -1,34 +1,35 @@
 # プログラミング講習 07. 機器の利用 その１
 ## 概要
 + マイコンに接続した機器を使ってみよう
-	- 機器のテストコードで使った[気圧計の回路とプログラム](../Test_Barometer)を使う
+	- 機器のテストコードで使った[高度計（気圧計）・温湿度計の回路とプログラム](../Test_Barometer_Thermohygrometer)を使う
 	- ここでは，気圧計をつかって，今の高度を求めてみよう
 
 
 ## ソースコード
 ```cpp
-// 気圧計のライブラリ（便利なコードまとめ）を使うよ！ と宣言
-#include "./Barometer.h"
+// 高度計（気圧計）・温湿度計のライブラリ（便利なコードまとめ）を使うよ！ と宣言
+#include "./BarometerThermohygrometer.h"
 // すると，
-// Barometer.h に宣言されている
-//   void BMP_Init();
-//   void BMP_Update();
-//   void BMP_Print();
-//   float BMP_GetPressure();
-//   float BMP_GetTemperature();
+// BarometerThrmohygrometer.h に宣言されている
+//  void BTH_Init();
+//  void BTH_Update();
+//  void BTH_Print();
+//  float BTH_GetPressure();
+//  float BTH_GetHumidity();
+//  float BTH_GetTemperature();
 // という関数が使えるようになる
-// 関数の中身は Barometer.c にかかれている
+// 関数の中身は BarometerThrmohygrometer.ino にかかれている
 
 
 void setup()
 {
-  // Wire(Arduino-I2C)の初期化．気圧計との通信を開始
+  // Wire(Arduino-I2C)の初期化．高度計（気圧計）・温湿度計との通信を開始
   Wire.begin();
   // デバック用シリアル通信は9600bps
   Serial.begin(9600);
 
-  // 気圧計を初期化
-  BMP_Init();
+  // 高度計（気圧計）・温湿度計を初期化
+  BTH_Init();
 
   Serial.println(F("Init done"));
   delay(300);
@@ -36,26 +37,20 @@ void setup()
 
 void loop()
 {
-  // 気圧計の値を更新
-  BMP_Update();
-  // 気圧計の値を表示
-  // BMP_Print();
-
-  // 気圧計の値を取得
-  float pressure = BMP_GetPressure();
-  Serial.print(F("Pressure: "));
-  Serial.print(pressure);
-  Serial.println(F(" [Pa]"));
+  // 高度計（気圧計）・温湿度計の値を更新
+  BTH_Update();
+  // // 高度計（気圧計）・温湿度計の値を表示
+  // BTH_Print();
+  float pressure = BTH_GetPressure();
 
   // 気圧から高度に変換
   // まあ，ざっくり 10m上昇すると1hPa下がるとしようか．
-  float pressure_at_sea_level = 101325.0;
-  float height = (pressure_at_sea_level - pressure) / 100 * 10;
+  float pressure_at_sea_level = 1013.250;
+  float height = (pressure_at_sea_level - pressure) * 10;
 
-  Serial.print(F("Height: "));
+  Serial.print(F("Height = "));
   Serial.print(height);
   Serial.println(F(" [m]"));
-
   delay(1000);
 }
 ```

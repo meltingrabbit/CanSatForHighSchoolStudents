@@ -153,14 +153,14 @@ void BTH_Update() {
 
 
 void BTH_Print() {
-  Serial.print(F("Temp = "));
-  Serial.print(BTH_GetTemperature());
+	Serial.print(F("Temp = "));
+	Serial.print(BTH_GetTemperature());
   Serial.println(" [degC]");
-  Serial.print(F("Hmid = "));
-  Serial.print(BTH_GetHumidity());
+	Serial.print(F("Hmid = "));
+	Serial.print(BTH_GetHumidity());
   Serial.println(F(" [parcent]"));
-  Serial.print(F("Pres = "));
-  Serial.print(BTH_GetPressure());
+	Serial.print(F("Pres = "));
+	Serial.print(BTH_GetPressure());
   Serial.println(F(" [hPa]"));
 }
 
