@@ -16,8 +16,8 @@
 
 #define PIN_CAM2_SS 7
 
-#define PIN_SW 5
-
+#define PIN_DC_MOTER1 5
+#define PIN_DC_MOTER2 6
 
 // #define SDA A4
 // #define SCL A5
