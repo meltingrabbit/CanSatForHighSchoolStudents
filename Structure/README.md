@@ -15,6 +15,9 @@
 
 <img src="./img/2021/overview.jpg" width="49%"> <img src="./img/2021/board_top.jpg" width="49%">
 
+マイコン層のピンアサインは以下の通り．
+![](./img/2021/pin_assign.png)
+
 ### Ver.1 （2020年版）
 <img src="./img/2020/overview_in_bottle.jpg" width="30%"> <img src="./img/2020/overview.jpg" width="30%">
 <img src="./img/2020/board_side.jpg" width="49%">
