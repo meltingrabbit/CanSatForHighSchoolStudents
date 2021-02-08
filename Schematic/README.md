@@ -10,6 +10,6 @@
 + [SDカード](../Arduino/Test_SD)
 + [XBee（無線通信機）](../Arduino/Test_XBee)
 + [全機器の統合状態](../Arduino/Test)
-	- 過去
-		* [カメラ](../Arduino/Test_Camera)
-		* [高度計（気圧計）](../Arduino/Test_Barometer)
++ 過去
+	- [カメラ](../Arduino/Test_Camera)
+	- [高度計（気圧計）](../Arduino/Test_Barometer)
