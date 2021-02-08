@@ -5,6 +5,7 @@
 - GPS，光，高度計（気圧計），温湿度，電源スイッチ（左）
 - XBee（無線機）（中）
 - Arduino Nano Every（マイコン）（右）
+
 ![](./img/2021/core_omote.jpg)
 ![](./img/2021/core_ura.jpg)
 
