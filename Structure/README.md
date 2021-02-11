@@ -13,9 +13,7 @@
 + Ver.1で難易度の高かった配線を簡易化するため，すべての階層に同じマイコンのピンをストレートで伸ばしたもの．
 + これにより，層の順番の変更や，取捨選択が可能となった．
 
-<img src="./img/2021/overview_tate.jpg" width="30%">
-
-<img src="./img/2021/overview.jpg" width="49%"> <img src="./img/2021/board_top.jpg" width="49%">
+<img src="./img/2021/overview_tate.jpg" width="30%"> <img src="./img/2021/overview.jpg" width="49%"> <img src="./img/2021/board_top.jpg" width="49%">
 
 マイコン層のピンアサインは以下の通り．
 ![](./img/2021/pin_assign.png)
