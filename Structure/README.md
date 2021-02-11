@@ -14,6 +14,7 @@
 + これにより，層の順番の変更や，取捨選択が可能となった．
 
 <img src="./img/2021/overview_tate.jpg" width="30%">
+
 <img src="./img/2021/overview.jpg" width="49%"> <img src="./img/2021/board_top.jpg" width="49%">
 
 マイコン層のピンアサインは以下の通り．
