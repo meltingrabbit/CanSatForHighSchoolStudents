@@ -17,7 +17,9 @@ https://www.switch-science.com/catalog/3495/
 + 通信はシリアル通信 (TX, RX)
 + 電圧は5V
 
-## 参考資料
+## Xbeeの事前設定
+下のページの「設定」を進めて，２つのXbeeのペアリングをしておく必要がある．  
+どちらのXbeeがPC用 / 缶サット用なのかがわからなくならないように，印をつけておくとよい．  
 https://qiita.com/s_fujii/items/9804eaf3599139164aa3
 
 ## ソースコードへのリンク
