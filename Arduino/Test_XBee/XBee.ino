@@ -18,7 +18,7 @@ void XBEE_Test() {
 	static uint32_t rec_count = 0;
 
 	const uint8_t MAX_LEN = 32;
-	char receive_data[MAX_LEN];
+	char receive_data[MAX_LEN+1];
 
 	delay(500);
 
