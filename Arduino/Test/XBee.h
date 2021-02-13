@@ -13,7 +13,7 @@ https://www.switch-science.com/catalog/3495/
 https://qiita.com/s_fujii/items/9804eaf3599139164aa3
 */
 
-// #################### GPS ####################
+// #################### XBEE ####################
 
 void XBEE_Init();
 void XBEE_Test();
