@@ -13,7 +13,9 @@ https://www.switch-science.com/catalog/3780/
 
 #include <SPI.h>
 
+// 初期化
 void CAM2_Init();
+// 撮影し，SDに保存
 void CAM2_TakePic();
 
 typedef struct {

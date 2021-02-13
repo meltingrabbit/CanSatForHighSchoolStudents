@@ -1,6 +1,7 @@
+#include "./DCMotor.h"
 #include "./DCMotor2.h"
 
-DcMotor2_t dcmotor2;
+DcMotor_t dcmotor2;
 
 void DCM2_Init() {
 	pinMode(PIN_DC_MOTER3, OUTPUT);

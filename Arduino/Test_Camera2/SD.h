@@ -16,10 +16,11 @@ http://akizukidenshi.com/download/ds/akizuki/AE-microSD-LLCNV_sch_20190218_01.pd
 #include "./PIN_ASSIGN.h"
 
 
-
-
+// 初期化
 void SD_Init();
+// SDカードに str の文字列を書き込み
 void SD_Write(String str);
+// 現在書き込んでいるディレクトリ名を取得
 String SD_GetDirName();
 
 typedef struct {

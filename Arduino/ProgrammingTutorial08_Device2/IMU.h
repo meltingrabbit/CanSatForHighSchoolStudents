@@ -22,26 +22,6 @@ http://akizukidenshi.com/catalog/g/gK-13010/
 #include "./PIN_ASSIGN.h"
 
 
-void IMU_Init();
-void IMU_UpdateAll();
-void IMU_UpdateAcc();
-void IMU_UpdateGyr();
-void IMU_UpdateMag();
-void IMU_PrintAcc();
-void IMU_PrintGyr();
-void IMU_PrintMag();
-
-float IMU_GetAccX();
-float IMU_GetAccY();
-float IMU_GetAccZ();
-float IMU_GetGyrX();
-float IMU_GetGyrY();
-float IMU_GetGyrZ();
-int16_t IMU_GetMagX();
-int16_t IMU_GetMagY();
-int16_t IMU_GetMagZ();
-
-
 #include<Wire.h>
 // BMX055 加速度センサのI2Cアドレス
 #define IMU_ADDR_ACCL 0x19  // (JP1,JP2,JP3 = Openの時)
@@ -50,20 +30,53 @@ int16_t IMU_GetMagZ();
 // BMX055 磁気センサのI2Cアドレス
 #define IMU_ADDR_MAG 0x13   // (JP1,JP2,JP3 = Openの時)
 
+// 初期化
+void IMU_Init();
+// 9軸すべての値をアップデート
+void IMU_UpdateAll();
+// 加速度センサの値をアップデート
+void IMU_UpdateAcc();
+// ジャイロセンサの値をアップデート
+void IMU_UpdateGyr();
+// 磁気センサの値をアップデート
+void IMU_UpdateMag();
+// 加速度センサの値を表示
+void IMU_PrintAcc();
+// ジャイロセンサの値を表示
+void IMU_PrintGyr();
+// 磁気センサの値を表示
+void IMU_PrintMag();
 
-#define IMU_COEF  (100.0)
+// 加速度センサのX軸の値を取得
+float IMU_GetAccX();
+// 加速度センサのY軸の値を取得
+float IMU_GetAccY();
+// 加速度センサのZ軸の値を取得
+float IMU_GetAccZ();
+// ジャイロセンサのX軸の値を取得
+float IMU_GetGyrX();
+// ジャイロセンサのY軸の値を取得
+float IMU_GetGyrY();
+// ジャイロセンサのZ軸の値を取得
+float IMU_GetGyrZ();
+// 磁気センサのX軸の値を取得
+int IMU_GetMagX();
+// 磁気センサのY軸の値を取得
+int IMU_GetMagY();
+// 磁気センサのZ軸の値を取得
+int IMU_GetMagZ();
+
 
 typedef struct {
-	// floatだとメモリを多く消費するので，intで保持し，Getterで変換
-	int16_t xAccl;
-	int16_t yAccl;
-	int16_t zAccl;
-	int16_t xGyro;
-	int16_t yGyro;
-	int16_t zGyro;
-	int16_t xMag ;
-	int16_t yMag ;
-	int16_t zMag ;
+	float xAccl;
+	float yAccl;
+	float zAccl;
+	float xGyro;
+	float yGyro;
+	float zGyro;
+	int   xMag ;
+	int   yMag ;
+	int   zMag ;
 } Imu_t;
 
 
