@@ -5,13 +5,12 @@ Imu_t imu;
 
 
 void IMU_Init() {
-	// Wire.begin();はされている前提！
-	imu.xAccl = 0;
-	imu.yAccl = 0;
-	imu.zAccl = 0;
-	imu.xGyro = 0;
-	imu.yGyro = 0;
-	imu.zGyro = 0;
+	imu.xAccl = 0.0;
+	imu.yAccl = 0.0;
+	imu.zAccl = 0.0;
+	imu.xGyro = 0.0;
+	imu.yGyro = 0.0;
+	imu.zGyro = 0.0;
 	imu.xMag  = 0;
 	imu.yMag  = 0;
 	imu.zMag  = 0;
@@ -99,7 +98,6 @@ void IMU_UpdateAll() {
 void IMU_UpdateAcc() {
 	// int data[6];
 	uint8_t data[6];
-	float temp;
 	for (uint8_t i = 0; i < 6; i++)
 	{
 		Wire.beginTransmission(IMU_ADDR_ACCL);
@@ -112,27 +110,21 @@ void IMU_UpdateAcc() {
 			data[i] = Wire.read();
 	}
 	// Convert the data to 12-bits
-	temp = ((data[1] * 256) + (data[0] & 0xF0)) / 16;
-	if (temp > 2047)  temp -= 4096;
-	temp = temp * 0.0098; // renge +-2g
-	imu.xAccl = (int16_t)(temp * IMU_COEF);
-
-	temp = ((data[3] * 256) + (data[2] & 0xF0)) / 16;
-	if (temp > 2047)  temp -= 4096;
-	temp = temp * 0.0098; // renge +-2g
-	imu.yAccl = (int16_t)(temp * IMU_COEF);
-
-	temp = ((data[5] * 256) + (data[4] & 0xF0)) / 16;
-	if (temp > 2047)  temp -= 4096;
-	temp = temp * 0.0098; // renge +-2g
-	imu.zAccl = (int16_t)(temp * IMU_COEF);
+	imu.xAccl = ((data[1] * 256) + (data[0] & 0xF0)) / 16;
+	if (imu.xAccl > 2047)  imu.xAccl -= 4096;
+	imu.yAccl = ((data[3] * 256) + (data[2] & 0xF0)) / 16;
+	if (imu.yAccl > 2047)  imu.yAccl -= 4096;
+	imu.zAccl = ((data[5] * 256) + (data[4] & 0xF0)) / 16;
+	if (imu.zAccl > 2047)  imu.zAccl -= 4096;
+	imu.xAccl = imu.xAccl * 0.0098; // renge +-2g
+	imu.yAccl = imu.yAccl * 0.0098; // renge +-2g
+	imu.zAccl = imu.zAccl * 0.0098; // renge +-2g
 }
 
 
 void IMU_UpdateGyr() {
 	// int data[6];
 	uint8_t data[6];
-	float temp;
 	for (uint8_t i = 0; i < 6; i++)
 	{
 		Wire.beginTransmission(IMU_ADDR_GYRO);
@@ -145,20 +137,16 @@ void IMU_UpdateGyr() {
 			data[i] = Wire.read();
 	}
 	// Convert the data
-	temp = (data[1] * 256) + data[0];
-	if (temp > 32767)  temp -= 65536;
-	temp = temp * 0.0038; //  Full scale = +/- 125 degree/s
-	imu.xGyro = (int16_t)(temp * IMU_COEF);
+	imu.xGyro = (data[1] * 256) + data[0];
+	if (imu.xGyro > 32767)  imu.xGyro -= 65536;
+	imu.yGyro = (data[3] * 256) + data[2];
+	if (imu.yGyro > 32767)  imu.yGyro -= 65536;
+	imu.zGyro = (data[5] * 256) + data[4];
+	if (imu.zGyro > 32767)  imu.zGyro -= 65536;
 
-	temp = (data[3] * 256) + data[2];
-	if (temp > 32767)  temp -= 65536;
-	temp = temp * 0.0038; //  Full scale = +/- 125 degree/s
-	imu.yGyro = (int16_t)(temp * IMU_COEF);
-
-	temp = (data[5] * 256) + data[4];
-	if (temp > 32767)  temp -= 65536;
-	temp = temp * 0.0038; //  Full scale = +/- 125 degree/s
-	imu.zGyro = (int16_t)(temp * IMU_COEF);
+	imu.xGyro = imu.xGyro * 0.0038; //  Full scale = +/- 125 degree/s
+	imu.yGyro = imu.yGyro * 0.0038; //  Full scale = +/- 125 degree/s
+	imu.zGyro = imu.zGyro * 0.0038; //  Full scale = +/- 125 degree/s
 }
 
 
@@ -188,61 +176,61 @@ void IMU_UpdateMag() {
 
 void IMU_PrintAcc() {
 	Serial.print(F("Acc= "));
-	Serial.print(IMU_GetAccX());
+	Serial.print(imu.xAccl);
 	Serial.print(F(","));
-	Serial.print(IMU_GetAccY());
+	Serial.print(imu.yAccl);
 	Serial.print(F(","));
-	Serial.print(IMU_GetAccZ());
+	Serial.print(imu.zAccl);
 	Serial.println(F(""));
 }
 
 
 void IMU_PrintGyr() {
 	Serial.print(F("Gyr= "));
-	Serial.print(IMU_GetGyrX());
+	Serial.print(imu.xGyro);
 	Serial.print(F(","));
-	Serial.print(IMU_GetGyrY());
+	Serial.print(imu.yGyro);
 	Serial.print(F(","));
-	Serial.print(IMU_GetGyrZ());
+	Serial.print(imu.zGyro);
 	Serial.println(F(""));
 }
 
 
 void IMU_PrintMag() {
 	Serial.print(F("Mag= "));
-	Serial.print(IMU_GetMagX());
+	Serial.print(imu.xMag);
 	Serial.print(F(","));
-	Serial.print(IMU_GetMagY());
+	Serial.print(imu.yMag);
 	Serial.print(F(","));
-	Serial.print(IMU_GetMagZ());
+	Serial.print(imu.zMag);
 	Serial.println(F(""));
 }
 
 
 float IMU_GetAccX() {
-	return imu.xAccl / IMU_COEF;
+	return imu.xAccl;
 }
 float IMU_GetAccY() {
-	return imu.yAccl / IMU_COEF;
+	return imu.yAccl;
 }
 float IMU_GetAccZ() {
-	return imu.zAccl / IMU_COEF;
+	return imu.zAccl;
 }
 float IMU_GetGyrX() {
-	return imu.xGyro / IMU_COEF;
+	return imu.xGyro;
 }
 float IMU_GetGyrY() {
-	return imu.yGyro / IMU_COEF;
+	return imu.yGyro;
 }
 float IMU_GetGyrZ() {
-	return imu.zGyro / IMU_COEF;
+	return imu.zGyro;
 }
-int16_t IMU_GetMagX() {
+int IMU_GetMagX() {
 	return imu.xMag;
 }
-int16_t IMU_GetMagY() {
+int IMU_GetMagY() {
 	return imu.yMag;
 }
-int16_t IMU_GetMagZ() {
+int IMU_GetMagZ() {
 	return imu.zMag;
 }
