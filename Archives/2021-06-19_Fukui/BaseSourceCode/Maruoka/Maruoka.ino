@@ -37,15 +37,17 @@ void loop()
 	}
 
 	delay(5000);		// 5秒まつ
+						// TODO: 5秒で目的の動作ができるかな？
 
 	SRV_SetPosition(90);	// サーボモータの司令角度を90度に設定
+							// TODO: 90度で大丈夫か検討する
 	SRV_Run();				// 設定した回転角へサーボモータを動かす
 
 	delay(200);		// 0.2秒まつ
 
 	CAM2_TakePic();		// 写真を撮る
 
-	// 写真は１枚でいいのかな？
+	// TODO: 写真は１枚でいいのかな？
 
 	while (1) {
 		Serial.println(F("End of program"));
