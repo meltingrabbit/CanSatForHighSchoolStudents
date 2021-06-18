@@ -21,8 +21,11 @@ void setup() {
 }
 
 void loop() {
+	// 気圧・温度の値を更新
 	BTH_Update();
+	// 9軸センサの値を更新
 	IMU_UpdateAll();
+	// GPSの値を更新
 	GPS_Update();
 	log();
 }
