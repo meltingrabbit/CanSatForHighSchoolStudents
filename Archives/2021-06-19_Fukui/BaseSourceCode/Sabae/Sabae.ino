@@ -45,7 +45,6 @@ void loop() {
 		// TODO: マイクで計測するプログラム
 		// TODO: SDカードに保存するプログラム
 
-
 		float height = get_height();	// 高さを計算する関数を呼ぶ
 
 		// 高度が5m以下なら，whileループを抜ける

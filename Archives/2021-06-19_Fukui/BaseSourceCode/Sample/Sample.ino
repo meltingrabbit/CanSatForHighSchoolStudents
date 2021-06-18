@@ -100,6 +100,14 @@ void loop() {
 		CAM2_TakePic();		// 写真を撮る
 	}
 
+
+	// GPSの値の更新
+	GPS_Update();
+	// 位置情報を取得し，SDに保存
+	SD_Write(String(GPS_GetLat()));
+	SD_Write(String(GPS_GetLng()));
+	SD_Write(String(GPS_GetHeight()));
+
 	while (1) {
 		Serial.println(F("End of program"));
 		delay(1000);
