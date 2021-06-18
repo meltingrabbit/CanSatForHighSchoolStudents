@@ -14,9 +14,9 @@ https://www.switch-science.com/catalog/3780/
 #include <SPI.h>
 
 // 初期化
-void CAM2_Init();
+void CAM2_Init(ArduCAM myCAM, int PIN_CAM2_SS);
 // 撮影し，SDに保存
-void CAM2_TakePic();
+void CAM2_TakePic(ArduCAM myCAM, int PIN_CAM2_SS);
 
 typedef struct {
 

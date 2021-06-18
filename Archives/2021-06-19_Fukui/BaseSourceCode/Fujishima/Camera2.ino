@@ -8,8 +8,8 @@
 Camera2_t camera2;
 
 // 初期値なしの初期化ができないので，仕方なくstructにはいれない．
-ArduCAM myCAM(OV2640, PIN_CAM2_SS);
-
+ArduCAM myCAM1(OV2640, PIN_CAM2_1_SS);
+ArduCAM myCAM2(OV2640, PIN_CAM2_2_SS);
 
 // 公式サイト情報
 //You can change the FRAMES_NUM count to change the number of the picture.
@@ -34,14 +34,12 @@ static void    CAM2_get_filename_(char filename[FINENAME_MAX_LEN]);
 
 
 
-void CAM2_Init() {
+void CAM2_Init(ArduCAM myCAM, int PIN_CAM2_SS) {
 	// これはこのライブラリ外でされている前提
 	// Wire.begin();
 
 	pinMode(PIN_CAM2_SS, OUTPUT);
 	digitalWrite(PIN_CAM2_SS, HIGH);
-
-	SPI.begin();		// FIXME: これも本当はライブラリ外でやりたいが，今回はSPIが干渉しないので，ここで
 
 	// Reset the CPLD
 	myCAM.write_reg(0x07, 0x80);
@@ -89,7 +87,7 @@ void CAM2_Init() {
 }
 
 
-void CAM2_TakePic() {
+void CAM2_TakePic(ArduCAM myCAM) {
 	myCAM.CS_HIGH();
 	int total_time = 0;
 
@@ -122,6 +120,8 @@ void CAM2_TakePic() {
 
 	// Clear the capture done flag
 	myCAM.clear_fifo_flag();
+  
+  myCAM.CS_HIGH();
 }
 
 
@@ -223,8 +223,7 @@ static uint8_t CAM2_save_to_sd_(ArduCAM myCAM) {
 }
 
 
-static void CAM2_get_filename_(char filename[FINENAME_MAX_LEN]) {
-	myCAM.CS_HIGH();
+static void CAM2_get_filename_(char filename[FINENAME_MAX_LEN]) { 
 	strcpy(filename, "000.JPG");
 	for (uint16_t i = 0; i < 1000; i++) {
 		filename[0] = '0' + i/100;

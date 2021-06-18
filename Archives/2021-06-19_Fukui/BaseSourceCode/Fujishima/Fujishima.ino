@@ -4,16 +4,18 @@
 #include "./IMU.h"
 #include "./GPS.h"
 #include "./XBee.h"
-
+#include <SPI.h>
 
 void setup() {
 	// Wire(Arduino-I2C)の初期化
 	Wire.begin();
 	// デバック用シリアル通信は9600bps
 	Serial.begin(9600);
+  SPI.begin();    // SPIをここで初期化する
 
 	SD_Init();			// SDカードの初期化．これは絶対最初に初期化！
-	CAM2_Init();		// カメラの初期化．SDの後！
+	CAM2_Init(myCAM1, PIN_CAM2_1_SS);		// カメラの初期化．SDの後！
+  CAM2_Init(myCAM2, PIN_CAM2_2_SS);    // カメラの初期化．SDの後！
 
 	// FIXME: 2個目のカメラを入れる必要あり
 
@@ -43,7 +45,9 @@ void loop() {
 
 		// 高度が35m以下なら？
 		if (ground_height >= 35.0) {
-			CAM2_TakePic();		// 写真を撮る
+			CAM2_TakePic(myCAM1);		// 1つ目のカメラで写真を撮る
+      delay(1000);
+      CAM2_TakePic(myCAM2);   // 1つ目のカメラで写真を撮る
 		} else {
 			break;
 		}
