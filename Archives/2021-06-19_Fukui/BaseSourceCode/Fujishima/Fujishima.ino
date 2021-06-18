@@ -6,8 +6,7 @@
 #include "./XBee.h"
 
 
-void setup()
-{
+void setup() {
 	// Wire(Arduino-I2C)の初期化
 	Wire.begin();
 	// デバック用シリアル通信は9600bps
@@ -27,8 +26,7 @@ void setup()
 	delay(300);
 }
 
-void loop()
-{
+void loop() {
 	// TODO: このままでは，打ち上げ前にプログラムが進んでしまう．
 	//       打ち上がる前には先に進まないように修正しよう
 
@@ -43,6 +41,7 @@ void loop()
 		// TODO: 数式を正しくなおそう！
 		float ground_height = height - 10.0;
 
+		// 高度が35m以下なら？
 		if (ground_height >= 35.0) {
 			CAM2_TakePic();		// 写真を撮る
 		} else {
@@ -62,6 +61,7 @@ void loop()
 		// TODO: 数式を正しくなおそう！
 		float ground_height = height - 10.0;
 
+		// 高度が3m以下なら，whileループを抜ける
 		if (ground_height <= 3) {
 			break;
 		}

@@ -1,12 +1,10 @@
 #include "./SD.h"
 #include "./Camera2.h"
-#include "./BarometerThermohygrometer.h"
 #include "./Light.h"
 #include "./Servo.h"
 
 
-void setup()
-{
+void setup() {
 	// Wire(Arduino-I2C)の初期化
 	Wire.begin();
 	// デバック用シリアル通信は9600bps
@@ -24,8 +22,7 @@ void setup()
 	delay(300);
 }
 
-void loop()
-{
+void loop() {
 	// TODO: このままでは，打ち上げ前にプログラムが進んでしまう．
 	//       打ち上がる前には先に進まないように修正しよう
 
@@ -33,7 +30,7 @@ void loop()
 	//       実際の場所では，パラシュートが開く前後で光センサの値がどう変化するか実験し
 	//       条件式を適切に修正しよう
 	while (LIT_Get() < 100) {
-		delay(100);		// 0.1秒まつ
+		delay(100);		// 0.1秒待つ
 	}
 
 	delay(5000);		// 5秒まつ
