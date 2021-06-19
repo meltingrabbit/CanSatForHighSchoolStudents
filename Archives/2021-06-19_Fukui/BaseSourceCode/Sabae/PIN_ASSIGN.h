@@ -4,6 +4,8 @@
 #define PIN_SRV 4
 
 #define PIN_LIT A1
+#define PIN_SOUND_SENSOR A2
+#define PIN_SPEAKER A3
 
 #define PIN_GPS_TX 8
 #define PIN_GPS_RX 9

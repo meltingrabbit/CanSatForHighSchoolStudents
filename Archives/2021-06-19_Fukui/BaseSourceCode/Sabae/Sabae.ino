@@ -41,10 +41,15 @@ void loop() {
 
 
 	while (1) {
-		// TODO: スピーカーを鳴らすプログラム
-		// TODO: マイクで計測するプログラム
+		// スピーカーを鳴らすプログラム
+    tone(PIN_SPEAKER, 262, 1000); // 1000ms間ドの音を鳴らす
+    
+		// マイクで計測するプログラム
+    int intensity = SoundSensor_GetIntensity();
+    
 		// TODO: SDカードに保存するプログラム
-
+    SD_Write(String(intensity));
+    
 		float height = get_height();	// 高さを計算する関数を呼ぶ
 
 		// 高度が5m以下なら，whileループを抜ける
