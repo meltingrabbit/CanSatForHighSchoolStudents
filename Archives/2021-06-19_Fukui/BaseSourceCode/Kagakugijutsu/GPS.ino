@@ -102,29 +102,29 @@ void GPS_Update() {
 		}
 	}
 }
-
 void GPS_Print() {
-	Serial.print(F("測位結果："));
-	Serial.print(F("GPS: Lat="));
-	Serial.print(GPS_GetLat(),6);
-	Serial.print(F(", Lng="));
-	Serial.print(GPS_GetLng(),6);
-	Serial.print(F(", Height="));
-	Serial.print(GPS_GetHeight(),2);
-	Serial.print(F(", RecTime="));
-	Serial.print(gps.last_received_time);
-	Serial.println(F(""));
+  Serial.print(F("測位結果："));
+  Serial.print(F("GPS: Lat="));
+  Serial.print(GPS_GetLat(),11);
+  Serial.print(F(", Lng="));
+  Serial.print(GPS_GetLng(),11);
+  Serial.print(F(", Height="));
+  Serial.print(GPS_GetHeight(),11);
+  Serial.print(F(", RecTime="));
+  Serial.print(gps.last_received_time);
+  Serial.println(F(""));
+}
+float GPS_GetLat(){
+  return gps.lat;
+}
+float GPS_GetLng(){
+  return gps.lng;
+}
+float GPS_GetHeight(){
+  return gps.height;
 }
 
-float GPS_GetLat() {
-	return gps.lat;
-}
-float GPS_GetLng() {
-	return gps.lng;
-}
-float GPS_GetHeight() {
-	return gps.height;
-}
+
 
 
 
@@ -167,4 +167,3 @@ float GPS_NMEA2DDf_(float val) {
 // 	if(hh > 24) hh = hh - 24;
 // 	return String(hh,DEC) + ":" + str.substring(2,4) + ":" + str.substring(4,6);
 // }
-
