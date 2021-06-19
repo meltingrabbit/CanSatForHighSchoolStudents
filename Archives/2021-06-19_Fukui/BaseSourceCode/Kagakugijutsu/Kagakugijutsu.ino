@@ -2,10 +2,7 @@
 #include "./DCMotor.h"
 #include "./DCMotor2.h"
 #include "./SD.h"
-#include "./SD2.h"
 #include "./IMU.h"
-
-uint16_t loop_count = 0;
 
 void setup()
 {
@@ -15,19 +12,12 @@ void setup()
   GPS_Init();		// GPSの初期化
   DCM_Init();     // DCモータを初期化
   DCM2_Init();    // DCモータ2を初期化
-  SD_Init();  
+  SD_Init();
   IMU_Init();     // 9軸センサを初期化
-  
+
   Serial.println(F("Init done"));
   delay(300);
-} 
-//  int i;
-//  for (i = 0; i < 6; i++) {
-//    GPS_Update();   // GPSの値をアップデート
-//    GPS_Print();    // GPSの値を表示
-//
-//    delay(25);    // 25 ms 待つ
-//  }
+}
 
 void loop()
 {
@@ -40,7 +30,7 @@ void loop()
   IMU_PrintAcc();     // 取得した加速度を表示
   IMU_PrintGyr();     // 取得した角加速度を表示
   IMU_PrintMag();     // 取得した磁気を表示
-  
+
   Serial.println(F("DCM1 Forward"));
   DCM_FORWARD();      // 正転
   delay(5000);      // 5000 ms 待つ
