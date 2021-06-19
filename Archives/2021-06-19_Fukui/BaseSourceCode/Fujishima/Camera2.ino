@@ -2,14 +2,10 @@
 #include "./SD.h"
 #include <Wire.h>
 #include <SPI.h>
-#include "./ArduCAM.h"
-
 
 Camera2_t camera2;
 
 // 初期値なしの初期化ができないので，仕方なくstructにはいれない．
-ArduCAM myCAM1(OV2640, PIN_CAM2_1_SS);
-ArduCAM myCAM2(OV2640, PIN_CAM2_2_SS);
 
 // 公式サイト情報
 //You can change the FRAMES_NUM count to change the number of the picture.
