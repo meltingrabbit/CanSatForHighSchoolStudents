@@ -6,6 +6,9 @@
 #include "./XBee.h"
 #include <SPI.h>
 
+ArduCAM myCAM1(OV2640, PIN_CAM2_1_SS);
+ArduCAM myCAM2(OV2640, PIN_CAM2_2_SS);
+
 void setup() {
 	// Wire(Arduino-I2C)の初期化
 	Wire.begin();

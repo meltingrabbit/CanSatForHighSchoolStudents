@@ -10,7 +10,7 @@ https://www.switch-science.com/catalog/3780/
 
 
 #include "./PIN_ASSIGN.h"
-
+#include "./ArduCAM.h"
 #include <SPI.h>
 
 // 初期化
