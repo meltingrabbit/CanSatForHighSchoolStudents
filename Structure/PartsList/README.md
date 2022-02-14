@@ -13,6 +13,7 @@
 | :--- | :--- | :--- | :--- |  
 | GPS | AE-GYSFDMAXB | 実装参考は[こちら](../../Arduino/Test_GPS) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gK-09991/) |  
 | 9軸センサ | AE-BMX055 | 実装参考は[こちら](../../Arduino/Test_IMU) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gK-13010/) |  
+| 9軸センサ | Pololu MinIMU-9 v5 | 実装参考は[こちら](../../Arduino/Test_IMU) | [スイッチサイエンス](https://www.switch-science.com/catalog/2658/) |  
 | 気圧計・温湿度計 | BME280 | 実装参考は[こちら](../../Arduino/Test_Barometer_Thermohygrometer) | [秋月電子通商](https://akizukidenshi.com/catalog/g/gK-09421/)<br>[スイッチサイエンス](https://www.switch-science.com/catalog/2236/) |  
 | 光センサ | MI527 | CdSセルを使用したセンサ<br>実装参考は[こちら](../../Arduino/Test_Light) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gI-00110/) |  
 | カメラ | Arducam Mini 2MP Plus | 実装参考は[こちら](../../Arduino/Test_Camera2) | [SWITCH SCIENCE](https://www.switch-science.com/catalog/3780/) |  
