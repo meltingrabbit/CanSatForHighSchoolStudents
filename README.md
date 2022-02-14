@@ -61,7 +61,7 @@ Ver.2 から，半導体不足等で入手困難なセンサ類を変更した�
 	- [Arduinoについて](./Arduino/)
 	- 機器のテストコード（動作試験）
 		* [GPSの単体テスト](./Arduino/Test_GPS)
-		* [9軸センサの単体テスト](./Arduino/Test_IMU)
+		* [9軸センサ (IMU) の単体テスト (BMX055)](./Arduino/Test_IMU)
 		* [高度計（気圧計）・温湿度計の単体テスト](./Arduino/Test_Barometer_Thermohygrometer)
 		* [光センサの単体テスト](./Arduino/Test_Light)
 		* [カメラの単体テスト](./Arduino/Test_Camera2)
