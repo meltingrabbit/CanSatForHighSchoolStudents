@@ -14,5 +14,9 @@
 + 後継機であるArduino Nano Everyを用いれば，SRAMが３倍になるので問題ない．
 
 
+## 注意
++ 高度計（気圧計）・温湿度計は，秋月電子のものを載せている．スイッチサイエンスのものの場合は [こちら](../Test_Barometer_Thermohygrometer) を参照すること．なお，ソースコードはそのままでOK．
+
+
 ## ソースコードへのリンク
 [GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test)
