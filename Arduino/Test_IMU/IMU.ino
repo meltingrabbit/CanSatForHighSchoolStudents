@@ -2,9 +2,9 @@
 
 Imu_t imu;
 
-
-
 void IMU_Init() {
+	// Wire.begin();はされている前提！
+
 	imu.xAccl = 0.0;
 	imu.yAccl = 0.0;
 	imu.zAccl = 0.0;
