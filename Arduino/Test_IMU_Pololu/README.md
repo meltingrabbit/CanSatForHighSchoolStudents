@@ -16,6 +16,12 @@ https://www.switch-science.com/catalog/2658/
 ## 回路図
 ![](../../Schematic/PNG/IMU_Pololu.png)
 
++ 通信は I2C
++ 電圧は 5V
+	- 電源電圧，通信電圧は， 5V と 3.3V で選択可能
+	- ここでは， 5V を利用している． `VDD` には何もつないではならない．
+	- 詳細はデータシートを参照のこと
+
 
 ## 注意
 + これはスイッチサイエンスのもの (Pololu MinIMU-9 v5) である．秋月電子のもの (BMX055) の場合は [こちら](../Test_IMU) を参照すること．
