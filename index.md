@@ -13,6 +13,10 @@ CanSat for High School Students
 	- Arduino Nanoでも可能だが，よりSRAMの多いEveryを用いたほうがよい．
 
 
+### Ver.2.1 （2022年版）
+Ver.2 から，半導体不足等で入手困難なセンサ類を変更したバージョン．
+
+
 ### Ver.2 （2021年版）
 + Ver.1で難易度の高かった配線を簡易化するため，すべての階層に同じマイコンのピンをストレートで伸ばしたもの．
 + これにより，層の順番の変更や，取捨選択が可能となった．
@@ -57,7 +61,8 @@ CanSat for High School Students
 	- [Arduinoについて](./Arduino/)
 	- 機器のテストコード（動作試験）
 		* [GPSの単体テスト](./Arduino/Test_GPS)
-		* [9軸センサの単体テスト](./Arduino/Test_IMU)
+		* [9軸センサ (IMU) の単体テスト (BMX055)](./Arduino/Test_IMU)
+		* [9軸センサ (IMU) の単体テスト (Pololu MinIMU-9 v5)](./Arduino/Test_IMU_Pololu)
 		* [高度計（気圧計）・温湿度計の単体テスト](./Arduino/Test_Barometer_Thermohygrometer)
 		* [光センサの単体テスト](./Arduino/Test_Light)
 		* [カメラの単体テスト](./Arduino/Test_Camera2)
@@ -94,8 +99,10 @@ CanSat for High School Students
 	- [テスタ](./Structure/tester)
 + `./Archives` ：アーカイブ
 	- [2020年02月22～23日 缶サットHigh School 「缶サット電子系講座」](./Archives/2020-02-22_Fukui)
+	- [2021年06月19～20日 缶サットHigh School 「缶サット構造系講座」](./Archives/2021-06-19_Fukui)
 
 ## ブログ
 + [【CanSat】缶サット甲子園を目指す高校生向け電子系講座 2020年度版 @福井 [2020/02/23]](https://meltingrabbit.com/blog/article/2020022301/)
 + [【CanSat】缶サット甲子園を目指す高校生向け構造系講座 2020年度版 @福井 [2020/10/25]](https://meltingrabbit.com/blog/article/2020102501/)
 + [【CanSat】缶サット甲子園を目指す高校生向け電子系講座 2021年度版 @福井 [2021/02/14]](https://meltingrabbit.com/blog/article/2021021401/)
++ [【CanSat】缶サット甲子園を目指す高校生向け構造系講座 2021年度版 @福井 [2021/06/20]](https://meltingrabbit.com/blog/article/2021062001/)
