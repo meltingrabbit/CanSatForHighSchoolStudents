@@ -16,6 +16,13 @@ https://www.switch-science.com/catalog/1241/
 ## 回路図
 ![](../../Schematic/PNG/Camera_SD.png)
 
+| 素子 Pin | Arduino Pin | 備考 |
+| ---- | ---- | ---- |
+| TX | D2 | カメラの送信端子．Arduinoのシリアル受信端子と接続する． |
+| RX | D3 | カメラの受信端子．Arduinoのシリアル送信端子と接続する．なお，途中で分圧をする． |
+| GND | GND | GND |
+| +5V | 5V | 5V 電源 |
+
 + 通信はシリアル通信 (TX, RX)
 + 電源電圧は5V
 + 通信電圧は3.3V
