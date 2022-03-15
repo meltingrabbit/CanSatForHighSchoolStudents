@@ -42,6 +42,7 @@
 | ピンヘッダ 1×40(40P) | PH-1x40SG | サーボのコネクタと基板間にはんだしておくピン<br>基板間の電源・通信ライン接続にも用いる | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-00167/) |
 | microSDカードスロット | AE-microSD-LLCNV | microSDカードへの書き込み・読み取り回路基板<br>実装参考は[こちら](../../Arduino/Test_SD) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gK-14015/) |
 | トグルスイッチ | 2MS1-T1-B4-VS2-Q-E | 電源ON/OFF用スイッチ<br>実装参考は[こちら](../switch) | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-00300/) |
+| ターミナルブロック | WJEK254-2.54-02P-122-00A | バッテリの基板接続用 | [秋月電子通商](https://akizukidenshi.com/catalog/g/gP-14611/) |
 | DCジャック | AE-DC-POWER-JACK-DIP | DCプラグ接続用コネクタ基板 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gK-05148/) |
 | ジャンパワイヤ(オス-オス) | BBJ-65 | カメラ等を直接配線する用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gC-05159/) |
 | メッキ線 | P-13310 | 基板にはんだ固定する導通経路用 | [秋月電子通商](http://akizukidenshi.com/catalog/g/gP-13310/) |
