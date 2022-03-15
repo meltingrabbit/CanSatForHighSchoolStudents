@@ -17,7 +17,7 @@
 | 素子 Pin | Arduino Pin | 備考 |
 | ---- | ---- | ---- |
 | VDD | 3V3 | 3.3V 電源 |
-| GND | GND |  |
+| GND | GND | GND |
 | SDI | A4 (SDA) | I2C のシリアルデータ |
 | SCK | A5 (SCL) | I2C のシリアルクロック |
 | SDO | GND | I2C のアドレス選択ピン．ここでは GND |
@@ -36,7 +36,7 @@
 | ---- | ---- | ---- |
 | Vcore | 3V3 | 3.3V 電源 |
 | Vio | 3V3 | I2C のプルアップ電圧 |
-| GND | GND |  |
+| GND | GND | GND |
 | SDI | A4 (SDA) | I2C のシリアルデータ． `Vio` でプルアップする |
 | SCK | A5 (SCL) | I2C のシリアルクロック． `Vio` でプルアップする |
 | SDO | GND | I2C のアドレス選択ピン．ここでは GND |
