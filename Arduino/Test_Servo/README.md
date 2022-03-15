@@ -25,6 +25,12 @@ http://akizukidenshi.com/catalog/g/gM-08914/
 
 ![](../../Schematic/PNG/Servo.png)
 
+| 素子 Pin | Arduino Pin | 備考 |
+| ---- | ---- | ---- |
+| 茶（GND） | GND | GND |
+| 赤（電源 [+]） | 5V | 5V 電源 |
+| 橙（制御信号 [JRタイプ]） | D4 | 指定した回転角にモーターを制御するための信号 |
+
 
 ## ソースコードへのリンク
 [GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_Servo)
