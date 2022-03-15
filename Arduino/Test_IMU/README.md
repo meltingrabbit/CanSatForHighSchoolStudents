@@ -21,7 +21,7 @@ http://akizukidenshi.com/catalog/g/gK-13010/
 | VCC | 5V | 5V 電源 |
 | VCCIO | 5V | 5V 電源 |
 | 3V3 | 3V3 | 3.3V 電源 |
-| GND | GND |  |
+| GND | GND | GND |
 | SDA | A4 (SDA) | I2C のシリアルデータ |
 | SCL | A5 (SCL) | I2C のシリアルクロック |
 
