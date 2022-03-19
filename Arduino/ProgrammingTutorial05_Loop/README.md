@@ -57,8 +57,8 @@ void setup()
 
     count = count + 1;
 
-    if (count >= 10) {            // もし， "count" が 10 以上なら
-      break;                      // ループから抜ける
+    if (count >= 10) {          // もし， "count" が 10 以上なら
+      break;                    // ループから抜ける
     }
   }
 }
