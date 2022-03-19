@@ -18,14 +18,15 @@
 //  float BTH_GetHumidity();
 //  float BTH_GetTemperature();
 // という関数が使えるようになる
-// 関数の中身は BarometerThrmohygrometer.ino にかかれている
+// 関数の説明は BarometerThrmohygrometer.h に書かれている
+// 関数の中身は BarometerThrmohygrometer.ino に書かれている
 
 
 void setup()
 {
-  // Wire(Arduino-I2C)の初期化．高度計（気圧計）・温湿度計との通信を開始
+  // Wire(Arduino-I2C) の初期化．高度計（気圧計）・温湿度計との通信を開始
   Wire.begin();
-  // デバック用シリアル通信は9600bps
+  // デバック用シリアル通信は 9600bps
   Serial.begin(9600);
 
   // 高度計（気圧計）・温湿度計を初期化
@@ -44,7 +45,7 @@ void loop()
   float pressure = BTH_GetPressure();
 
   // 気圧から高度に変換
-  // まあ，ざっくり 10m上昇すると1hPa下がるとしようか．
+  // まあ，ざっくり 10m 上昇すると 1hPa 下がるとしようか．
   float pressure_at_sea_level = 1013.250;
   float height = (pressure_at_sea_level - pressure) * 10;
 
@@ -70,6 +71,7 @@ void loop()
 
 
 ## 備考
++ `pressure_at_sea_level` （標高 0m での大気圧）の値は，天気などによって変わるので，もし，精度の良い高度計を作る場合は，事前に調整（キャリブレーション）が必要．
 + ここでは，講義の時間の都合上，用意された関数群を用いた．
 + 本来であれば，センサに応じたサンプルコードをインターネットなどからダウンロードすると良い．
 	- 「センサ名 Arduino サンプルコード」などでGoogle検索をかけるとよい．
