@@ -162,6 +162,7 @@ void BTH_Print() {
 	Serial.print(F("Pres = "));
 	Serial.print(BTH_GetPressure());
 	Serial.println(F(" [hPa]"));
+	Serial.println();
 }
 
 
