@@ -106,5 +106,5 @@ void loop()
 
 
 ## ソースコードへのリンク
-[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/ProgrammingTutorial09_Application)
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/ProgrammingTutorial10_Application)
 

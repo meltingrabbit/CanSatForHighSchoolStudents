@@ -88,7 +88,7 @@ Ver.2 から，半導体不足等で入手困難なセンサ類を変更した�
 		* [06. Function](./Arduino/ProgrammingTutorial06_Function)
 		* [07. Device1](./Arduino/ProgrammingTutorial07_Device1)
 		* [08. Device2](./Arduino/ProgrammingTutorial08_Device2)
-		* [09. Application](./Arduino/ProgrammingTutorial09_Application)
+		* [10. Application](./Arduino/ProgrammingTutorial10_Application)
 	- 実装例
 		* [明るさ計](./Arduino/App_LightMeter)
 + `./Schematic` ：[回路図](./Schematic)
