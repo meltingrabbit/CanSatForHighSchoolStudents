@@ -21,7 +21,8 @@
 //   void SRV_Detach();
 //   void SRV_Attach();
 // という関数が使えるようになる
-// 関数の中身は Servo.c にかかれている
+// 関数の説明は Servo.h に書かれている
+// 関数の中身は Servo.ino に書かれている
 
 // 光センサのライブラリ（便利なコードまとめ）を使うよ！ と宣言
 #include "./Light.h"
@@ -31,12 +32,13 @@
 //   int  LIT_Get();
 //   void LIT_Print();
 // という関数が使えるようになる
-// 関数の中身は Light.c にかかれている
+// 関数の説明は Light.h に書かれている
+// 関数の中身は Light.ino に書かれている
 
 
 void setup()
 {
-  // デバック用シリアル通信は9600bps
+  // デバック用シリアル通信は 9600bps
   Serial.begin(9600);
 
   // サーボモータを初期化
@@ -54,14 +56,14 @@ void loop()
   uint32_t light = 0;
   uint8_t  sampling_num = 20;
 
-  // sampling_num回の平均値をとる
+  // sampling_num 回の平均値をとる
   for (int i = 0; i < sampling_num; i = i + 1) {
     light = light + LIT_Get();
   }
   light = light / sampling_num;
 
   // 明るさを角度に変換
-  // lightは 0 - 1024
+  // light は 0 - 1024
   // サーボは 0 - 180
   uint8_t angle = (uint8_t)( (float)light * 180.0 / 1024.0);
 
