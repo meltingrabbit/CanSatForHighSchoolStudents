@@ -12,6 +12,9 @@
 ![](./img/slide_3.png)
 ![](./img/slide_4.png)
 ![](./img/slide_5.png)
+
+※ `書込装置（書き込み装置）` については，2022/03/19現在，「Onboard Atmel mEDBG (UNO WiFi Rev2)」であることもあります．
+
 ![](./img/slide_6.png)
 
 
