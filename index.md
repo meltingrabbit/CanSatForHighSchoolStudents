@@ -86,9 +86,10 @@ Ver.2 から，半導体不足等で入手困難なセンサ類を変更した�
 		* [04. If Else](./Arduino/ProgrammingTutorial04_IfElse)
 		* [05. Loop](./Arduino/ProgrammingTutorial05_Loop)
 		* [06. Function](./Arduino/ProgrammingTutorial06_Function)
-		* [07. Device1](./Arduino/ProgrammingTutorial07_Device1)
-		* [08. Device2](./Arduino/ProgrammingTutorial08_Device2)
-		* [10. Application](./Arduino/ProgrammingTutorial10_Application)
+		* [07. Device1 （高度計）](./Arduino/ProgrammingTutorial07_Device1)
+		* [08. Device2 （方位磁石）](./Arduino/ProgrammingTutorial08_Device2)
+		* [09. Device3 （サーボモータの利用）](./Arduino/ProgrammingTutorial09_Device3)
+		* [10. Application （明るさ計）](./Arduino/ProgrammingTutorial10_Application)
 	- 実装例
 		* [明るさ計](./Arduino/App_LightMeter)
 + `./Schematic` ：[回路図](./Schematic)
