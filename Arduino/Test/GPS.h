@@ -23,6 +23,9 @@ float GPS_GetLng();
 // 高度の値を取得
 float GPS_GetHeight();
 
+void GPS_begin();
+void GPS_end();
+
 typedef struct {
 	float lat;
 	float lng;
@@ -32,4 +35,3 @@ typedef struct {
 
 
 #endif
-

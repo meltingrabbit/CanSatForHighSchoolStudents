@@ -13,6 +13,14 @@ float GPS_NMEA2DDf_(float val);
 
 
 
+
+void GPS_begin() {
+  GpsSerial.begin(9600);
+}
+void GPS_end() {
+  GpsSerial.end();
+}
+
 void GPS_Init() {
 	GpsSerial.begin(9600);
 	gps.lat = 0.0;
@@ -25,6 +33,7 @@ void GPS_Init() {
 
 void GPS_Update() {
 	// 1つのセンテンスを読み込む
+  return;
 	String line = GpsSerial.readStringUntil('\n');
 	Serial.println(line);
 
@@ -167,4 +176,3 @@ float GPS_NMEA2DDf_(float val) {
 // 	if(hh > 24) hh = hh - 24;
 // 	return String(hh,DEC) + ":" + str.substring(2,4) + ":" + str.substring(4,6);
 // }
-

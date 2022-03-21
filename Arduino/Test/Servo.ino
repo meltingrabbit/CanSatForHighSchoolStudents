@@ -3,6 +3,16 @@
 
 Servo_t servo;
 
+
+
+void SRV_attach() {
+  servo.servo.attach(PIN_SRV);  
+}
+
+void SRV_detach() {
+   servo.servo.detach();  
+}
+
 void SRV_Init() {
 	servo.position = 0;
 	servo.setPosition = 0;

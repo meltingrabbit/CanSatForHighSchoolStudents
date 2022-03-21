@@ -18,15 +18,15 @@ void setup()
 	// デバック用シリアル通信は9600bps
 	Serial.begin(9600);
 
-	SD_Init();			// これは絶対最初に初期化！
-	CAM2_Init();		// SDの後！
-	BTH_Init();
-	DCM_Init();
-	IMU_Init();
-	LIT_Init();
+//	SD_Init();			// これは絶対最初に初期化！
+//	CAM2_Init();		// SDの後！
+//	BTH_Init();
+//	DCM_Init();
+//	IMU_Init();
+//	LIT_Init();
 	SRV_Init();
 	GPS_Init();
-	XBEE_Init();
+//	XBEE_Init();
 
 	Serial.println(F("Init done"));
 	delay(300);
@@ -34,21 +34,27 @@ void setup()
 
 void loop()
 {
-	IMU_UpdateAll();
-	IMU_PrintAcc();
-	IMU_PrintGyr();
-	IMU_PrintMag();
+//	IMU_UpdateAll();
+//	IMU_PrintAcc();
+//	IMU_PrintGyr();
+//	IMU_PrintMag();
+
+
+  GPS_begin();
+  delay(2000);
 	GPS_Update();
 	GPS_Print();
-	LIT_Print();
-	BTH_Update();
-	BTH_Print();
-	XBEE_Test();
+  GPS_end();
+ 
+//	LIT_Print();
+//	BTH_Update();
+//	BTH_Print();
+//	XBEE_Test();
 
-	if (loop_count % 10 == 3) {
-		CAM2_TakePic();
-	}
-	SD_Write(String(loop_count));
+//	if (loop_count % 10 == 3) {
+//		CAM2_TakePic();
+//	}
+//	SD_Write(String(loop_count));
 
 	Serial.println(loop_count);
 	if (loop_count % 10 == 0) {
@@ -72,8 +78,17 @@ void loop()
 		}
 	}
 
+//  Serial.println("SRV");
+//  delay(100);
+//  SRV_detach();
+//  delay(100);
+//  SRV_attach();
+//  delay(100);
+
+
 	// DCは一旦含んでいない（基本的に使わないと考えているため）
 
 	loop_count++;
-	delay(1000);
+//	delay(1000);
+  delay(100);
 }

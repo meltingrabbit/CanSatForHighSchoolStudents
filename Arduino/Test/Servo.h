@@ -19,6 +19,9 @@ uint8_t SRV_GetPosition();
 // 設定した回転角へ動かす
 void SRV_Run();
 
+void SRV_detach();
+void SRV_attach();
+
 typedef struct {
 	Servo servo;
 	uint8_t setPosition;
@@ -27,4 +30,3 @@ typedef struct {
 
 
 #endif
-
