@@ -4,7 +4,7 @@
 + [科学技術](./Kagakugijutsu)
 + [高志](./Koshi)
 + [鯖江](./Sabae)
-+ [武生東](./Takefuhigashi)
++ [武生東](./TakefuHigashi)
 + [若狭](./Wakasa)
 
 
