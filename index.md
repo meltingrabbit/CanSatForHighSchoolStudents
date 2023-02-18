@@ -71,7 +71,7 @@ Ver.2 から，半導体不足等で入手困難なセンサ類を変更した�
 		* [SDカードの単体テスト](./Arduino/Test_SD)
 		* [XBee（無線通信機）の単体テスト](./Arduino/Test_XBee)
 		* 過去
-			+ [カメラ（2020年使用版）の単体テスト](./Arduino/Test_Camera)
+			+ [カメラ（2020年使用版）の単体テスト](./Arduino/Test_Camera_2020)
 			+ [高度計（気圧計）（2020年使用版）の単体テスト](./Arduino/Test_Barometer)
 	- 機器のテストコード（複数使用）
 		* [全機器の統合状態のテスト](./Arduino/Test)

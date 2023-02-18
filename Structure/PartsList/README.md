@@ -93,7 +93,7 @@
 | パーツ名 | 型番 | 概要 | 購入先URL |
 | :--- | :--- | :--- | :--- |
 | 気圧計 | GY-BMP280-3.3 | 実装参考は[こちら](../../Arduino/Test_Barometer) | [LED PARADISE](https://www.led-paradise.com/product/2334) |
-| TTLシリアルJPEGカメラ | ADA-397 | 実装参考は[こちら](../../Arduino/Test_Camera) | [SWITCH SCIENCE](https://www.switch-science.com/catalog/1241/) |
+| TTLシリアルJPEGカメラ | ADA-397 | 実装参考は[こちら](../../Arduino/Test_Camera_2020) | [SWITCH SCIENCE](https://www.switch-science.com/catalog/1241/) |
 
 ## その他基板実装パーツ
 | パーツ名 | 型番 | 概要 | 購入先URL |

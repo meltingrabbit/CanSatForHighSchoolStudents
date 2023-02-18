@@ -2,7 +2,7 @@ https://meltingrabbit.github.io/CanSatForHighSchoolStudents/
 https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Arduino/Test/
 https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Arduino/Test_Barometer/
 https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Arduino/Test_Barometer_Thermohygrometer/
-https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Arduino/Test_Camera/
+https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Arduino/Test_Camera_2020/
 https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Arduino/Test_Camera2/
 https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Arduino/Test_DCMotor/
 https://meltingrabbit.github.io/CanSatForHighSchoolStudents/Arduino/Test_DCMotor_x2/
