@@ -41,5 +41,5 @@ https://www.switch-science.com/catalog/1241/
 + １枚目の撮像は必ず壊れた画像になる．
 
 ## ソースコードへのリンク
-[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_Camera)
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Arduino/Test_Camera_2020)
 
