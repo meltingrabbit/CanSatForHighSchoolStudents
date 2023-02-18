@@ -3,7 +3,7 @@
 
 #define PIN_SRV 4
 
-#define PIN_OPEAMP A2
+#define PIN_MICROPHONE A2
 
 #define PIN_GPS_TX 8
 #define PIN_GPS_RX 9
