@@ -2,34 +2,46 @@
 
 Microphone_t microphone;
 
-void MIC_Init() {}
+static void MIC_Update_();
 
-int MIC_Get_Average() {
-  // たくさんとって平均してもいいかも？
-  int32_t valueSum = 0;
-  int averageNum = 10;
-  for (int8_t i = 0; i < averageNum; i++) {
-    valueSum = abs(analogRead(PIN_MIC) - 512);
-  }
-  int value = valueSum / averageNum;
-  return value;
+static const uint8_t MIC_SAMPLING_NUM = 10;
+static const uint32_t MIC_MEDIAN = 512;
+
+void MIC_Init() {
+	microphone.average = 0;
+	microphone.maximum = 0;
 }
 
-int MIC_Get_Maximum() {
-  int averageNum = 10;
-  int value = 0;
-  for (int8_t i = 0; i < averageNum; i++) {
-    int valueTmp = abs(analogRead(PIN_MIC) - 512);
-    if (value < valueTmp) {
-      value = valueTmp;
-    }
-  }
-  return value;
+static void MIC_Update_()
+{
+	uint32_t average = 0;
+	uint32_t maximum = 0;
+	for (int8_t i = 0; i < MIC_SAMPLING_NUM; i++) {
+		uint32_t value = abs(analogRead(PIN_MIC) - MIC_MEDIAN);
+		average += value;
+		if (maximum < value) {
+			maximum = value;
+		}
+	}
+	microphone.average = average / MIC_SAMPLING_NUM;
+	microphone.maximum = maximum;
+}
+
+int MIC_GetAverage() {
+	MIC_Update_();
+	return (int)microphone.average;
+}
+
+int MIC_GetMaximum() {
+	MIC_Update_();
+	return (int)microphone.maximum;
 }
 
 void MIC_Print() {
-  int value = MIC_Get_Maximum();
-  Serial.print(F("Microphone= "));
-  Serial.print(value);
-  Serial.println(F(""));
+	MIC_Update_();
+	Serial.print(F("Mic= "));
+	Serial.print(microphone.average);
+	Serial.print(F(", "));
+	Serial.print(microphone.maximum);
+	Serial.println(F(""));
 }
