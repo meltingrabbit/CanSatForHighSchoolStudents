@@ -14,6 +14,7 @@ void MIC_Init() {
 
 static void MIC_Update_()
 {
+	// Serial.println(millis());
 	uint32_t average = 0;
 	uint32_t maximum = 0;
 	for (int8_t i = 0; i < MIC_SAMPLING_NUM; i++) {
@@ -25,6 +26,7 @@ static void MIC_Update_()
 	}
 	microphone.average = average / MIC_SAMPLING_NUM;
 	microphone.maximum = maximum;
+	// Serial.println(millis());
 }
 
 int MIC_GetAverage() {

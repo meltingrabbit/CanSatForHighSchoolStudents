@@ -13,5 +13,5 @@ void setup() {
 void loop() {
 	MIC_Print();			// マイクロフォンの値を表示
 
-	delay(50);				// 50 ms 待つ
+	delay(10);				// 10 ms 待つ
 }
