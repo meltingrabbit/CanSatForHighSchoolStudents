@@ -26,6 +26,7 @@ void setup()
 	LIT_Init();
 	SRV_Init();
 	GPS_Init();
+	MIC_Init();
 	XBEE_Init();
 
 	Serial.println(F("Init done"));
@@ -43,6 +44,7 @@ void loop()
 	LIT_Print();
 	BTH_Update();
 	BTH_Print();
+	MIC_Print();
 	XBEE_Test();
 
 	if (loop_count % 10 == 3) {
