@@ -5,6 +5,7 @@
 + [高度計（気圧計）・温湿度計](../Arduino/Test_Barometer_Thermohygrometer)
 + [光センサ](../Arduino/Test_Light)
 + [カメラ](../Arduino/Test_Camera2)
++ [マイク](../Arduino/Test_Microphone)
 + [サーボモータ](../Arduino/Test_Servo)
 + [DCモータ](../Arduino/Test_DCMotor)
 + [SDカード](../Arduino/Test_SD)
