@@ -4,6 +4,7 @@
 #define PIN_SRV 4
 
 #define PIN_LIT A1
+#define PIN_MIC A2
 
 #define PIN_GPS_TX 8
 #define PIN_GPS_RX 9
