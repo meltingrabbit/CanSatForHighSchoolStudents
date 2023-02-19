@@ -76,7 +76,7 @@ Ver.2 から，半導体不足等で入手困難なセンサ類を変更した�
 	- 機器のテストコード（複数使用）
 		* [全機器の統合状態のテスト](./Arduino/Test)
 		* [光センサを４並列にした光方向センサ](./Arduino/Test_Light4)
-		* [サーボモータの２並列版](./Arduino/Test_Servo2)
+		* [サーボモータの２並列版](./Arduino/Test_Servo_x2)
 		* [DCモータの２並列版](./Arduino/Test_DCMotor_x2)
 	- プログラミング講習
 		* [00. 事前準備](./Arduino/ProgrammingTutorial00_Preparation)
