@@ -75,7 +75,7 @@ Ver.2 から，半導体不足等で入手困難なセンサ類を変更した�
 			+ [高度計（気圧計）（2020年使用版）の単体テスト](./Arduino/Test_Barometer)
 	- 機器のテストコード（複数使用）
 		* [全機器の統合状態のテスト](./Arduino/Test)
-		* [光センサを４並列にした光方向センサ](./Arduino/Test_Light4)
+		* [光センサを４並列にした光方向センサ](./Arduino/Test_Light_x4)
 		* [サーボモータの２並列版](./Arduino/Test_Servo_x2)
 		* [DCモータの２並列版](./Arduino/Test_DCMotor_x2)
 	- プログラミング講習
