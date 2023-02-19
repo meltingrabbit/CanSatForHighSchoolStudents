@@ -6,7 +6,7 @@ Servo_t servo2;
 
 void SRV2_Init() {
 	servo2.position = 0;
-	servo2.setPosition = 0;
+	servo2.setPosition = 1;
 
 	servo2.servo.attach(PIN_SRV2);
 	delay(1000);
