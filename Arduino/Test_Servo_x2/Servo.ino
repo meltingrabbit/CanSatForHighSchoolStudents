@@ -5,7 +5,7 @@ Servo_t servo;
 
 void SRV_Init() {
 	servo.position = 0;
-	servo.setPosition = 1;
+	servo.setPosition = 1;  // servo2.setPosition = 0 にするとサーボが振動してしまうため1で初期化している
 
 	servo.servo.attach(PIN_SRV);
 	delay(1000);
