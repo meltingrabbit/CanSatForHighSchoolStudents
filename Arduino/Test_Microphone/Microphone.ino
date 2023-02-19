@@ -9,7 +9,7 @@ int MIC_Get_Average() {
   int32_t valueSum = 0;
   int averageNum = 10;
   for (int8_t i = 0; i < averageNum; i++) {
-    valueSum = abs(analogRead(PIN_MICROPHONE) - 512);
+    valueSum = abs(analogRead(PIN_MIC) - 512);
   }
   int value = valueSum / averageNum;
   return value;
@@ -19,7 +19,7 @@ int MIC_Get_Maximum() {
   int averageNum = 10;
   int value = 0;
   for (int8_t i = 0; i < averageNum; i++) {
-    int valueTmp = abs(analogRead(PIN_MICROPHONE) - 512);
+    int valueTmp = abs(analogRead(PIN_MIC) - 512);
     if (value < valueTmp) {
       value = valueTmp;
     }
