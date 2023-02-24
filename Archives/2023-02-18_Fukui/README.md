@@ -1,4 +1,4 @@
-# 2023年03月18～19日 缶サットHigh School 「缶サット電子系講座」
+# 2023年02月18～19日 缶サットHigh School 「缶サット電子系講座」
 ## 各高校のプログラム一覧
 + [藤島](./Fujishima)
 + [金津](./Kanazu)
@@ -9,4 +9,4 @@
 
 
 ## ソースコードへのリンク
-[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Archives/2023-03-18_Fukui)
+[GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents/tree/master/Archives/2023-02-18_Fukui)
