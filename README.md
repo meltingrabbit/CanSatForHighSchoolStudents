@@ -3,6 +3,8 @@
 CanSat for High School Students  
 高校生のためのCanSat開発キット
 
+**最新版の開発・メンテはフォーク先の [ut-issl/CanSatForHighSchoolStudents](https://github.com/ut-issl/CanSatForHighSchoolStudents) にて行われています．**
+
 ## リンク
 [GitHub](https://github.com/meltingrabbit/CanSatForHighSchoolStudents)  
 [Web Page](https://meltingrabbit.github.io/CanSatForHighSchoolStudents/)
